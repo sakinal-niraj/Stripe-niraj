@@ -1,11 +1,13 @@
-import React from 'react'
+import React from 'react';
+import Comanies from './Comanies';
+// import Hero from './Hero';
 
 function Home() {
   return (
-    <div>
-      
-    </div>
-  )
+    <>
+     
+    </>
+  );
 }
 
-export default Home
+export default Home;
