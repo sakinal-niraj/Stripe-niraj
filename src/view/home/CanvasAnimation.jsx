@@ -115,8 +115,6 @@ const CanvasAnimation = () => {
                 </div>
 
             </div>
-            <Comanies />
-            <Details />
         </>
     );
 };
