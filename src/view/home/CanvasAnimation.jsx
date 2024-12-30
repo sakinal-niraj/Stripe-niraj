@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { BsArrowRightShort } from 'react-icons/bs';
 import { MdKeyboardArrowRight, MdOutlineKeyboardArrowRight } from "react-icons/md";
-import phone from  '../../assets/images/Screenshot 2024-12-26 185431.png';
 import Comanies from './Comanies';
+import Details from './Details';
 
 
 const CanvasAnimation = () => {
@@ -65,31 +65,48 @@ const CanvasAnimation = () => {
                 ref={canvasRef}
                 width="32"
                 height="32"
-                className="absolute top-0 left-0 w-full h-full z-0"
+                className="absolute top-0 left-0 w-full h-full -z-20"
                 style={{
                     clipPath: 'polygon(0 0, 100% 0, 100% 33%, 0 83%)',
                 }}
             >
 
             </canvas>
-            <div className='z-10 mt-16 w-full '>
-                <div className='text-black px-2 md:px-4 xl:px-24 ml-3 2xl:px-[220px]'>
-                    <h1 className='w-fit text-center py-[1px] px-2 pb-1 rounded-full bg-[#0000004d] flex items-center text-sm text-white font-bold'>Preview</h1>
+            <div className='-z-10 mt-16 w-full '>
+                <div className="text-black px-4 md:px-8 xl:px-24 2xl:px-[220px] ml-2">
+                    {/* Preview Tag */}
+                    <div className="flex justify-start items-center">
+                        <h1 className="w-fit text-center py-[6px] px-4 rounded-full bg-gray-800/50 text-white text-xs font-bold tracking-wide">
+                            Preview
+                        </h1>
+                    </div>
 
-                    <div className='mt-5 min-w-[400px] max-w-[540px] gap-0 space-y-8'>
-                        <h1 className='text-[84px] tracking-tight leading-tight gap-[-1px] text-[#000000b7] font-bold'>Financial infrastructure to grow your revenue</h1>
+                    {/* Content Section */}
+                    <div className="mt-8 max-w-[540px] space-y-9 ">
+                        {/* Headline */}
+                        <h1 className="text-4xl md:text-6xl xl:text-[5.5rem] tracking-tight leading-[1.2] text-gray-800 font-bold">
+                            Financial infrastructure to grow your revenue
+                        </h1>
 
-                        <p className='text-[#3a3a3ae1] font-semibold text-lg'>Join the millions of companies of all sizes that use Stripe to accept payments online and in person, embed financial services, power custom revenue models, and build a more profitable business.</p>
+                        {/* Subheading */}
+                        <p className="text-gray-700 font-medium text-lg leading-relaxed">
+                            Join millions of companies of all sizes using Stripe to accept payments online and in person, embed financial services, power custom revenue models, and build a more profitable business.
+                        </p>
 
+                        {/* Call-to-Action Button */}
                         <button
                             onMouseEnter={() => setHovered({ ...hovered, contactSales: true })}
                             onMouseLeave={() => setHovered({ ...hovered, contactSales: false })}
-                            className='hover:opacity-80 gap-1 flex items-center bg-black rounded-full text-white py-1.5 px-4'>Request an invite
-                            <span className='pt-1'>{hovered.contactSales ? <BsArrowRightShort /> : <MdKeyboardArrowRight />}</span>
+                            className="flex items-center gap-2 bg-gray-900 text-white rounded-full py-2 px-6 font-semibold shadow-md transition-transform duration-300 hover:scale-105 hover:bg-gray-800"
+                        >
+                            Request an invite
+                            <span className="text-lg">
+                                {hovered.contactSales ? <BsArrowRightShort /> : <MdKeyboardArrowRight />}
+                            </span>
                         </button>
-
                     </div>
                 </div>
+
 
 
                 {/* images */}
@@ -98,7 +115,8 @@ const CanvasAnimation = () => {
                 </div>
 
             </div>
-            <Comanies /> 
+            <Comanies />
+            <Details />
         </>
     );
 };
