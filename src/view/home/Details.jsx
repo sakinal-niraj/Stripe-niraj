@@ -4,13 +4,10 @@ import DetailsComponent from './DetailsComponent';
 
 function Details() {
     return (
-        <section className='relative'>
+        <section className="relative text-white bg-[#f2f6f9]
+  after:content-[''] after:block after:w-full after:bg-[#f2f6f9] after:absolute after:h-24 ">
             <div
                 className='bg-[#f2f6f9] mt-10'
-                style={{
-                    clipPath: 'polygon(0 0, 100% 0, 100% 96%, 0% 100%)',
-                    WebkitClipPath: 'polygon(0 0, 100% 0, 100% 96%, 0% 100%)',
-                }}
             >
                 {/* First Clipped Section */}
                 <div className='pb-28 z-10'>

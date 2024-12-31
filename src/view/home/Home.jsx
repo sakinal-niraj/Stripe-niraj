@@ -6,6 +6,7 @@ import Header from '../../component/header/Header';
 // import Footer from '../../component/footer/Footer';
 import Ready from './Ready';
 import Globle from './Globle';
+import GlobeScale from './GlobeScale';
 
 // import Hero from './Hero';
 
@@ -18,6 +19,7 @@ function Home() {
       </div>
       <Comanies />
       <Details />
+      <GlobeScale />
       <Globle />
       <Ready />
     </>
