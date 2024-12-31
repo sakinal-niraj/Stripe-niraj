@@ -8,7 +8,7 @@ import { FaRegFileCode } from "react-icons/fa6";
 <TiArrowRight />
 function Ready() {
     return (
-        <div className='bg-[#f2f6f9] w-full text-white z-50 py-20'
+        <div className='bg-[#f2f6f9] w-full text-white z-50 py-16 pb-28'
             style={{
                 clipPath: 'polygon(0 0, 100% 0, 100% 87%, 0% 100%)',
                 WebkitClipPath: 'polygon(0 0, 100% 0, 100% 87%, 0% 100%)',

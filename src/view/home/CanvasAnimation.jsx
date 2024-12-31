@@ -1,8 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { BsArrowRightShort } from 'react-icons/bs';
 import { MdKeyboardArrowRight, MdOutlineKeyboardArrowRight } from "react-icons/md";
-import Comanies from './Comanies';
-import Details from './Details';
 
 
 const CanvasAnimation = () => {
@@ -60,7 +58,7 @@ const CanvasAnimation = () => {
     }, []);
 
     return (
-        <>
+        <div>
             <canvas
                 ref={canvasRef}
                 width="32"
@@ -115,7 +113,7 @@ const CanvasAnimation = () => {
                 </div>
 
             </div>
-        </>
+        </div>
     );
 };
 

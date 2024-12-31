@@ -4,9 +4,9 @@ import DetailsComponent from './DetailsComponent';
 
 function Details() {
     return (
-        <>
+        <section className='relative'>
             <div
-                className='bg-[#f2f6f9] mt-10 relative z-10'
+                className='bg-[#f2f6f9] mt-10'
                 style={{
                     clipPath: 'polygon(0 0, 100% 0, 100% 96%, 0% 100%)',
                     WebkitClipPath: 'polygon(0 0, 100% 0, 100% 96%, 0% 100%)',
@@ -15,9 +15,7 @@ function Details() {
                 {/* First Clipped Section */}
                 <div className='pb-28 z-10'>
                     <div className="px-5 md:px-10 xl:px-20 2xl:px-52 py-20 pt-28 space-y-32">
-                        {/* Section 1 */}
                         <div className="w-full flex flex-col md:flex-row gap-8 items-start md:items-center">
-                            {/* Text Section */}
                             <div className="space-y-6 md:w-1/2 w-full">
                                 <h2 className="text-[#635BFF] font-bold text-xl pl-4 flex items-center gap-2">
                                     Modular solutions
@@ -33,7 +31,6 @@ function Details() {
                                 </p>
                             </div>
 
-                            {/* Image Section */}
                             <div className="md:w-1/2 w-full flex justify-center items-center">
                                 <div className="bg-gray-200 w-[75%] md:w-full flex justify-center items-center rounded-lg shadow-md">
                                     <img src={img1} alt="Modular solutions visual" className="object-cover rounded-lg" />
@@ -46,7 +43,8 @@ function Details() {
                     </div>
                 </div>
             </div>
-        </>
+
+        </section>
     );
 }
 
