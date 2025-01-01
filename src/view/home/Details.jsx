@@ -5,7 +5,7 @@ import DetailsComponent from './DetailsComponent';
 function Details() {
     return (
         <section className="relative text-white bg-[#f2f6f9]
-  after:content-[''] after:block after:w-full after:bg-[#f2f6f9] after:absolute after:h-24 ">
+  after:content-[''] after:block after:w-full after:bg-[#f2f6f9] after:absolute after:h-28 z-10 top-9 md:top-[150px]">
             <div
                 className='bg-[#f2f6f9] mt-10'
             >
@@ -17,7 +17,7 @@ function Details() {
                                 <h2 className="text-[#635BFF] font-bold text-xl pl-4 flex items-center gap-2">
                                     Modular solutions
                                 </h2>
-                                <p className="font-bold text-[36px] lg:text-[46px] xl:text-[56px] text-[#0A2540] leading-tight pr-10 pl-4">
+                                <p className="font-bold text-[36px] lg:text-[46px] xl:text-[56px] text-[#0A2540] leading-tight md:pr-10 pl-4">
                                     A fully integrated suite of financial and payments products
                                 </p>
                                 <p className="text-lg text-gray-700 pl-4 pr-10">

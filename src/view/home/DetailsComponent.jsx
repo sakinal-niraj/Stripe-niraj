@@ -18,11 +18,11 @@ function DetailsComponent() {
                                     {item.svg}
                                     {item.title}</h2>
 
-                                <p className="font-bold text-[46px] tracking-tight lg:text-[38px] text-[#0A2540] leading-tight pr-[60px] pl-[16px]">
+                                <p className="font-bold text-[46px] tracking-tight lg:text-[38px] text-[#0A2540] leading-tight md:pr-[60px] pl-[16px]">
                                     {item.heading}
                                 </p>
 
-                                <p className="text-base md:text-lg text-[#425466] text-[18px] pr-[64px] pl-[16px] ">
+                                <p className="text-base md:text-lg text-[#425466] text-[18px] md:pr-[64px] pl-[16px] ">
                                     {item.content}
                                 </p>
 
@@ -44,7 +44,7 @@ function DetailsComponent() {
 
                         {/* Image or Content Section */}
                         <div className="w-full md:w-1/2 flex justify-center items-center">
-                            <div className="bg-gray-200 w-[65%] md:w-full flex justify-center items-center">
+                            <div className="bg-gray-200 w-[65%] md:w-full  flex justify-center items-center">
                                 <img src={item.img} alt='img1' />
                             </div>
                         </div>
