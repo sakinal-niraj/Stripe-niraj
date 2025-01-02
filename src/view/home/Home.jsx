@@ -7,7 +7,7 @@ import Header from '../../component/header/Header';
 import Ready from './Ready';
 import Globle from './Globle';
 import GlobeScale from './GlobeScale';
-import Slider from './Slider';
+import SliderComponent from './SliderComponent';
 
 // import Hero from './Hero';
 
@@ -21,7 +21,7 @@ function Home() {
       <Comanies />
       <Details />
       <GlobeScale />
-      <Slider />
+      <SliderComponent />
       <Globle />
       <Ready />
     </>
