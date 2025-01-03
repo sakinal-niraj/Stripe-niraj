@@ -8,6 +8,8 @@ import Ready from './Ready';
 import Globle from './Globle';
 import GlobeScale from './GlobeScale';
 import SliderComponent from './SliderComponent';
+import Startup from './Startup';
+import Ship from './Ship';
 
 // import Hero from './Hero';
 
@@ -22,6 +24,8 @@ function Home() {
       <Details />
       <GlobeScale />
       <SliderComponent />
+      <Startup />
+      <Ship />
       <Globle />
       <Ready />
     </>

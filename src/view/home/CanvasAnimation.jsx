@@ -80,9 +80,9 @@ const CanvasAnimation = () => {
                     </div>
 
                     {/* Content Section */}
-                    <div className="mt-8 max-w-[540px] space-y-9 ">
+                    <div className="mt-8 max-w-[540px] space-y-9 font-sohne-var ">
                         {/* Headline */}
-                        <h1 className="text-4xl md:text-6xl xl:text-[5.5rem] tracking-tight leading-[1.2] text-gray-800 font-bold">
+                        <h1 className="text-[32px] md:text-[80px] font-sohne-var tracking-tight leading-[5.1rem] text-gray-800 font-bold">
                             Financial infrastructure to grow your revenue
                         </h1>
 
