@@ -4,7 +4,7 @@ import DetailsComponent from './DetailsComponent';
 
 function Details() {
     return (
-        <section className="relative text-white bg-[#f2f6f9]
+        <section className="relative text-white bg-[#f2f6f9] w-full 3xl:flex justify-center
   after:content-[''] after:block after:w-full after:bg-[#f2f6f9] after:absolute after:h-28 z-10 top-9 md:top-[150px]">
             <div
                 className='bg-[#f2f6f9] mt-10'

@@ -6,6 +6,7 @@ function GlobeScale() {
     <>
       <section
         className="bg-[#0A2540] relative z-20
+        w-full 3xl:flex justify-center
         before:content-[''] before:block before:w-full before:h-28 "
         style={{
           clipPath: 'polygon(0 12%, 100% 0, 100% 100%, 0% 100%)',

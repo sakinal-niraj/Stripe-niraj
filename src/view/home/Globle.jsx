@@ -5,7 +5,7 @@ import card2 from '../../assets/images/card2.svg';
 
 function Globle() {
     return (
-        <section className=" before:content-[''] before:block before:w-full relative "
+        <section className="relative "
         >
             <div className='py-32 px-5 md:px-10 xl:px-24 2xl:px-56 pt-16 w-full space-y-12'>
                 {/* Content */}

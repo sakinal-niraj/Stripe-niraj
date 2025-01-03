@@ -24,7 +24,7 @@ function SliderComponent() {
     autoplay: true,
     speed: 1000,
     autoplaySpeed: 2000,
-    // lazyLoad: 'ondemand',
+    initialSlide:0,
     fade:true,
   };
   

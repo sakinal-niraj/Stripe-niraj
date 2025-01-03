@@ -10,16 +10,17 @@ import icon4 from '../../assets/images/icon4.png';
 function Ship() {
     return (
         <section
-            className="before:content-[''] before:block before:w-full before:h-5 bg-[#0a2540] z-20
-            after:content-[''] after:block after:w-full after:h-32"
+            className="
+            before:content-[''] before:block before:w-full before:h-5 bg-[#0a2540] z-20
+            after:content-[''] after:block after:w-full after:h-40"
             style={{
                 clipPath: 'polygon(0 10%, 100% 0, 100% 90%, 0% 100%)',
-                WebkitClipPath: 'polygon(0 10%, 100% 0, 100% 100%, 0% 100%)',
+                WebkitClipPath: 'polygon(0 10%, 100% 0, 100% 90%, 0% 100%)',
             }}
 
             
         >
-            <div className='py-20 pt-48 px-5 md:px-4 md:pl-8 xl:px-24 2xl:px-56 w-full text-white z-10 relative'>
+            <div className='py-20 pt-48 px-5 md:px-4 md:pl-8 xl:px-24 2xl:px-56 w-full 3xl:flex justify-center text-white z-10 relative'>
                 <div className='space-y-16 pt-5'>
                     {/* row 1 */}
                     <div className='grid sm:grid-cols-2 grid-cols-1 space-y-6 md:pl-4'>
@@ -63,7 +64,7 @@ function Ship() {
 
                             <p className='pl-4 text-[#adbdcc] text-[15px] text-left pr-8'> We offer client and server libraries in everything from React and PHP to .NET and iOS.</p>
 
-                            <p className='text-[15px] pl-4 text-[#00d4ff] hover:text-white font-medium'>See libraries </p>
+                            <p className='flex items-center text-[15px] pl-4 text-[#00d4ff] hover:text-white font-medium'>See libraries <span><MdKeyboardArrowRight /></span> </p>
                         </div>
 
                         {/* col2 */}
@@ -81,7 +82,7 @@ function Ship() {
 
                             <p className='pl-4 text-[#adbdcc] text-[15px] pr-[32px]'> Customize and deploy payments interfaces directly from the Stripe Dashboard.</p>
 
-                            <p className='text-[15px] pl-4 text-[#00d4ff] hover:text-white font-medium'>Explore no-code. </p>
+                            <p className='flex items-center text-[15px] pl-4 text-[#00d4ff] hover:text-white font-medium'>Explore no-code <span><MdKeyboardArrowRight /></span></p>
                         </div>
 
 
@@ -100,7 +101,7 @@ function Ship() {
 
                             <p className='pl-4 text-[#adbdcc] text-[15px] pr-[32px]'> Connect Stripe to over a hundred tools including Adobe, Salesforce, and Xero.</p>
 
-                            <p className='text-[15px] pl-4 text-[#00d4ff] hover:text-white font-medium'>Browse App Marketplace </p>
+                            <p className='flex items-center text-[15px] pl-4 text-[#00d4ff] hover:text-white font-medium'>Browse App Marketplace <span><MdKeyboardArrowRight /></span></p>
                         </div>
 
 
@@ -119,7 +120,7 @@ function Ship() {
 
                             <p className='pl-4 text-[#adbdcc] text-[15px] pr-[32px]'> Create an app just for your team or for the millions of businesses on Stripe.</p>
 
-                            <p className='text-[15px] pl-4 text-[#00d4ff] hover:text-white font-medium'>Learn about Apps     </p>
+                            <p className='flex items-center text-[15px] pl-4 text-[#00d4ff] hover:text-white font-medium'>Learn about Apps <MdKeyboardArrowRight /></p>
                         </div>
                     </div>
                 </div>

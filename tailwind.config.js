@@ -30,6 +30,8 @@ module.exports = {
   
         '2xl': '1536px',
         // => @media (min-width: 1536px) { ... }
+
+        '3xl': '1600px',
       },
       fontFamily: {
         'sohne-var': ['sohne-var', 'Helvetica Neue', 'Arial', 'sans-serif'],

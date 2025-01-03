@@ -14,8 +14,8 @@ function Header() {
 
     return (
         <>
-            <header className='w-full h-14 mt-2 z-50'>
-                <nav className='px-2 md:px-4 xl:px-24 2xl:px-[220px]'>
+            <header className='w-full h-14 mt-2 z-50 '>
+                <nav className='px-2 md:px-4 xl:px-24 2xl:px-[220px] 3xl:flex justify-center'>
                     <div className={`lg:mt-0 md:pt-2 px-3 flex justify-between items-center font-bold ${isOpen} ? mt-8 md:mt-4 : mt-3 md:mt-2`}>
                         {/* right side */}
                         <div className='flex items-center justify-center space-x-9'>

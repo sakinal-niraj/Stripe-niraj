@@ -4,6 +4,7 @@ import startupCard1 from '../../assets/images/startupCard1.jpg';
 function Startup() {
     return (
         <section className='bg-[#f6f9fc] 
+        w-full 3xl:flex justify-center
         after:content-[""] after:block after:w-full after:bg-[#f6f9fc] after:absolute after:h-28 z-0 top-9 md:top-[150px]:h-28 '>
             <div className='px-5 md:px-10 xl:px-24 2xl:px-56 py-20 w-full space-y-12'>
                 {/* Content */}

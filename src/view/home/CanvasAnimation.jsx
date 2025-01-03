@@ -58,7 +58,7 @@ const CanvasAnimation = () => {
     }, []);
 
     return (
-        <div>
+        <div className=''>
             <canvas
                 ref={canvasRef}
                 width="32"
@@ -70,11 +70,11 @@ const CanvasAnimation = () => {
             >
 
             </canvas>
-            <div className='-z-10 mt-16 w-full '>
-                <div className="text-black px-4 md:px-8 xl:px-24 2xl:px-[220px] ml-2">
+            <div className='-z-10 mt-16 '>
+                <div className="text-black px-4 md:px-8 xl:px-24 2xl:px-[220px] ml-2 ">
                     {/* Preview Tag */}
                     <div className="flex justify-start items-center">
-                        <h1 className="w-fit text-center py-[6px] px-4 rounded-full bg-gray-800/50 text-white text-xs font-bold tracking-wide">
+                        <h1 className="w-fit text-center p-[3px_12px_4px] rounded-full bg-gray-800/50 text-white text-[13px] font-bold tracking-wide">
                             Preview
                         </h1>
                     </div>
