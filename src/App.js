@@ -1,14 +1,17 @@
 import React from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
 import { routes } from './routes/Route';
-// import Header from './component/header/Header';
+import Header from './component/header/Header';
 import './index.css';
 import Footer from './component/footer/Footer';
 
 function App() {
+  const location = useLocation();
+  const showHeader = location.pathname !== '/'; 
   return (
     <div className="flex flex-col w-full h-screen font-sohne-var">
       {/* Canvas Animation in the Background */}
+      {showHeader && <Header />}  
 
       {/* Header Section */}
 

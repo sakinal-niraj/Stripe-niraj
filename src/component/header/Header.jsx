@@ -18,7 +18,7 @@ function Header() {
                 <nav className='px-2 md:px-4 xl:px-24 2xl:px-[220px] 3xl:flex justify-center'>
                     <div className={`lg:mt-0 md:pt-2 px-3 flex justify-between items-center font-bold ${isOpen} ? mt-8 md:mt-4 : mt-3 md:mt-2`}>
                         {/* right side */}
-                        <div className='flex items-center justify-center space-x-9'>
+                        <div className='flex items-center justify-center space-x-6'>
                             {/* Logo */}
                             <h1 className="SiteHeader__logo text-white">
                                 <Link to="/"
@@ -41,23 +41,23 @@ function Header() {
                                 <nav>
                                     <ul className='flex items-center justify-center font-semibold'>
                                         <li className='relative px-5 hover:opacity-100 group cursor-pointer'>
-                                            <button className='text-white'>Products</button>
+                                            <button className='text-white group-hover:opacity-50 text-[15px]'>Products</button>
                                             <Products />
                                         </li>
                                         <li className='relative px-5 hover:opacity-100 group cursor-pointer'>
-                                            <button className='text-white'>Solutoins</button>
+                                            <button className='text-white group-hover:opacity-50 text-[15px]'>Solutoins</button>
                                             <Solutions />
                                         </li>
                                         <li className='relative px-5 hover:opacity-100 group cursor-pointer'>
-                                            <button className='text-white'>Developers</button>
+                                            <button className='text-white group-hover:opacity-50 text-[15px]'>Developers</button>
                                             <Developers />
                                         </li>
                                         <li className='relative px-5 hover:opacity-100 group cursor-pointer'>
-                                            <button className='text-white'>Resources</button>
+                                            <button className='text-white group-hover:opacity-50 text-[15px]'>Resources</button>
                                             <Resources />
                                         </li>
                                         <li className='relative px-5 hover:opacity-50'>
-                                            <Link to={'/'} className=' text-white'>Price</Link>
+                                            <Link to={'/'} className=' text-white text-[15px]'>Price</Link>
                                         </li>
                                     </ul>
                                 </nav>
@@ -68,22 +68,22 @@ function Header() {
                         <div className='lg:flex space-y-2 space-x-2 items-center hidden'>
                             {/* Sign in */}
                             <div
-                                className='flex items-center pt-1 font-bold first-letter:uppercase transform'
+                                className='flex items-center pt-1 font-bold first-letter:uppercase transform text-[15px] hover:opacity-50 text-white'
                                 onMouseEnter={() => setHovered({ ...hovered, signIn: true })}
                                 onMouseLeave={() => setHovered({ ...hovered, signIn: false })}
                             >
                                 Sign in
-                                <span className='pt-1 text-lg font-extrabold transition duration-500'>{hovered.signIn ? <BsArrowRightShort /> : <MdKeyboardArrowRight />}</span>
+                                <span className=' text-lg font-extrabold transition duration-500'>{hovered.signIn ? <BsArrowRightShort /> : <MdKeyboardArrowRight />}</span>
                             </div>
 
                             {/* Contact sales */}
                             <div
-                                className='flex items-center font-normal transform bg-black text-white rounded-full py-1 px-4 pb-1.5 gap-1'
+                                className='flex items-center font-normal transform bg-white rounded-full py-1.5 px-4 gap-1'
                                 onMouseEnter={() => setHovered({ ...hovered, contactSales: true })}
                                 onMouseLeave={() => setHovered({ ...hovered, contactSales: false })}
                             >
-                                Contact sales
-                                <span className='pt-1 font-bold transition duration-500'>{hovered.contactSales ? <BsArrowRightShort /> : <MdKeyboardArrowRight />}</span>
+                                <span className='font-medium text-[15px] bg-gradient-to-r from-[#FFBD22] to-[#A13FBC] bg-clip-text text-transparent'>Contact sales</span>
+                                <span className='pt-[2px] font-bold transition duration-500'>{hovered.contactSales ? <BsArrowRightShort /> : <MdKeyboardArrowRight />}</span>
                             </div>
                         </div>
 

@@ -70,19 +70,19 @@ const CanvasAnimation = () => {
             >
 
             </canvas>
-            <div className='-z-10 mt-16 '>
-                <div className="text-black px-4 md:px-8 xl:px-24 2xl:px-[220px] ml-2 ">
+            <div className='-z-10 mt-5 md:mt-16 w-full '>
+                <div className="text-black px-4 md:px-8 xl:px-24 2xl:px-[220px] ml-2">
                     {/* Preview Tag */}
                     <div className="flex justify-start items-center">
-                        <h1 className="w-fit text-center p-[3px_12px_4px] rounded-full bg-gray-800/50 text-white text-[13px] font-bold tracking-wide">
+                        <h1 className="w-fit text-center px-3 py-2 rounded-sm md:py-[4px] md:px-[13px] md:rounded-full bg-gray-800/50 text-white text-[13px] font-bold tracking-wide">
                             Preview
                         </h1>
                     </div>
 
                     {/* Content Section */}
-                    <div className="mt-8 max-w-[540px] space-y-9 font-sohne-var ">
+                    <div className="mt-8 max-w-[540px] space-y-9 ">
                         {/* Headline */}
-                        <h1 className="text-[32px] md:text-[80px] font-sohne-var tracking-tight leading-[5.1rem] text-gray-800 font-bold">
+                        <h1 className="text-[61px] md:text-[91px] tracking-[-0.06em] leading-[1] text-gray-800 font-bold">
                             Financial infrastructure to grow your revenue
                         </h1>
 
@@ -95,11 +95,11 @@ const CanvasAnimation = () => {
                         <button
                             onMouseEnter={() => setHovered({ ...hovered, contactSales: true })}
                             onMouseLeave={() => setHovered({ ...hovered, contactSales: false })}
-                            className="flex items-center gap-2 bg-gray-900 text-white rounded-full py-2 px-6 font-semibold shadow-md transition-transform duration-300 hover:scale-105 hover:bg-gray-800"
+                            className="flex items-center text-[15px] gap-1 bg-[#0a2540] text-white rounded-full p-[7px_12px_6px_16px] font-semibold shadow-md hover:opacity-50"
                         >
                             Request an invite
-                            <span className="text-lg">
-                                {hovered.contactSales ? <BsArrowRightShort /> : <MdKeyboardArrowRight />}
+                            <span className="text-lg transition-transform duration-300">
+                                {hovered.contactSales ? <BsArrowRightShort  /> : <MdKeyboardArrowRight />}
                             </span>
                         </button>
                     </div>

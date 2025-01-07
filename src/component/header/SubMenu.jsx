@@ -74,7 +74,7 @@ const Products = () => {
                     <div className="p-1 space-y-1 text-[15px] flex">
                         <div className="flex flex-col relative z-10 w-[70%]">
                             {/* Globel */}
-                            <div className="bg-white rounded-xl p-6 pb-7 border-2  w-full">
+                            <div className="bg-white rounded-xl p-6 pb-7 border-[1px]  w-full">
                                 <h1 className="uppercase text-[#000000] text-[15px] font-bold">Globle payments</h1>
                                 <div className="grid grid-cols-2 mt-2 gap-30">
                                     <div>

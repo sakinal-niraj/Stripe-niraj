@@ -13,7 +13,7 @@ function Comanies() {
   ]
   return (
     <div className='w-full 3xl:flex justify-center'>
-      <div className="px-4 md:px-10 xl:px-20 2xl:px-40 mt-24 mb-4">
+      <div className="px-4 md:px-10 xl:px-20 2xl:px-56 mt-28">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
           {companise.map((item, index) => (
             <div

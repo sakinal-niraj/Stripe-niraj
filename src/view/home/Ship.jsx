@@ -18,10 +18,10 @@ function Ship() {
                 WebkitClipPath: 'polygon(0 10%, 100% 0, 100% 90%, 0% 100%)',
             }}
 
-            
+
         >
-            <div className='py-20 pt-48 px-5 md:px-4 md:pl-8 xl:px-24 2xl:px-56 w-full 3xl:flex justify-center text-white z-10 relative'>
-                <div className='space-y-16 pt-5'>
+            <div className='py-20 pt-48 px-5 md:px-4 md:pl-8 xl:px-24 2xl:px-56  w-full 3xl:flex justify-center text-white z-10 relative'>
+                <div className='space-y-16 pt-5 max-w-[1100px] 3xl:ml-10'>
                     {/* row 1 */}
                     <div className='grid sm:grid-cols-2 grid-cols-1 space-y-6 md:pl-4'>
                         {/* col1 */}
