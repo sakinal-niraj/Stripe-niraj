@@ -68,8 +68,7 @@ const Products = () => {
                                             md:opacity-0 invisible md:group-hover:opacity-100 group-hover:visible duration-300 ease-in-out
                                             group-hover:transform z-50 min-w-[1000px] transform'>
             <div className="relative top-6 bg-[#F6F9FB] rounded-xl shadow-xl w-full">
-                <div className="w-10 h-10  bg-[#F6F9FB] transform rotate-45 absolute top-0 z-0 translate-x-0
-                transition-transform group-hover:translate-x-[5rem] duration-300 ease-in-out rounded-sm"></div>
+                <div className="w-10 h-10  bg-[#F6F9FB] transform rotate-45 absolute top-0 z-0 translate-x-[8rem] rounded-sm"></div>
                 <div>
                     <div className="p-1 space-y-1 text-[15px] flex">
                         <div className="flex flex-col relative z-10 w-[70%]">
@@ -240,8 +239,7 @@ const Solutions = () => {
                                             opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-300 ease-in-out
                                             group-hover:transform z-50 min-w-[600px] transform'>
             <div className="relative top-6 bg-[#F6F9FB] rounded-xl shadow-xl w-full">
-                <div className="w-10 h-10  bg-[#F6F9FB] transform rotate-45 absolute top-0 z-0 translate-x-0
-                transition-transform group-hover:translate-x-[5rem] duration-300 ease-in-out rounded-sm"></div>
+                <div className="w-10 h-10  bg-[#F6F9FB] transform rotate-45 absolute top-0 z-0 translate-x-[5rem] rounded-sm"></div>
                 <div>
                     {/* first row */}
                     <div className="p-1 space-y-1 text-[15px]">
@@ -318,8 +316,7 @@ const Developers = () => {
                                             opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-300 ease-in-out
                                             group-hover:transform z-50 min-w-[550px] transform'>
             <div className="relative top-6 bg-[white] rounded-xl shadow-xl shadow-gray-400 w-full">
-                <div className="w-10 h-10  bg-[white] transform rotate-45 absolute top-0 z-0 translate-x-0
-                transition-transform group-hover:translate-x-[9rem] duration-300 ease-in-out rounded-sm"></div>
+                <div className="w-10 h-10  bg-[white] transform rotate-45 absolute top-0 z-0 translate-x-[9rem] rounded-sm"></div>
                 <div>
 
                     {/* first row */}
@@ -368,8 +365,7 @@ const Resources = () => {
                                             opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-300 ease-in-out
                                             group-hover:transform z-50 min-w-[500px] transform'>
             <div className="relative top-6 bg-[white] rounded-xl shadow-xl shadow-gray-400 w-full">
-                <div className="w-10 h-10  bg-[white] transform rotate-45 absolute top-0 z-0 translate-x-0
-                transition-transform group-hover:translate-x-[9rem] duration-300 ease-in-out rounded-sm"></div>
+                <div className="w-10 h-10  bg-[white] transform rotate-45 absolute top-0 z-0 translate-x-[9rem] rounded-sm"></div>
                 <div>
 
                     {/* first row */}
