@@ -1,9 +1,11 @@
+import { BsArrowRightShort } from "react-icons/bs";
+
 const ProductConstant = [
-    { key: 'paymeth', label: 'Payment Methods', description: 'Access to 100+ globally' },
-    { key: 'link', label: 'Link', description: 'Accelerated checkout' },
-    { key: 'financialConn', label: 'Financial Connections', description: 'Linked financial account data' },
-    { key: 'identity', label: 'Identity', description: 'Online identity verification' },
-    { key: 'atlas', label: 'Atlas', description: 'Start-up incorporation' },
+    { id: 10, key: 'paymeth', label: 'Payment Methods', description: 'Access to 100+ globally',hover:(<BsArrowRightShort />), },
+    { id: 11, key: 'link', label: 'Link', description: 'Accelerated checkout' ,hover:(<BsArrowRightShort />),},
+    { id: 12, key: 'financialConn', label: 'Financial Connections', description: 'Linked financial account data',hover:(<BsArrowRightShort />), },
+    { id: 13, key: 'identity', label: 'Identity', description: 'Online identity verification' ,hover:(<BsArrowRightShort />),},
+    { id: 14, key: 'atlas', label: 'Atlas', description: 'Start-up incorporation',hover:(<BsArrowRightShort />), },
 ]
 
 // product global section
@@ -51,6 +53,7 @@ const ProductGlobal = [
 // Revenue and finance
 const RevenueFinance = [
     {
+        id: 4,
         key: 'billing',
         svg: (<svg class="ProductIcon ProductIcon--Billing " width="20" height="20" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
 
@@ -60,56 +63,73 @@ const RevenueFinance = [
         </svg>),
         label: "Billing",
         description: 'Subscriptions and usage-based',
+        hover: (<BsArrowRightShort />),
+        default: ""
     },
     {
+        id: 5,
         key: 'revenueRecognition',
         svg: (<svg class="ProductIcon ProductIcon--RevRec " width="20" height="20" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-    
+
             <title>Revenue Recognition</title>
-          
-          <path d="M24.4531 3.37679c.0004-.4707-.1391-.9309-.4008-1.32216-.2616-.39126-.6337-.69594-1.0689-.87535-.4351-.179408-.9138-.225461-1.3752-.1323-.4614.09315-.8847.32131-1.2161.65551L3.57784 18.493c-.33493.3321-.56335.7565-.65614 1.219-.09278.4626-.04573.9422.13515 1.3779.18089.4356.48742.8076.88051 1.0683.39309.2608.85494.3986 1.32665.3958h4.74979L24.4531 8.12657V3.37679z" fill="url(#product-icon-revrec-SiteMobileMenu-a)"></path><path d="M33.7627 8.12634h-9.3096V20.1789c0 .6299-.2502 1.2339-.6956 1.6793-.4453.4454-1.0494.6956-1.6793.6956H10.0138V36.625c0 .6299.2502 1.234.6956 1.6793.4454.4454 1.0494.6956 1.6793.6956h21.374c.6299 0 1.2339-.2502 1.6793-.6956.4454-.4453.6956-1.0494.6956-1.6793V10.5012c0-.62983-.2502-1.23389-.6956-1.67927-.4454-.44538-1.0494-.69559-1.6793-.69559z" fill="#9A66FF"></path><path d="M24.4531 20.1789V8.12634L10.0138 22.5538h12.0644c.6299 0 1.234-.2502 1.6793-.6956.4454-.4454.6956-1.0494.6956-1.6793z" fill="url(#product-icon-revrec-SiteMobileMenu-b)"></path><defs><linearGradient id="product-icon-revrec-SiteMobileMenu-a" x1="13.7647" y1="1" x2="13.7647" y2="22.3532" gradientUnits="userSpaceOnUse"><stop offset=".270725" stop-color="#FF5091"></stop><stop offset="1" stop-color="#E03071"></stop></linearGradient><linearGradient id="product-icon-revrec-SiteMobileMenu-b" x1="16.0302" y1="22.3652" x2="24.2719" y2="6.84356" gradientUnits="userSpaceOnUse"><stop stop-color="#6E00F5"></stop><stop offset="1" stop-color="#9860FE"></stop></linearGradient></defs>
+
+            <path d="M24.4531 3.37679c.0004-.4707-.1391-.9309-.4008-1.32216-.2616-.39126-.6337-.69594-1.0689-.87535-.4351-.179408-.9138-.225461-1.3752-.1323-.4614.09315-.8847.32131-1.2161.65551L3.57784 18.493c-.33493.3321-.56335.7565-.65614 1.219-.09278.4626-.04573.9422.13515 1.3779.18089.4356.48742.8076.88051 1.0683.39309.2608.85494.3986 1.32665.3958h4.74979L24.4531 8.12657V3.37679z" fill="url(#product-icon-revrec-SiteMobileMenu-a)"></path><path d="M33.7627 8.12634h-9.3096V20.1789c0 .6299-.2502 1.2339-.6956 1.6793-.4453.4454-1.0494.6956-1.6793.6956H10.0138V36.625c0 .6299.2502 1.234.6956 1.6793.4454.4454 1.0494.6956 1.6793.6956h21.374c.6299 0 1.2339-.2502 1.6793-.6956.4454-.4453.6956-1.0494.6956-1.6793V10.5012c0-.62983-.2502-1.23389-.6956-1.67927-.4454-.44538-1.0494-.69559-1.6793-.69559z" fill="#9A66FF"></path><path d="M24.4531 20.1789V8.12634L10.0138 22.5538h12.0644c.6299 0 1.234-.2502 1.6793-.6956.4454-.4454.6956-1.0494.6956-1.6793z" fill="url(#product-icon-revrec-SiteMobileMenu-b)"></path><defs><linearGradient id="product-icon-revrec-SiteMobileMenu-a" x1="13.7647" y1="1" x2="13.7647" y2="22.3532" gradientUnits="userSpaceOnUse"><stop offset=".270725" stop-color="#FF5091"></stop><stop offset="1" stop-color="#E03071"></stop></linearGradient><linearGradient id="product-icon-revrec-SiteMobileMenu-b" x1="16.0302" y1="22.3652" x2="24.2719" y2="6.84356" gradientUnits="userSpaceOnUse"><stop stop-color="#6E00F5"></stop><stop offset="1" stop-color="#9860FE"></stop></linearGradient></defs>
         </svg>),
         label: "Revenue Recognition",
         description: 'Accounting automation',
+        hover: (<BsArrowRightShort />),
+        default: ""
     },
     {
+        id: 6,
         key: 'tax',
         svg: (<svg class="ProductIcon ProductIcon--Tax " width="20" height="20" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-    
+
             <title>Tax</title>
-          
-          <path d="M19.049.00995851C22.4341.325767 25.7367 1.28014 28.7794 2.83046c3.0426 1.55031 5.756 3.66123 8.0012 6.2142.9142 1.03954.6576 2.61624-.4624 3.42994L20.5259 23.9483c-1.6569 1.2039-3.98.0202-3.98-2.0279V2.40011c0-1.38439 1.1247-2.518749 2.5031-2.39015149z" fill="url(#product-icon-tax-SiteMobileMenu-a)"></path><circle cx="17.6666" cy="24.3334" transform="rotate(-90 17.6666 24.3334)" fill="#96F" r="15.6666"></circle><path d="M31.099 16.2665l-10.5731 7.6818c-1.6569 1.2038-3.98.0201-3.98-2.028V8.70618c.37-.02614.7436-.03943 1.1202-.03943 5.7019 0 10.6924 3.04605 13.4329 7.59975z" fill="url(#product-icon-tax-SiteMobileMenu-b)"></path><defs><linearGradient id="product-icon-tax-SiteMobileMenu-a" x1="27.6927" y1="-.106484" x2="27.6927" y2="20.5734" gradientUnits="userSpaceOnUse"><stop offset=".23665" stop-color="#FF5191"></stop><stop offset="1" stop-color="#E03071"></stop></linearGradient><linearGradient id="product-icon-tax-SiteMobileMenu-b" x1="23.3061" y1="24.96" x2="18.8407" y2="7.43349" gradientUnits="userSpaceOnUse"><stop stop-color="#6E00F5"></stop><stop offset="1" stop-color="#9860FE"></stop></linearGradient></defs>
+
+            <path d="M19.049.00995851C22.4341.325767 25.7367 1.28014 28.7794 2.83046c3.0426 1.55031 5.756 3.66123 8.0012 6.2142.9142 1.03954.6576 2.61624-.4624 3.42994L20.5259 23.9483c-1.6569 1.2039-3.98.0202-3.98-2.0279V2.40011c0-1.38439 1.1247-2.518749 2.5031-2.39015149z" fill="url(#product-icon-tax-SiteMobileMenu-a)"></path><circle cx="17.6666" cy="24.3334" transform="rotate(-90 17.6666 24.3334)" fill="#96F" r="15.6666"></circle><path d="M31.099 16.2665l-10.5731 7.6818c-1.6569 1.2038-3.98.0201-3.98-2.028V8.70618c.37-.02614.7436-.03943 1.1202-.03943 5.7019 0 10.6924 3.04605 13.4329 7.59975z" fill="url(#product-icon-tax-SiteMobileMenu-b)"></path><defs><linearGradient id="product-icon-tax-SiteMobileMenu-a" x1="27.6927" y1="-.106484" x2="27.6927" y2="20.5734" gradientUnits="userSpaceOnUse"><stop offset=".23665" stop-color="#FF5191"></stop><stop offset="1" stop-color="#E03071"></stop></linearGradient><linearGradient id="product-icon-tax-SiteMobileMenu-b" x1="23.3061" y1="24.96" x2="18.8407" y2="7.43349" gradientUnits="userSpaceOnUse"><stop stop-color="#6E00F5"></stop><stop offset="1" stop-color="#9860FE"></stop></linearGradient></defs>
         </svg>),
         label: "Tax",
         description: 'Sales tax & VAT automation',
+        hover: (<BsArrowRightShort />),
+        default: ""
     },
     {
+        id: 7,
         key: 'invocing',
         svg: (<svg class="ProductIcon ProductIcon--Invoicing " width="20" height="20" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-    
+
             <title>Invoicing</title>
-          
-          <path d="M12.5001 1C11.1194 1 10.0001 2.11929 10.0001 3.5V36.3314C10.0001 37.4628 9.24028 38.4532 8.14746 38.7462L36.1472 31.24C37.2401 30.9472 38.0001 29.9567 38.0001 28.8252V3.5C38.0001 2.11929 36.8808 1 35.5001 1H12.5001Z" fill="#00D924"></path><path d="M1.25338 24.5476C0.0575759 25.238 -0.352092 26.7668 0.338338 27.9626L5.81522 37.449C6.38097 38.4289 7.53438 38.9067 8.62734 38.6138L34.7744 31.6076L24.5869 13.9626C23.8969 12.7668 22.3676 12.3571 21.1718 13.0476L1.25338 24.5476Z" fill="url(#product-icon-invoicing-SiteMobileMenu-a)"></path><path d="M8.40173 38.6633C8.4771 38.6504 8.55237 38.6339 8.62737 38.6138L34.7744 31.6076L24.5869 13.9626C23.897 12.7668 22.3677 12.3571 21.1719 13.0476L10.0002 19.4976V36.3314C10.0002 37.3728 9.35638 38.2947 8.40173 38.6633Z" fill="url(#product-icon-invoicing-SiteMobileMenu-b)"></path><defs><linearGradient id="product-icon-invoicing-SiteMobileMenu-a" x1="17.3897" y1="20.25" x2="17.3893" y2="38" gradientUnits="userSpaceOnUse"><stop stop-color="#FFD748"></stop><stop offset="1" stop-color="#FFC148"></stop></linearGradient><linearGradient id="product-icon-invoicing-SiteMobileMenu-b" x1="21.5889" y1="12.7122" x2="21.5881" y2="38.6633" gradientUnits="userSpaceOnUse"><stop stop-color="#00A600"></stop><stop offset="1" stop-color="#00D924"></stop></linearGradient></defs>
+
+            <path d="M12.5001 1C11.1194 1 10.0001 2.11929 10.0001 3.5V36.3314C10.0001 37.4628 9.24028 38.4532 8.14746 38.7462L36.1472 31.24C37.2401 30.9472 38.0001 29.9567 38.0001 28.8252V3.5C38.0001 2.11929 36.8808 1 35.5001 1H12.5001Z" fill="#00D924"></path><path d="M1.25338 24.5476C0.0575759 25.238 -0.352092 26.7668 0.338338 27.9626L5.81522 37.449C6.38097 38.4289 7.53438 38.9067 8.62734 38.6138L34.7744 31.6076L24.5869 13.9626C23.8969 12.7668 22.3676 12.3571 21.1718 13.0476L1.25338 24.5476Z" fill="url(#product-icon-invoicing-SiteMobileMenu-a)"></path><path d="M8.40173 38.6633C8.4771 38.6504 8.55237 38.6339 8.62737 38.6138L34.7744 31.6076L24.5869 13.9626C23.897 12.7668 22.3677 12.3571 21.1719 13.0476L10.0002 19.4976V36.3314C10.0002 37.3728 9.35638 38.2947 8.40173 38.6633Z" fill="url(#product-icon-invoicing-SiteMobileMenu-b)"></path><defs><linearGradient id="product-icon-invoicing-SiteMobileMenu-a" x1="17.3897" y1="20.25" x2="17.3893" y2="38" gradientUnits="userSpaceOnUse"><stop stop-color="#FFD748"></stop><stop offset="1" stop-color="#FFC148"></stop></linearGradient><linearGradient id="product-icon-invoicing-SiteMobileMenu-b" x1="21.5889" y1="12.7122" x2="21.5881" y2="38.6633" gradientUnits="userSpaceOnUse"><stop stop-color="#00A600"></stop><stop offset="1" stop-color="#00D924"></stop></linearGradient></defs>
         </svg>),
         label: "Invocing",
         description: 'Online reports',
+        hover: (<BsArrowRightShort />),
+        default: ""
     },
     {
+        id: 8,
         key: 'sigma',
         svg: (<svg class="ProductIcon ProductIcon--Sigma " width="20" height="20" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-    
+
             <title>Sigma</title>
-          
-          <path d="M5 35V7a3 3 0 0 1 5.48-1.69L21.2 21 9.32 38H8a3 3 0 0 1-3-3z" fill="url(#product-icon-sigma-SiteMobileMenu-a)"></path><path d="M8.06 4h25.16a1.5 1.5 0 0 1 1.1 2.51L21.15 21 5.84 4.92A3 3 0 0 1 8.05 4z" fill="url(#product-icon-sigma-SiteMobileMenu-b)"></path><path d="M7.88 38H33.2a1.5 1.5 0 0 0 1.11-2.51L21.11 21 7.14 36.33A1 1 0 0 0 7.88 38z" fill="#9A66FF"></path><defs><linearGradient id="product-icon-sigma-SiteMobileMenu-a" x1="13.1" y1="38" x2="13.1" y2="12.99" gradientUnits="userSpaceOnUse"><stop stop-color="#9860FE"></stop><stop offset="1" stop-color="#6E00F5"></stop></linearGradient><linearGradient id="product-icon-sigma-SiteMobileMenu-b" x1="20.28" y1="8.42" x2="20.28" y2="19.47" gradientUnits="userSpaceOnUse"><stop stop-color="#FF5091"></stop><stop offset="1" stop-color="#E03071"></stop></linearGradient></defs>
+
+            <path d="M5 35V7a3 3 0 0 1 5.48-1.69L21.2 21 9.32 38H8a3 3 0 0 1-3-3z" fill="url(#product-icon-sigma-SiteMobileMenu-a)"></path><path d="M8.06 4h25.16a1.5 1.5 0 0 1 1.1 2.51L21.15 21 5.84 4.92A3 3 0 0 1 8.05 4z" fill="url(#product-icon-sigma-SiteMobileMenu-b)"></path><path d="M7.88 38H33.2a1.5 1.5 0 0 0 1.11-2.51L21.11 21 7.14 36.33A1 1 0 0 0 7.88 38z" fill="#9A66FF"></path><defs><linearGradient id="product-icon-sigma-SiteMobileMenu-a" x1="13.1" y1="38" x2="13.1" y2="12.99" gradientUnits="userSpaceOnUse"><stop stop-color="#9860FE"></stop><stop offset="1" stop-color="#6E00F5"></stop></linearGradient><linearGradient id="product-icon-sigma-SiteMobileMenu-b" x1="20.28" y1="8.42" x2="20.28" y2="19.47" gradientUnits="userSpaceOnUse"><stop stop-color="#FF5091"></stop><stop offset="1" stop-color="#E03071"></stop></linearGradient></defs>
         </svg>),
         label: "Sigma",
         description: 'Custom reports',
+        hover: (<BsArrowRightShort />),
+        default: ""
     },
     {
+        id: 9,
         key: 'dataPipe',
         svg: (<svg class="ProductIcon ProductIcon--DataPipeline " width="20" height="20" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.375 10.813h-.938C3.75 10.813 0 14.957 0 19.718c0 4.761 3.75 8.906 8.438 8.906H18.75c1.035 0 1.875-.84 1.875-1.875v-6.563H11.25a1.875 1.875 0 0 1-1.875-1.875v-7.5Z" fill="url(#product-icon-data-pipeline-SiteMobileMenu-a)"></path><path d="M20.625 12.688c0-1.036-.84-1.876-1.875-1.876H9.375v7.5c0 1.036.84 1.875 1.875 1.875h9.375v-7.5Z" fill="url(#product-icon-data-pipeline-SiteMobileMenu-b)"></path><path d="M9.375 4.25c0-1.036.84-1.875 1.875-1.875h10.313C26.25 2.375 30 6.52 30 11.281c0 4.762-3.75 8.906-8.438 8.906h-.937v-7.5c0-1.035-.84-1.874-1.875-1.874H9.375V4.25Z" fill="#9A66FF"></path><defs><linearGradient id="product-icon-data-pipeline-SiteMobileMenu-a" x1="9.375" y1="11.75" x2="4.875" y2="29" gradientUnits="userSpaceOnUse"><stop stop-color="#E03071"></stop><stop offset="1" stop-color="#FF5091"></stop></linearGradient><linearGradient id="product-icon-data-pipeline-SiteMobileMenu-b" x1="12.375" y1="20" x2="15.078" y2="9.056" gradientUnits="userSpaceOnUse"><stop stop-color="#9860FE"></stop><stop offset="1" stop-color="#6E00F5"></stop></linearGradient></defs></svg>),
         label: "Data Pipeline",
         description: 'Data sync',
+        hover: (<BsArrowRightShort />),
+        default: ""
     }
 ];
 

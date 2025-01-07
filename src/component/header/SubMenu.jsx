@@ -29,24 +29,16 @@ import { FaArrowsAltH } from "react-icons/fa";
 import { BsFiles } from "react-icons/bs";
 import { useState } from "react";
 import { LuDot } from "react-icons/lu";
-import { ProductConstant, ProductGlobal,RevenueFinance } from "../../constant/Products";
+import { ProductConstant, ProductGlobal, RevenueFinance } from "../../constant/Products";
+import { paymentHover } from "../../constant/Hover";
 
 
 
 
 const Products = () => {
     const [hovered, setHovered] = useState({
-        payments: false,
-        paylink: false,
-        checkout: false,
         elements: false,
         connect: false,
-        Billing:false,
-        revenueRecognition:false,
-        tax:false,
-        invocing:false,
-        sigma:false,
-        dataPipe:false,
     });
 
     // global-2
@@ -56,13 +48,9 @@ const Products = () => {
         Authorization: false,
     });
 
-    const [isHoverd, setIsHoverd] = useState({
-        paymeth: false,
-        link: false,
-        financialConn: false,
-        identity: false,
-        atlas: false,
-    });
+
+    // icons
+    const [hoveredIcon, setHoveredIcon] = useState(null);
     return (
         <div className='absolute top-0 left-[-6.5rem] transition group-hover:translate-y-5 translate-y-0
                                             md:opacity-0 invisible md:group-hover:opacity-100 group-hover:visible duration-300 ease-in-out
@@ -74,7 +62,7 @@ const Products = () => {
                         <div className="flex flex-col relative z-10 w-[70%]">
                             {/* Globel */}
                             <div className="bg-white rounded-xl p-6 pb-7 border-[1px]  w-full">
-                                <h1 className="uppercase text-[#000000] text-[15px] font-bold">Globle payments</h1>
+                                <h1 className="uppercase text-[#0A2540] text-[12px] ">Globle payments</h1>
                                 <div className="grid grid-cols-2 mt-2 gap-30">
                                     <div>
                                         {/* logo x payment  */}
@@ -91,38 +79,29 @@ const Products = () => {
                                                 onMouseEnter={() => setHovered({ ...hovered, payments: true })}
                                                 onMouseLeave={() => setHovered({ ...hovered, payments: false })}
                                             >
-                                                <p className="font-semibold flex items-center gap-2">Payments {hovered.payments ? <BsArrowRightShort size={20} /> : ""}</p>
+                                                <p className="font-semibold flex items-center gap-2 text-[#0a2540]">Payments {hovered.payments ? <BsArrowRightShort size={20} /> : ""}</p>
                                                 <p className="opacity-70 hover:font-semibold hover:opacity-100">Online payments</p>
                                             </div>
                                         </div>
                                         {/* content */}
                                         <div className="text-xs ml-7 mt-3 space-y-1 lg:w-[70%]">
-                                            <p className="flex items-center p-1.5 bg-[#F6F9FC] rounded-md"
-                                                onMouseEnter={() => setHovered({ ...hovered, paylink: true })}
-                                                onMouseLeave={() => setHovered({ ...hovered, paylink: false })}
-                                            >
-                                                <span className="font-bold">Payment links</span>
-                                                <span className="mt-0.5 font-extrabold ml-0.5">{hovered.paylink ? <BsArrowRightShort /> : <LuDot />}</span>
-                                                <span className="opactiy-50">No-code payments</span>
-                                            </p>
+                                            {paymentHover.map((item) => (
+                                                <p
+                                                    className="flex items-center p-1.5 bg-[#F6F9FC] rounded-md"
+                                                    key={item.id}
+                                                    onMouseEnter={() => setHoveredIcon(item.id)}
+                                                    onMouseLeave={() => setHoveredIcon(null)}
+                                                >
+                                                    <span className="text-[13px] text-[#0a2540]">{item.title}</span>
+                                                    <span className="mt-0.5 ml-0.5">
+                                                        {hoveredIcon === item.id ? item.hover : item.default}
+                                                    </span>
+                                                    <span className={`transition-opacity duration-100 text-[13px] text-[#0a2540] ${hoveredIcon === item.id ? "opacity-100" :"opacity-50"} font-[300]`}>
+                                                        {item.desc}
+                                                    </span>
+                                                </p>
+                                            ))}
 
-                                            <p className="flex items-center p-1.5 bg-[#F6F9FC] rounded-md"
-                                                onMouseEnter={() => setHovered({ ...hovered, checkout: true })}
-                                                onMouseLeave={() => setHovered({ ...hovered, checkout: false })}
-                                            >
-                                                <span className="font-bold">Payment links</span>
-                                                <span className="mt-0.5 font-extrabold ml-0.5">{hovered.checkout ? <BsArrowRightShort /> : <LuDot />}</span>
-                                                <span className="opactiy-50">No-code payments</span>
-                                            </p>
-
-                                            <p className="flex items-center p-1.5 bg-[#F6F9FC] rounded-md"
-                                                onMouseEnter={() => setHovered({ ...hovered, elements: true })}
-                                                onMouseLeave={() => setHovered({ ...hovered, elements: false })}
-                                            >
-                                                <span className="font-bold">Payment links</span>
-                                                <span className="mt-0.5 font-extrabold ml-0.5">{hovered.elements ? <BsArrowRightShort /> : <LuDot />}</span>
-                                                <span className="opactiy-50">No-code payments</span>
-                                            </p>
                                         </div>
                                     </div>
 
@@ -142,8 +121,8 @@ const Products = () => {
                                                             setGlobHoverd((prev) => ({ ...prev, [item.label]: false }))
                                                         }
                                                     >
-                                                        <p className="font-semibold flex items-center gap-2">{item.label} {globHoverd[item.label] ? <BsArrowRightShort size={20} /> : ""}</p>
-                                                        <p className="opacity-70 hover:font-semibold hover:opacity-100">{item.description}</p>
+                                                        <p className="font-semibold flex items-center gap-2 text-[#0a2540] text-[16px]">{item.label} {globHoverd[item.label] ? <BsArrowRightShort size={20} /> : ""}</p>
+                                                        <p className={`transition-opacity duration-100 opacity-50 text-[#0a2540] ${globHoverd[item.label] ? "opacity-100" : "opacity-0"} text-[16px] font-normal `}>{item.description}</p>
                                                     </div>
                                                 </div>
                                             ))
@@ -155,7 +134,7 @@ const Products = () => {
 
                             {/* Embedded */}
                             <div className="bg-white rounded-xl p-6 pb-7 border-2  w-full">
-                                <h1 className="uppercase text-[#000000] text-[15px] font-bold">Embedded payments and Finance</h1>
+                                <h1 className="uppercase text-[#0a2540] text-[13px]">Embedded payments and Finance</h1>
                                 <div className="flex gap-2 mt-2">
                                     <div className="pt-2">
                                         <svg class="ProductIcon ProductIcon--Payments " width="20" height="20" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -169,8 +148,12 @@ const Products = () => {
                                         onMouseEnter={() => setHovered({ ...hovered, connect: true })}
                                         onMouseLeave={() => setHovered({ ...hovered, connect: false })}
                                     >
-                                        <p className="font-semibold flex items-center gap-2">Connect {hovered.connect ? <BsArrowRightShort size={20} /> : ""}</p>
-                                        <p className="opacity-70 hover:font-semibold hover:opacity-100">Payments for plateforms</p>
+                                        <p className="flex items-center gap-2 text-[#0a2540] font-[500]">
+                                            Connect {hovered.connect ? <BsArrowRightShort size={20} /> : ""}
+                                        </p>
+                                        <p className={`transition-opacity text-[#0a2450] duration-100 ${hovered.connect ? "opacity-100" : "opacity-50"} font-[300]`}>
+                                            Payments for platforms
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -192,11 +175,12 @@ const Products = () => {
                                                         {item.svg}
                                                     </div>
                                                     <div
-                                                        onMouseEnter={() => setHovered({ ...hovered, [item?.key]: true })}
-                                                        onMouseLeave={() => setHovered({ ...hovered, [item?.key]: false })}
+                                                        key={item.id}
+                                                        onMouseEnter={() => setHoveredIcon(item.id)}
+                                                        onMouseLeave={() => setHoveredIcon(null)}
                                                     >
-                                                        <p className="font-semibold flex items-center gap-1">{item.label} {hovered[item.key] ? <BsArrowRightShort size={20} /> : ""}</p>
-                                                        <p className="opacity-70 hover:font-semibold hover:opacity-100">{item.description}</p>
+                                                        <p className="flex items-center gap-1 font-[500]">{item.label} {hoveredIcon === item.id ? item.hover : ""}</p>
+                                                        <p className={`transition-opacity duration-100 text-[#0a2540] opacity-50 ${hoveredIcon === item.id ? "opacity-100" : "opacity-0"} font-[300]`}>{item.description}</p>
                                                     </div>
                                                 </div>
 
@@ -212,12 +196,21 @@ const Products = () => {
                             <h1 className="font-bold text-lg">More</h1>
 
                             {ProductConstant.map((item) => (
-                                <div key={item.key}
-                                    onMouseEnter={() => setIsHoverd({ ...isHoverd, [item.key]: true })}
-                                    onMouseLeave={() => setIsHoverd({ ...isHoverd, [item.key]: false })}
+                                <div
+                                    key={item.id}
+                                    onMouseEnter={() => setHoveredIcon(item.id)} // Set hoveredIcon to item.id when mouse enters
+                                    onMouseLeave={() => setHoveredIcon(null)} // Reset hoveredIcon to null when mouse leaves
+                                    className="relative"
                                 >
-                                    <p className="flex items-center gap-1 ">{item?.label} <span>{isHoverd[item.key] ? <BsArrowRightShort /> : ""}</span></p>
-                                    <p className={`  ${isHoverd[item.key] ? 'block' : 'hidden'}`} >{item?.description}</p>
+                                    <p className="flex items-center gap-1 font-[500]">
+                                        {item?.label}
+                                        <span>{hoveredIcon === item.id ? item.hover : item.default}</span>
+                                    </p>
+                                    <p
+                                        className={`transition-all duration-700 font-[300] text-[#0a2540] opacity-50 max-h-0 overflow-hidden ${hoveredIcon === item.id ? 'max-h-40' : ''}`}
+                                    >
+                                        {item?.description}
+                                    </p>
                                 </div>
                             ))}
                         </div>
