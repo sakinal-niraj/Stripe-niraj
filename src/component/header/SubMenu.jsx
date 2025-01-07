@@ -202,12 +202,12 @@ const Products = () => {
                                     onMouseLeave={() => setHoveredIcon(null)} // Reset hoveredIcon to null when mouse leaves
                                     className="relative"
                                 >
-                                    <p className="flex items-center gap-1 font-[500]">
+                                    <p className="flex items-center gap-1 font-[500] text-[14px]">
                                         {item?.label}
                                         <span>{hoveredIcon === item.id ? item.hover : item.default}</span>
                                     </p>
                                     <p
-                                        className={`transition-all duration-700 font-[300] text-[#0a2540] opacity-50 max-h-0 overflow-hidden ${hoveredIcon === item.id ? 'max-h-40' : ''}`}
+                                        className={`transition-all duration-700 font-[300] text-[13px] text-[#0a2540] opacity-50 max-h-0 overflow-hidden ${hoveredIcon === item.id ? 'max-h-40' : ''}`}
                                     >
                                         {item?.description}
                                     </p>
