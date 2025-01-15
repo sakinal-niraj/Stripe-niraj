@@ -55,9 +55,9 @@ function SliderComponent() {
         {/* Content */}
         <div className="grid md:grid-cols-[3fr_1fr] md:pr-12">
           <div className='space-y-3'>
-            <h1 className='text-[#635BFF] text-[18px] font-bold'>Enterprise reinvention</h1>
+            <h1 className='text-[#635BFF] text-[18px] font-bold pb-2'>Enterprise reinvention</h1>
 
-            <p className='text-[38px] font-bold tracking-tight pb-1'>
+            <p className='text-[38px] font-bold tracking-tight pb-1 text-[#0a2540]'>
               Bring agility to your enterprise
             </p>
 

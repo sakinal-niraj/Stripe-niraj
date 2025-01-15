@@ -22,7 +22,7 @@ function Header() {
                             {/* Logo */}
                             <h1 className="SiteHeader__logo text-white">
                                 <Link to="/"
-                                    className="SiteHeader__logoLink"
+                                    className="SiteHeader__logoLink hover:opacity-50 duration-300"
                                     data-js-controller="AnalyticsButton"
                                     data-analytics-category="Navigation"
                                     data-analytics-action="Clicked"

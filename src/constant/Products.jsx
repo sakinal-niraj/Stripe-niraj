@@ -67,34 +67,6 @@ const RevenueFinance = [
         default: ""
     },
     {
-        id: 5,
-        key: 'revenueRecognition',
-        svg: (<svg class="ProductIcon ProductIcon--RevRec " width="20" height="20" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-
-            <title>Revenue Recognition</title>
-
-            <path d="M24.4531 3.37679c.0004-.4707-.1391-.9309-.4008-1.32216-.2616-.39126-.6337-.69594-1.0689-.87535-.4351-.179408-.9138-.225461-1.3752-.1323-.4614.09315-.8847.32131-1.2161.65551L3.57784 18.493c-.33493.3321-.56335.7565-.65614 1.219-.09278.4626-.04573.9422.13515 1.3779.18089.4356.48742.8076.88051 1.0683.39309.2608.85494.3986 1.32665.3958h4.74979L24.4531 8.12657V3.37679z" fill="url(#product-icon-revrec-SiteMobileMenu-a)"></path><path d="M33.7627 8.12634h-9.3096V20.1789c0 .6299-.2502 1.2339-.6956 1.6793-.4453.4454-1.0494.6956-1.6793.6956H10.0138V36.625c0 .6299.2502 1.234.6956 1.6793.4454.4454 1.0494.6956 1.6793.6956h21.374c.6299 0 1.2339-.2502 1.6793-.6956.4454-.4453.6956-1.0494.6956-1.6793V10.5012c0-.62983-.2502-1.23389-.6956-1.67927-.4454-.44538-1.0494-.69559-1.6793-.69559z" fill="#9A66FF"></path><path d="M24.4531 20.1789V8.12634L10.0138 22.5538h12.0644c.6299 0 1.234-.2502 1.6793-.6956.4454-.4454.6956-1.0494.6956-1.6793z" fill="url(#product-icon-revrec-SiteMobileMenu-b)"></path><defs><linearGradient id="product-icon-revrec-SiteMobileMenu-a" x1="13.7647" y1="1" x2="13.7647" y2="22.3532" gradientUnits="userSpaceOnUse"><stop offset=".270725" stop-color="#FF5091"></stop><stop offset="1" stop-color="#E03071"></stop></linearGradient><linearGradient id="product-icon-revrec-SiteMobileMenu-b" x1="16.0302" y1="22.3652" x2="24.2719" y2="6.84356" gradientUnits="userSpaceOnUse"><stop stop-color="#6E00F5"></stop><stop offset="1" stop-color="#9860FE"></stop></linearGradient></defs>
-        </svg>),
-        label: "Revenue Recognition",
-        description: 'Accounting automation',
-        hover: (<BsArrowRightShort />),
-        default: ""
-    },
-    {
-        id: 6,
-        key: 'tax',
-        svg: (<svg class="ProductIcon ProductIcon--Tax " width="20" height="20" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-
-            <title>Tax</title>
-
-            <path d="M19.049.00995851C22.4341.325767 25.7367 1.28014 28.7794 2.83046c3.0426 1.55031 5.756 3.66123 8.0012 6.2142.9142 1.03954.6576 2.61624-.4624 3.42994L20.5259 23.9483c-1.6569 1.2039-3.98.0202-3.98-2.0279V2.40011c0-1.38439 1.1247-2.518749 2.5031-2.39015149z" fill="url(#product-icon-tax-SiteMobileMenu-a)"></path><circle cx="17.6666" cy="24.3334" transform="rotate(-90 17.6666 24.3334)" fill="#96F" r="15.6666"></circle><path d="M31.099 16.2665l-10.5731 7.6818c-1.6569 1.2038-3.98.0201-3.98-2.028V8.70618c.37-.02614.7436-.03943 1.1202-.03943 5.7019 0 10.6924 3.04605 13.4329 7.59975z" fill="url(#product-icon-tax-SiteMobileMenu-b)"></path><defs><linearGradient id="product-icon-tax-SiteMobileMenu-a" x1="27.6927" y1="-.106484" x2="27.6927" y2="20.5734" gradientUnits="userSpaceOnUse"><stop offset=".23665" stop-color="#FF5191"></stop><stop offset="1" stop-color="#E03071"></stop></linearGradient><linearGradient id="product-icon-tax-SiteMobileMenu-b" x1="23.3061" y1="24.96" x2="18.8407" y2="7.43349" gradientUnits="userSpaceOnUse"><stop stop-color="#6E00F5"></stop><stop offset="1" stop-color="#9860FE"></stop></linearGradient></defs>
-        </svg>),
-        label: "Tax",
-        description: 'Sales tax & VAT automation',
-        hover: (<BsArrowRightShort />),
-        default: ""
-    },
-    {
         id: 7,
         key: 'invocing',
         svg: (<svg class="ProductIcon ProductIcon--Invoicing " width="20" height="20" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -109,6 +81,20 @@ const RevenueFinance = [
         default: ""
     },
     {
+        id: 5,
+        key: 'revenueRecognition',
+        svg: (<svg class="ProductIcon ProductIcon--RevRec " width="20" height="20" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+            <title>Revenue Recognition</title>
+
+            <path d="M24.4531 3.37679c.0004-.4707-.1391-.9309-.4008-1.32216-.2616-.39126-.6337-.69594-1.0689-.87535-.4351-.179408-.9138-.225461-1.3752-.1323-.4614.09315-.8847.32131-1.2161.65551L3.57784 18.493c-.33493.3321-.56335.7565-.65614 1.219-.09278.4626-.04573.9422.13515 1.3779.18089.4356.48742.8076.88051 1.0683.39309.2608.85494.3986 1.32665.3958h4.74979L24.4531 8.12657V3.37679z" fill="url(#product-icon-revrec-SiteMobileMenu-a)"></path><path d="M33.7627 8.12634h-9.3096V20.1789c0 .6299-.2502 1.2339-.6956 1.6793-.4453.4454-1.0494.6956-1.6793.6956H10.0138V36.625c0 .6299.2502 1.234.6956 1.6793.4454.4454 1.0494.6956 1.6793.6956h21.374c.6299 0 1.2339-.2502 1.6793-.6956.4454-.4453.6956-1.0494.6956-1.6793V10.5012c0-.62983-.2502-1.23389-.6956-1.67927-.4454-.44538-1.0494-.69559-1.6793-.69559z" fill="#9A66FF"></path><path d="M24.4531 20.1789V8.12634L10.0138 22.5538h12.0644c.6299 0 1.234-.2502 1.6793-.6956.4454-.4454.6956-1.0494.6956-1.6793z" fill="url(#product-icon-revrec-SiteMobileMenu-b)"></path><defs><linearGradient id="product-icon-revrec-SiteMobileMenu-a" x1="13.7647" y1="1" x2="13.7647" y2="22.3532" gradientUnits="userSpaceOnUse"><stop offset=".270725" stop-color="#FF5091"></stop><stop offset="1" stop-color="#E03071"></stop></linearGradient><linearGradient id="product-icon-revrec-SiteMobileMenu-b" x1="16.0302" y1="22.3652" x2="24.2719" y2="6.84356" gradientUnits="userSpaceOnUse"><stop stop-color="#6E00F5"></stop><stop offset="1" stop-color="#9860FE"></stop></linearGradient></defs>
+        </svg>),
+        label: "Revenue Recognition",
+        description: 'Accounting automation',
+        hover: (<BsArrowRightShort />),
+        default: ""
+    },
+    {
         id: 8,
         key: 'sigma',
         svg: (<svg class="ProductIcon ProductIcon--Sigma " width="20" height="20" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -119,6 +105,20 @@ const RevenueFinance = [
         </svg>),
         label: "Sigma",
         description: 'Custom reports',
+        hover: (<BsArrowRightShort />),
+        default: ""
+    },
+    {
+        id: 6,
+        key: 'tax',
+        svg: (<svg class="ProductIcon ProductIcon--Tax " width="20" height="20" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+            <title>Tax</title>
+
+            <path d="M19.049.00995851C22.4341.325767 25.7367 1.28014 28.7794 2.83046c3.0426 1.55031 5.756 3.66123 8.0012 6.2142.9142 1.03954.6576 2.61624-.4624 3.42994L20.5259 23.9483c-1.6569 1.2039-3.98.0202-3.98-2.0279V2.40011c0-1.38439 1.1247-2.518749 2.5031-2.39015149z" fill="url(#product-icon-tax-SiteMobileMenu-a)"></path><circle cx="17.6666" cy="24.3334" transform="rotate(-90 17.6666 24.3334)" fill="#96F" r="15.6666"></circle><path d="M31.099 16.2665l-10.5731 7.6818c-1.6569 1.2038-3.98.0201-3.98-2.028V8.70618c.37-.02614.7436-.03943 1.1202-.03943 5.7019 0 10.6924 3.04605 13.4329 7.59975z" fill="url(#product-icon-tax-SiteMobileMenu-b)"></path><defs><linearGradient id="product-icon-tax-SiteMobileMenu-a" x1="27.6927" y1="-.106484" x2="27.6927" y2="20.5734" gradientUnits="userSpaceOnUse"><stop offset=".23665" stop-color="#FF5191"></stop><stop offset="1" stop-color="#E03071"></stop></linearGradient><linearGradient id="product-icon-tax-SiteMobileMenu-b" x1="23.3061" y1="24.96" x2="18.8407" y2="7.43349" gradientUnits="userSpaceOnUse"><stop stop-color="#6E00F5"></stop><stop offset="1" stop-color="#9860FE"></stop></linearGradient></defs>
+        </svg>),
+        label: "Tax",
+        description: 'Sales tax & VAT automation',
         hover: (<BsArrowRightShort />),
         default: ""
     },

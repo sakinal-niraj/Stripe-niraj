@@ -73,8 +73,8 @@ const CanvasAnimation = () => {
             <div className='-z-10 mt-5 md:mt-16 w-full '>
                 <div className="text-black px-4 md:px-8 xl:px-24 2xl:px-[220px] ml-2">
                     {/* Preview Tag */}
-                    <div className="flex justify-start items-center">
-                        <h1 className="w-fit text-center px-3 py-2 rounded-sm md:py-[4px] md:px-[13px] md:rounded-full bg-gray-800/50 text-white text-[13px] font-bold tracking-wide">
+                    <div className="flex justify-start items-center mb-10">
+                        <h1 className="w-fit text-center px-3 py-2 rounded-sm md:py-[3px] md:px-[11px] md:rounded-full bg-gray-800/50 text-white text-[13px] font-bold tracking-wide">
                             Preview
                         </h1>
                     </div>

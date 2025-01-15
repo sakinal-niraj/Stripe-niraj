@@ -23,17 +23,17 @@ function Footer() {
                                 <div className='hidden sm:block'>
                                     <h1 className=''>Stripe</h1>
 
-                                    <p className='flex items-center gap-2'><span className='pt-1'><FaLocationArrow /></span>india (English)</p>
+                                    <span className='flex items-center gap-2  cursor-pointer'><span className='pt-1'><FaLocationArrow /></span>india (English)</span>
                                 </div>
 
                                 {/* col2 */}
                                 <div className='space-y-2'>
-                                    <h1 className='font-semibold'>Products & pricing</h1>
+                                    <h1 className='font-medium'>Products & pricing</h1>
 
                                     <div className='flex flex-col space-y-1 text-[#0A2540] text-[15px]'>
                                         {
                                             productsPricing.map((item, index) => (
-                                                <Link to={item.path} key={item.key}>{item.label}</Link>
+                                                <Link className='hover:opacity-60' to={item.path} key={item.key}>{item.label}</Link>
                                             ))
                                         }
                                     </div>
@@ -43,12 +43,12 @@ function Footer() {
                                 <div class="grid grid-rows-min grid-cols-auto grid-flow-row auto-cols-auto auto-rows-min space-y-6">
                                     {/* Solutions */}
                                     <div className='flex flex-col space-y-2'>
-                                        <h1 className='font-semibold'>Solutions</h1>
+                                        <h1 className='font-medium'>Solutions</h1>
 
                                         <div className='flex flex-col space-y-1 text-[#0A2540] text-[15px]'>
                                             {
                                                 solutoinsData.map((item, index) => (
-                                                    <Link to={item.path} key={item.key}>{item.label}</Link>
+                                                    <Link className='hover:opacity-60' to={item.path} key={item.key}>{item.label}</Link>
                                                 ))
                                             }
                                         </div>
@@ -56,12 +56,12 @@ function Footer() {
 
                                     {/* Integration & custom solutions */}
                                     <div className='flex flex-col space-y-2'>
-                                        <h1 className='font-semibold'>Integrations & custom solutions</h1>
+                                        <h1 className='font-medium'>Integrations & custom solutions</h1>
 
                                         <div className='flex flex-col space-y-1 text-[#0A2540] text-[15px]'>
                                             {
                                                 integrationCustom.map((item, index) => (
-                                                    <Link to={item.path} key={item.key}>{item.label}</Link>
+                                                    <Link className='hover:opacity-60' to={item.path} key={item.key}>{item.label}</Link>
                                                 ))
                                             }
                                         </div>
@@ -69,12 +69,12 @@ function Footer() {
 
                                     {/* Integration & custom solutions */}
                                     <div className='flex flex-col space-y-2'>
-                                        <h1 className='font-semibold'>Developers</h1>
+                                        <h1 className='font-medium'>Developers</h1>
 
                                         <div className='flex flex-col space-y-1 text-[#0A2540] text-[15px]'>
                                             {
                                                 developersData.map((item, index) => (
-                                                    <Link to={item.path} key={item.key}>{item.label}</Link>
+                                                    <Link className='hover:opacity-60' to={item.path} key={item.key}>{item.label}</Link>
                                                 ))
                                             }
                                         </div>
@@ -85,12 +85,12 @@ function Footer() {
                                 <div class="grid grid-rows-min grid-cols-auto grid-flow-row auto-cols-auto auto-rows-min space-y-6">
                                     {/* Solutions */}
                                     <div className='flex flex-col space-y-2'>
-                                        <h1 className='font-semibold'>Resources</h1>
+                                        <h1 className='font-medium'>Resources</h1>
 
                                         <div className='flex flex-col space-y-1 text-[#0A2540] text-[15px]'>
                                             {
                                                 resourcesData.map((item, index) => (
-                                                    <Link to={item.path} key={item.key}>{item.label}</Link>
+                                                    <Link className='hover:opacity-60' to={item.path} key={item.key}>{item.label}</Link>
                                                 ))
                                             }
                                         </div>
@@ -98,12 +98,12 @@ function Footer() {
 
                                     {/* Integration & custom solutions */}
                                     <div className='flex flex-col space-y-2'>
-                                        <h1 className='font-semibold'>Company</h1>
+                                        <h1 className='font-medium'>Company</h1>
 
                                         <div className='flex flex-col space-y-1 text-[#0A2540] text-[15px]'>
                                             {
                                                 companyData.map((item, index) => (
-                                                    <Link to={item.path} key={item.key}>{item.label}</Link>
+                                                    <Link className='hover:opacity-60' to={item.path} key={item.key}>{item.label}</Link>
                                                 ))
                                             }
                                         </div>
@@ -111,12 +111,12 @@ function Footer() {
 
                                     {/* Integration & custom solutions */}
                                     <div className='flex flex-col space-y-2'>
-                                        <h1 className='font-semibold'>Support</h1>
+                                        <h1 className='font-medium'>Support</h1>
 
                                         <div className='flex flex-col space-y-1 text-[#0A2540] text-[15px]'>
                                             {
                                                 supportData.map((item, index) => (
-                                                    <Link to={item.path} key={item.key}>{item.label}</Link>
+                                                    <Link className='hover:opacity-60' to={item.path} key={item.key}>{item.label}</Link>
                                                 ))
                                             }
                                         </div>

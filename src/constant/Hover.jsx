@@ -6,7 +6,7 @@ const paymentHover = [
         id: 1,
         default:(<LuDot />),
         hover:(<BsArrowRightShort />),
-        title:'Payment links',
+        title:'Payment Links',
         desc:'No-code payments',
     },
     {
