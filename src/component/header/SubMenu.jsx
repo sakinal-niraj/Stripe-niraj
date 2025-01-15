@@ -125,7 +125,7 @@ const Products = () => {
                                                         className="pt-[1px]"
                                                     >
                                                         <p className="font-semibold flex items-center gap-2 text-[#0a2540] text-[14px]">{item.label} {globHoverd[item.label] ? <BsArrowRightShort size={20} /> : ""}</p>
-                                                        <p className={`transition-opacity duration-100 opacity-50 text-[#0a2540] ${globHoverd[item.label] ? "opacity-100" : "opacity-0"} text-[13px] font-normal `}>{item.description}</p>
+                                                        <p className={`transition-opacity duration-100  text-[#0a2540] ${globHoverd[item.label] ? "opacity-100" : "opacity-50"} text-[13px] font-normal `}>{item.description}</p>
                                                     </div>
                                                 </div>
                                             ))
