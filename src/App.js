@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="flex flex-col w-full h-screen font-sohne-var">
       {/* Canvas Animation in the Background */}
-      {/* {showHeader && <Header />}   */}
+      {showHeader && <Header />}  
 
       {/* Header Section */}
 
@@ -24,7 +24,7 @@ function App() {
         <Route path='none' element={<Dummy />} />
       </Routes>
 
-      {/* <Footer /> */}
+      <Footer />
 
     </div>
   );

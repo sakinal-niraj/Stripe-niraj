@@ -57,15 +57,15 @@ const Products = () => {
     const [hoveredIcon, setHoveredIcon] = useState(null);
     return (
        
-            <div className="relative top-6 bg-[#F6F9FB] rounded-xl shadow-xl w-full">
-                <div className="w-10 h-10  bg-[#F6F9FB] transform rotate-45 absolute top-0 z-0 translate-x-[8rem] rounded-sm"></div>
+            <div className="relative top-6 lg:bg-[#F6F9FB] lg:rounded-xl lg:shadow-xl w-full">
+                <div className="w-10 h-10  lg:bg-[#F6F9FB] transform rotate-45 absolute top-0 z-0 translate-x-[8rem] rounded-sm"></div>
                 <div>
-                    <div className="p-1 space-y-1 text-[15px] flex">
-                        <div className="flex flex-col relative z-10 w-[76%] ">
+                    <div className="p-1 space-y-1 text-[15px] lg:flex ">
+                        <div className="flex flex-col relative z-10 w-full lg:w-[76%] ">
                             {/* Globel */}
-                            <div className="bg-white rounded-xl p-6 pb-7 border-[1px]  w-full">
+                            <div className="bg-white rounded-xl p-6 pb-7 lg:border-[1px]  w-full">
                                 <h1 className="uppercase text-[#0A2540] text-[13px] font-[600] opacity-90 pb-2">Globle payments</h1>
-                                <div className="grid grid-cols-2 mt-2 gap-30">
+                                <div className="grid lg:grid-cols-2 space-y-8 mt-2 gap-30">
                                     <div>
                                         {/* logo x payment  */}
                                         <div className="flex gap-2">
@@ -96,7 +96,7 @@ const Products = () => {
                                                     onMouseLeave={() => setHoveredIcon(null)}
                                                 >
                                                     <span className="font-[550] flex items-center gap-2 text-[#0a2540] text-[12px]">{item.title}</span>
-                                                    <span className="mt-0.5 ml-0.5">
+                                                    <span className="mt-0.5 lg:ml-0.5">
                                                         {hoveredIcon === item.id ? item.hover : item.default}
                                                     </span>
                                                     <span className={`transition-opacity duration-100 font-[300] text-[12px] text-[#0a2540] ${hoveredIcon === item.id ? "opacity-100" : "opacity-50"} font-[300]`}>
@@ -110,7 +110,7 @@ const Products = () => {
 
                                     {/* global-2 */}
                                     <div>
-                                        <div className="flex flex-col space-y-3 pl-10">
+                                        <div className="flex flex-col space-y-3 lg:pl-10">
                                             {ProductGlobal.map((item) => (
                                                 <div className="flex gap-2">
                                                     <div className="pt-2 pr-3">
@@ -137,7 +137,7 @@ const Products = () => {
                             </div>
 
                             {/* Embedded */}
-                            <div className="bg-white rounded-xl p-6 pb-7 border-2  w-full">
+                            <div className="bg-white rounded-xl p-6 pb-7 lg:border-2  w-full">
                                 <h1 className="uppercase text-[#0A2540] text-[13px] font-[600] opacity-90">Embedded payments and Finance</h1>
                                 <div className="flex gap-2 mt-2">
                                     <div className="pt-2 pr-3">
@@ -164,10 +164,10 @@ const Products = () => {
 
 
                             {/* Revenue and finance */}
-                            <div className="bg-white rounded-xl p-6 pb-7 border-2  w-full">
+                            <div className="bg-white rounded-xl p-6 pb-7 lg:border-2  w-full">
                                 <h1 className="uppercase text-[#0A2540] text-[13px] font-[600] opacity-90">Revenue and Finance Automation</h1>
 
-                                <div className="grid grid-cols-2">
+                                <div className="grid lg:grid-cols-2">
                                     {RevenueFinance.map((item) => (
                                         <div key={item.id}>
                                             <div className="flex gap-2 mt-2">
@@ -195,7 +195,7 @@ const Products = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="w-[30%] p-4 space-y-2 cursor-pointer">
+                        <div className="lg:w-[30%] w-full p-4 space-y-2 cursor-pointer bg-gray-50">
                             <h1 className="text-[13px] font-semibold uppercase pb-2">More</h1>
 
                             {ProductConstant.map((item) => (
@@ -207,13 +207,14 @@ const Products = () => {
                                 >
                                     <p className="flex items-center gap-1 font-[500] text-[14px]">
                                         {item?.label}
-                                        <span>{hoveredIcon === item.id ? item.hover : item.default}</span>
+                                        <span className="lg:flex hidden">{hoveredIcon === item.id ? item.hover : item.default}</span>
                                     </p>
                                     <p
                                         className={`transition-all duration-1000 font-[300] text-[13px] text-[#0a2540] opacity-50 max-h-0 overflow-hidden ${hoveredIcon === item.id ? 'max-h-40' : ''}`}
                                     >
-                                        {item?.description}
+                                        <span className="hidden lg:block">{item?.description}</span>
                                     </p>
+                                    <p className="lg:hidden text-[#0a2540] opacity-50">{item.description}</p>
                                 </div>
                             ))}
                         </div>
@@ -232,15 +233,15 @@ const Solutions = () => {
     const [isIconHoverd, setIsIconHoverd] = useState(null);
     return (
         
-            <div className="relative top-6 bg-[#F6F9FB] rounded-xl shadow-xl w-full">
-                <div className="w-10 h-10  bg-[#F6F9FB] transform rotate-45 absolute top-0 z-0 translate-x-[5rem] rounded-sm"></div>
+            <div className="relative top-6 bg-[#F6F9FB] lg:rounded-xl shadow-xl w-full">
+                <div className="w-10 h-10  lg:bg-[#F6F9FB] transform rotate-45 absolute top-0 z-0 translate-x-[5rem] rounded-sm"></div>
                 <div>
                     {/* first row */}
-                    <div className="p-1 space-y-1 text-[15px]">
-                        <div className="relative z-10 w-full bg-white shadow-white  rounded-xl p-6 pb-7">
+                    <div className="p-1 space-y-1 text-[15px] w-full">
+                        <div className="relative z-10 w-full bg-white  lg:rounded-xl p-6 pb-7">
                             <h1 className="uppercase text-[#0a2540] text-[13px] font-[550] tracking-tight">by stage</h1>
 
-                            <div className="grid grid-cols-2 mt-2">
+                            <div className="grid lg:grid-cols-2 lg:mt-2 mt-4 space-y-3 ">
                                 {
                                     byStage.map((item) => (
                                         <span
@@ -305,7 +306,7 @@ const Solutions = () => {
                             <h1 className="uppercase text-[#0a2540] text-[13px] font-[550]">By use case</h1>
 
                             <div className="">
-                                <div className="grid grid-cols-2 mt-2 space-y-3">
+                                <div className="grid lg:grid-cols-2 mt-2 space-y-3">
                                     {
                                         useCase.map((item) => (
                                             <span
@@ -336,7 +337,7 @@ const Solutions = () => {
                             <h1 className="uppercase text-[#0a2540] text-[13px] font-[550] tracking-tighter">Ecosystem</h1>
 
                             <div className="">
-                                <div className="grid grid-cols-2 mt-2 space-y-3">
+                                <div className="grid lg:grid-cols-2 mt-2 space-y-3">
                                     {
                                         ecosystem.map((item) => (
                                             <span
@@ -397,13 +398,13 @@ const Developers = () => {
                                     <div
                                         className="space-y-[2px]"
                                     >
-                                        <p className="flex items-center gap-1 uppercase text-[#0a2540] font-[550] tracking-tight text-[13px]"> Documentation{isHovered ? <BsArrowRightShort size={20} /> : ""}</p>
-                                        <p className={`transition-opacity duration-100  text-[#0a2540] ${isHovered ? "opacity-100" : "opacity-60"} text-[13px] font-normal `}>Start intergating Stripe's products and tools</p>
+                                        <p className="flex items-center gap-1 uppercase text-[#0a2540] font-[550] tracking-tight text-[13px]"> Documentation{isHovered ? <BsArrowRightShort className="hidden md:flex" size={20} /> : ""}</p>
+                                        <p className={`hidden lg:block transition-opacity duration-100  text-[#0a2540] ${isHovered ? "opacity-100" : "opacity-60"} text-[13px] font-normal `}>Start intergating Stripe's products and tools</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div className="grid grid-cols-2 mb-2 pt-2 space-y-2 px-10">
+                            <div className="grid lg:grid-cols-2 mb-2 pt-2 lg:space-y-2 px-10 space-y-6">
                                 <div className="mt-1.5 space-y-1.5">
                                     <span className="flex items-center gap-2 uppercase text-[#0a2540] text-[13px] font-[600] tracking-tight">Get Started</span>
                                     <span className="capitalize text-[#0a2540] text-[14px] font-[500] opacity-75 hover:opacity-100 flex items-center gap-2">Pre-built checkout </span>
@@ -420,7 +421,7 @@ const Developers = () => {
                                 </div>
                             </div>
 
-                            <div className="my-2 px-6 py-6 bg-[#F6F9FB]  grid grid-cols-2 space-y-3 rounded-md">
+                            <div className="my-2 px-6 py-6 bg-[#F6F9FB]  grid lg:grid-cols-2 lg:pd-0 pb-16 space-y-3 rounded-md">
                                 {
                                     developers.map((item) => (
                                         <span
@@ -462,7 +463,7 @@ const Resources = () => {
                     {/* first row */}
                     <div className="p-1 space-y-1 text-[15px]">
                         <div className="relative z-10 w-full bg-white shadow-white  rounded-xl space-y-6">
-                            <div className="grid grid-cols-2 mt-6 space-y-2 px-6">
+                            <div className="grid lg:grid-cols-2 mt-6 space-y-6 lg:space-y-2 px-6">
                                 {
                                     resources.map((item) => (
                                         <span
@@ -486,7 +487,7 @@ const Resources = () => {
                                 }
                             </div>
 
-                            <div className="my-2 px-6 py-6 bg-[#F6F9FB] grid grid-cols-2 space-y-3 shadow-xl text-black shadow-white rounded-md">
+                            <div className="my-2 px-6 py-6 lg:pb-0 pb-20 bg-[#F6F9FB] grid lg:grid-cols-2 lg:space-y-3 space-y-6 shadow-xl text-black shadow-white rounded-md">
                                 {
                                     resources2.map((item) => (
                                         <span

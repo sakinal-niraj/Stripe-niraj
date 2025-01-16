@@ -1,13 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { MdKeyboardArrowRight } from "react-icons/md";
 import code from '../../assets/images/code.jpg';
 import icon1 from '../../assets/images/icon1.png';
 import icon2 from '../../assets/images/icon2.png';
 import icon3 from '../../assets/images/icon3.png';
 import icon4 from '../../assets/images/icon4.png';
+import { FiArrowRight } from 'react-icons/fi';
+import { shipData } from '../../constant/ShipData';
 
 
 function Ship() {
+    const [isHoverd, setIsHovered] = useState(false);
+    const [isIconHoverd, setIsIconHoverd] = useState(null);
     return (
         <section
             className="
@@ -34,9 +38,12 @@ function Ship() {
                                 Save engineering time with unified payments functionality. We obsess over the maze of gateways, payments rails, and financial institutions that make up the global economic landscape so that your teams can build what you need on one platform.
                             </p>
 
-                            <button className='flex items-center gap-1 hover:bg-white bg-[#00d4ff] text-[#0a2540] text-[15px] font-[550] p-[6px_12px_6px_16px] rounded-full'>
+                            <button
+                                onMouseEnter={() => setIsHovered(true)}
+                                onMouseLeave={() => setIsHovered(false)}
+                                className='flex items-center gap-1 hover:bg-white bg-[#00d4ff] text-[#0a2540] text-[15px] font-[550] p-[6px_12px_6px_16px] rounded-full'>
                                 Read the docs
-                                <MdKeyboardArrowRight />
+                                {isHoverd ? <FiArrowRight /> : <MdKeyboardArrowRight />}
                             </button>
                         </div>
 
@@ -50,78 +57,30 @@ function Ship() {
                     {/* row 2 */}
                     <div className='grid md:grid-cols-4 grid-cols-2'>
                         {/* col1 */}
-                        <div className='space-y-3'>
-                            <div className="pb-2 pl-1">
-                                <img src={icon1} className='w-14' alt="" />
-                            </div>
+                        {
+                            shipData.map((item) => (
+                                <div className='space-y-3'>
+                                    <div className="pb-2 pl-1">
+                                        <img src={item.icon} className='w-14' alt="" />
+                                    </div>
 
-                            <div className='flex gap-4 relative'>
-                                <span className='block top-[3px] left-0 w-[1px] h-[14px] bg-[#00d4ff] absolute '></span>
-                                <p className='pl-4 text-[15px] font-semibold'>
-                                    Use Stripe with your stack
-                                </p>
-                            </div>
+                                    <div className='flex gap-4 relative'>
+                                        <span className='block top-[3px] left-0 w-[1px] h-[14px] bg-[#00d4ff] absolute '></span>
+                                        <p className='pl-4 text-[15px] font-semibold'>
+                                            {item.title}
+                                        </p>
+                                    </div>
 
-                            <p className='pl-4 text-[#adbdcc] text-[15px] text-left pr-8'> We offer client and server libraries in everything from React and PHP to .NET and iOS.</p>
+                                    <p className='pl-4 text-[#adbdcc] text-[15px] text-left pr-8'> {item.content}</p>
 
-                            <p className='flex items-center text-[15px] pl-4 text-[#00d4ff] hover:text-white font-medium'>See libraries <span><MdKeyboardArrowRight /></span> </p>
-                        </div>
+                                    <p
+                                        onMouseEnter={() => setIsIconHoverd(item.id)}
+                                        onMouseLeave={() => setIsIconHoverd(null)}
+                                        className='gap-1.5 flex items-center text-[15px] pl-4 text-[#00d4ff] hover:text-white font-medium'>{item.btn} <span>{isIconHoverd === item.id ? <FiArrowRight /> : <MdKeyboardArrowRight />}</span> </p>
+                                </div>
+                            ))
+                        }
 
-                        {/* col2 */}
-                        <div className='space-y-3 '>
-                            <div className="pb-2 pl-1">
-                                <img src={icon2} className='w-14' alt="" />
-                            </div>
-
-                            <div className='flex gap-4 relative'>
-                                <span className='block top-[3px] left-0 w-[1px] h-[14px] bg-[#00d4ff] absolute '></span>
-                                <p className='pl-4 text-[15px] font-semibold'>
-                                    Try no-code options
-                                </p>
-                            </div>
-
-                            <p className='pl-4 text-[#adbdcc] text-[15px] pr-[32px]'> Customize and deploy payments interfaces directly from the Stripe Dashboard.</p>
-
-                            <p className='flex items-center text-[15px] pl-4 text-[#00d4ff] hover:text-white font-medium'>Explore no-code <span><MdKeyboardArrowRight /></span></p>
-                        </div>
-
-
-                        {/* col3 */}
-                        <div className='space-y-3 mt-10 md:mt-0'>
-                            <div className="pb-2 pl-1">
-                                <img src={icon3} className='w-14' alt="" />
-                            </div>
-
-                            <div className='flex gap-4 relative'>
-                                <span className='block top-[3px] left-0 w-[1px] h-[14px] bg-[#00d4ff] absolute '></span>
-                                <p className='pl-4 text-[15px] font-semibold'>
-                                    Explore pre-built integrations
-                                </p>
-                            </div>
-
-                            <p className='pl-4 text-[#adbdcc] text-[15px] pr-[32px]'> Connect Stripe to over a hundred tools including Adobe, Salesforce, and Xero.</p>
-
-                            <p className='flex items-center text-[15px] pl-4 text-[#00d4ff] hover:text-white font-medium'>Browse App Marketplace <span><MdKeyboardArrowRight /></span></p>
-                        </div>
-
-
-                        {/* col4 */}
-                        <div className='space-y-3 mt-10 md:mt-0'>
-                            <div className="pb-2 pl-1">
-                                <img src={icon4} className='w-12 pt-1' alt="" />
-                            </div>
-
-                            <div className='flex gap-4 relative'>
-                                <span className='block top-[3px] left-0 w-[0.5px] h-[14px] bg-[#00d4ff] absolute '></span>
-                                <p className='pl-4 text-[15px] font-semibold'>
-                                    Build on Stripe Apps
-                                </p>
-                            </div>
-
-                            <p className='pl-4 text-[#adbdcc] text-[15px] pr-[32px]'> Create an app just for your team or for the millions of businesses on Stripe.</p>
-
-                            <p className='flex items-center text-[15px] pl-4 text-[#00d4ff] hover:text-white font-medium'>Learn about Apps <MdKeyboardArrowRight /></p>
-                        </div>
                     </div>
                 </div>
             </div>

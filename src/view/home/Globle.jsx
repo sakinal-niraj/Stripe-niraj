@@ -1,6 +1,7 @@
 import React from 'react'
 import card1 from '../../assets/images/card1.svg';
 import card2 from '../../assets/images/card2.svg';
+import t from '../../assets/images/t.png';
 
 
 function Globle() {
@@ -41,7 +42,7 @@ function Globle() {
                                     Explore our directory to find out-of-the-box solutions that connect with Stripe, such as Squarespace and Lightspeed.
                                 </p>
                                 {/* Hidden Button */}
-                                <p className="h-[10px] w-full box-border absolute text-[#9966FF] text-[18px] font-semibold bottom-[-20px] transition-all duration-300 group-hover:bottom-10">
+                                <p className="h-[10px] w-full hover:text-[#0a2450] box-border absolute text-[#9966FF] text-[18px] font-semibold bottom-[-20px] transition-all duration-300 group-hover:bottom-10">
                                     See directory
                                 </p>
                             </div>
@@ -50,7 +51,7 @@ function Globle() {
                         {/* card2 */}
                         <div className="h-[540px] w-full shadow-lg shadow-gay-150 overflow-hidden hover:cursor-pointer relative group p-1 rounded-md">
                             {/* Image Section */}
-                            <div className="w-[full] h-[220px] transition-all duration-300 group-hover:h-[180px] pl-10 bg-[#f6f9fa] z-0  overflow-hidden">
+                            <div className="w-[full] h-[220px] transition-all duration-300 group-hover:h-[180px] pl-0 bg-[#f6f9fa] z-0  overflow-hidden">
                                 <img
                                     src={card2}
                                     alt=""
@@ -67,7 +68,7 @@ function Globle() {
                                     Work with a Stripe consulting partner that can integrate and deploy Stripe solutions for you.
                                 </p>
                                 {/* Hidden Button */}
-                                <p className="h-[10px] w-full box-border absolute text-[#9966FF] text-[18px] font-semibold bottom-[-20px] transition-all duration-300 group-hover:bottom-10">
+                                <p className="h-[10px] w-full box-border hover:text-[#0a2450] absolute text-[#9966FF] text-[18px] font-semibold bottom-[-20px] transition-all duration-300 group-hover:bottom-10">
                                     View partners
                                 </p>
                             </div>
@@ -76,11 +77,11 @@ function Globle() {
                         {/* card3 */}
                         <div className="h-[540px] w-full shadow-lg shadow-gay-150 overflow-hidden hover:cursor-pointer relative group p-1 rounded-md">
                             {/* Image Section */}
-                            <div className="w-full h-[220px] transition-all duration-300 group-hover:h-[180px] pl-10 bg-[#f6f9fa] z-0  overflow-hidden">
+                            <div className="w-full h-[220px] transition-all duration-300 group-hover:h-[180px] pl-6 bg-[#f6f9fa] z-0 pt-4 overflow-hidden">
                                 <img
-                                    src={card1}
+                                    src={t}
                                     alt=""
-                                    className="rounded-md w-full h-[250px] object-cover transition-transform duration-300  group-hover:-translate-y-1"
+                                    className="rounded-md  h-[200px] object-cover transition-transform duration-300  group-hover:-translate-y-1 w-[90%]"
                                 />
                             </div>
 
@@ -93,7 +94,7 @@ function Globle() {
                                     Create an invoice, accept an in-person payment with your phone, or share a payment link directly from your Dashboard to start generating revenue in minutes – no code required.
                                 </p>
                                 {/* Hidden Button */}
-                                <p className="h-[10px] w-full box-border absolute text-[#9966FF] text-[18px] font-semibold bottom-[-20px] transition-all duration-300 group-hover:bottom-10">
+                                <p className="h-[10px] w-full box-border hover:text-[#0a2450] absolute text-[#9966FF] text-[18px] font-semibold bottom-[-20px] transition-all duration-300 group-hover:bottom-10">
                                     Explore no-code
                                 </p>
                             </div>

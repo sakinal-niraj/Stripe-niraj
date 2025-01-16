@@ -5,6 +5,7 @@ import img5 from '../assets/images/Screenshot 2024-12-30 144757.png';
 
 const details = [
     {
+        id: 1,
         title: 'Payments',
         svg: (<span className={``}><svg class="ProductIcon ProductIcon--Payments HomepageFrontdoor__copyCaptionIcon" width="20" height="20" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
 
@@ -24,6 +25,7 @@ const details = [
         img: (img2),
     },
     {
+        id: 2,
         title: 'Billing',
         svg: (<svg class="ProductIcon ProductIcon--Billing HomepageFrontdoor__copyCaptionIcon" width="20" height="20" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
 
@@ -43,6 +45,7 @@ const details = [
         img: (img3),
     },
     {
+        id: 3,
         title: 'Connect',
         svg: (<svg class="ProductIcon ProductIcon--Connect HomepageFrontdoor__copyCaptionIcon" width="20" height="20" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
 
@@ -62,6 +65,7 @@ const details = [
         img: (img4),
     },
     {
+        id: 4,
         title: 'Issuing',
         svg: (<svg class="ProductIcon ProductIcon--Issuing HomepageFrontdoor__copyCaptionIcon" width="20" height="20" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
 

@@ -4,10 +4,8 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 import { BsArrowRightShort } from "react-icons/bs";
 // import ResponsiveHeader from './ResponsiveHeader';
 import { Developers, Products, Resources, Solutions } from './SubMenu';
-// import { MdKeyboardArrowRight } from "react-icons/md";
-// import { BsArrowRightShort } from "react-icons/bs";
-// import { Developers, Products, Resources } from './SubMenu';
-// import { Solutions } from './SubMenu';
+import { MdKeyboardArrowLeft } from "react-icons/md";
+
 
 function Header() {
     const [hovered, setHovered] = useState({ signIn: false, contactSales: false });
@@ -31,7 +29,6 @@ function Header() {
     // Function to switch between content
     const changeContent = (newContent) => {
         setContent(newContent);
-        console.log(newContent);
     };
 
     const goBack = () => {
@@ -51,7 +48,7 @@ function Header() {
         return () => {
             document.body.style.overflow = "auto";
         };
-    }, []);
+    }, [isDrawerOpen]);
 
     const menuLink = [
         { key: 'Products', label: 'Products', tab: <MdKeyboardArrowRight /> },
@@ -166,23 +163,23 @@ function Header() {
 
                     {isDrawerOpen && (
                         <div
-                            className={`fixed lg:hidden top-0 left-0 z-40 h-screen p-4 overflow-y-auto transition-transform transform ${isDrawerOpen ? "translate-x-0" : "-translate-x-full"
+                            className={`fixed lg:hidden top-0 left-0 z-40 h-screen lg:px-4 overflow-y-auto transition-transform transform ${isDrawerOpen ? "translate-x-0" : "-translate-x-full"
                                 } bg-white w-full`}
                             aria-labelledby="drawer-label"
                         >
                             {/* Drawer Header */}
-                            <div className="flex justify-between items-center mb-4">
+                            <div className="flex justify-between items-center mb-0 sticky top-[0px] bg-white z-50 px-4 pt-4">
                                 <h5
                                     onClick={content !== "main" ? goBack : undefined}
                                     id="drawer-label"
                                     className="inline-flex items-center text-base font-semibold text-gray-500 dark:text-gray-400"
                                 >
-                                    {content === 'main' ? (<svg className=' fill-[#635bff]' viewBox="0 0 60 25" xmlns="http://www.w3.org/2000/svg" width="60" height="25" class="UserLogo variant-- "><title>Stripe logo</title><path d="M59.64 14.28h-8.06c.19 1.93 1.6 2.55 3.2 2.55 1.64 0 2.96-.37 4.05-.95v3.32a8.33 8.33 0 0 1-4.56 1.1c-4.01 0-6.83-2.5-6.83-7.48 0-4.19 2.39-7.52 6.3-7.52 3.92 0 5.96 3.28 5.96 7.5 0 .4-.04 1.26-.06 1.48zm-5.92-5.62c-1.03 0-2.17.73-2.17 2.58h4.25c0-1.85-1.07-2.58-2.08-2.58zM40.95 20.3c-1.44 0-2.32-.6-2.9-1.04l-.02 4.63-4.12.87V5.57h3.76l.08 1.02a4.7 4.7 0 0 1 3.23-1.29c2.9 0 5.62 2.6 5.62 7.4 0 5.23-2.7 7.6-5.65 7.6zM40 8.95c-.95 0-1.54.34-1.97.81l.02 6.12c.4.44.98.78 1.95.78 1.52 0 2.54-1.65 2.54-3.87 0-2.15-1.04-3.84-2.54-3.84zM28.24 5.57h4.13v14.44h-4.13V5.57zm0-4.7L32.37 0v3.36l-4.13.88V.88zm-4.32 9.35v9.79H19.8V5.57h3.7l.12 1.22c1-1.77 3.07-1.41 3.62-1.22v3.79c-.52-.17-2.29-.43-3.32.86zm-8.55 4.72c0 2.43 2.6 1.68 3.12 1.46v3.36c-.55.3-1.54.54-2.89.54a4.15 4.15 0 0 1-4.27-4.24l.01-13.17 4.02-.86v3.54h3.14V9.1h-3.13v5.85zm-4.91.7c0 2.97-2.31 4.66-5.73 4.66a11.2 11.2 0 0 1-4.46-.93v-3.93c1.38.75 3.1 1.31 4.46 1.31.92 0 1.53-.24 1.53-1C6.26 13.77 0 14.51 0 9.95 0 7.04 2.28 5.3 5.62 5.3c1.36 0 2.72.2 4.09.75v3.88a9.23 9.23 0 0 0-4.1-1.06c-.86 0-1.44.25-1.44.9 0 1.85 6.29.97 6.29 5.88z" fill="#635bff" fill-rule="evenodd"></path></svg>) : "Back"}
+                                    {content === 'main' ? (<svg className=' fill-[#635bff]' viewBox="0 0 60 25" xmlns="http://www.w3.org/2000/svg" width="60" height="25" class="UserLogo variant-- "><title>Stripe logo</title><path d="M59.64 14.28h-8.06c.19 1.93 1.6 2.55 3.2 2.55 1.64 0 2.96-.37 4.05-.95v3.32a8.33 8.33 0 0 1-4.56 1.1c-4.01 0-6.83-2.5-6.83-7.48 0-4.19 2.39-7.52 6.3-7.52 3.92 0 5.96 3.28 5.96 7.5 0 .4-.04 1.26-.06 1.48zm-5.92-5.62c-1.03 0-2.17.73-2.17 2.58h4.25c0-1.85-1.07-2.58-2.08-2.58zM40.95 20.3c-1.44 0-2.32-.6-2.9-1.04l-.02 4.63-4.12.87V5.57h3.76l.08 1.02a4.7 4.7 0 0 1 3.23-1.29c2.9 0 5.62 2.6 5.62 7.4 0 5.23-2.7 7.6-5.65 7.6zM40 8.95c-.95 0-1.54.34-1.97.81l.02 6.12c.4.44.98.78 1.95.78 1.52 0 2.54-1.65 2.54-3.87 0-2.15-1.04-3.84-2.54-3.84zM28.24 5.57h4.13v14.44h-4.13V5.57zm0-4.7L32.37 0v3.36l-4.13.88V.88zm-4.32 9.35v9.79H19.8V5.57h3.7l.12 1.22c1-1.77 3.07-1.41 3.62-1.22v3.79c-.52-.17-2.29-.43-3.32.86zm-8.55 4.72c0 2.43 2.6 1.68 3.12 1.46v3.36c-.55.3-1.54.54-2.89.54a4.15 4.15 0 0 1-4.27-4.24l.01-13.17 4.02-.86v3.54h3.14V9.1h-3.13v5.85zm-4.91.7c0 2.97-2.31 4.66-5.73 4.66a11.2 11.2 0 0 1-4.46-.93v-3.93c1.38.75 3.1 1.31 4.46 1.31.92 0 1.53-.24 1.53-1C6.26 13.77 0 14.51 0 9.95 0 7.04 2.28 5.3 5.62 5.3c1.36 0 2.72.2 4.09.75v3.88a9.23 9.23 0 0 0-4.1-1.06c-.86 0-1.44.25-1.44.9 0 1.85 6.29.97 6.29 5.88z" fill="#635bff" fill-rule="evenodd"></path></svg>) : <span className='text-[#635bff] flex items-center gap-1'><MdKeyboardArrowLeft size={20} />Back</span>}
                                 </h5>
                                 {/* Close Button */}
                                 <button
                                     type="button"
-                                    className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 flex items-center justify-center dark:hover:bg-gray-600 dark:hover:text-white"
+                                    className="text-gray-400 bg-transparent rounded-lg text-sm w-8 h-8 flex items-center justify-center"
                                     onClick={() => setIsDrawerOpen(false)}
                                 >
                                     <svg
@@ -205,7 +202,7 @@ function Header() {
                             </div>
 
                             {content === "main" && (
-                                <ul className="text-left pl-1 cursor-pointer w-full pt-6 space-y-8 text-[#3F4B66]">
+                                <ul className="text-left  cursor-pointer w-full px-4 pt-6 space-y-8 text-[#3F4B66]">
                                     {menuLink.map((item, index) => (
                                         <li
                                             key={index} // Using index as the key (make sure `item.index` is not undefined)
@@ -239,7 +236,7 @@ function Header() {
                             }
 
 
-                            <div className="fixed bottom-[-4px] left-0 right-0 flex justify-center w-full z-50 bg-white mb-5">
+                            <div className={`${content === "main" ? "fixed" : "sticky"} py-2 bottom-[0px] left-0 right-0 flex justify-center w-full z-50 bg-white `}>
                                 <div
                                     onMouseEnter={() => setHovered({ ...hovered, signIn: true })}
                                     onMouseLeave={() => setHovered({ ...hovered, signIn: false })}

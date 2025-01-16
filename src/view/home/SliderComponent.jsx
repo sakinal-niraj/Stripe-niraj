@@ -7,10 +7,13 @@ import twilio from '../../assets/images/Twilio.jpg';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick';
+import { FiArrowRight } from 'react-icons/fi';
 
 function SliderComponent() {
   const [sliderRef, setSliderRef] = useState(null);
   const [activeIndex, setActiveIndex] = useState(0);
+
+  const [isHoverd , setIsHovered] = useState(false);
 
   const settings = {
     dots: false,
@@ -70,9 +73,14 @@ function SliderComponent() {
             </p>
 
             <div className='w-full pt-4'>
-              <button className='bg-[#635BFF] flex items-center pl-4 pr-2 py-1 pb-1.5 text-white font-bold rounded-full hover:bg-[#1a2657]'>
+              <button
+              onMouseEnter={()=> { setIsHovered(true)}}
+              onMouseLeave={()=> { setIsHovered(false)}}
+               className='gap-2 bg-[#635BFF] flex items-center pl-4 pr-2 py-1 pb-1.5 text-white font-bold rounded-full hover:bg-[#1a2657]'>
                 Explore Stripe for enterprises
-                <span className='pt-1 font-bold'><MdKeyboardArrowRight style={{ width: '20px', fontWeight: '800', height: 'auto' }} /></span>
+                <span 
+                
+                className='pt-[1px] font-bold'>{isHoverd ? <FiArrowRight style={{ width: '20px', fontWeight: '800', height: 'auto' }} /> : <MdKeyboardArrowRight style={{ width: '20px', fontWeight: '800', height: 'auto' }} />}</span>
               </button>
             </div>
           </div>

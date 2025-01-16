@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import startupCard1 from '../../assets/images/startupCard1.jpg';
+import { MdKeyboardArrowRight } from "react-icons/md";
+import { FiArrowRight } from "react-icons/fi";
+
 
 function Startup() {
+    const [isHoverd, setIsHovered] = useState(null);
     return (
         <section className='bg-[#f6f9fc] 
         w-full 3xl:flex justify-center
@@ -53,7 +57,10 @@ function Startup() {
 
                                     <p className='text-[#425466] text-[18px]'>Form a legal entity, issue stock, and start accepting payments.</p>
 
-                                    <p className='cursor-pointer absolute -bottom-10 group-hover:-translate-y-4 left-5 text-[#635bff] font-semibold'>Learn about Atlas</p>
+                                    <p
+                                        onMouseEnter={() => setIsHovered(true)}
+                                        onMouseLeave={() => setIsHovered(false)}
+                                        className='flex items-center cursor-pointer absolute -bottom-10 group-hover:-translate-y-4 left-5 text-[#635bff] font-semibold hover:text-[#0a2450] '>Learn about Atlas  {isHoverd ? <FiArrowRight /> : <MdKeyboardArrowRight />} </p>
                                 </div>
                             </div>
 
@@ -85,7 +92,12 @@ function Startup() {
 
                                     <p className='text-[#425466] text-[18px]'>Launch a B2C business with a prebuilt payment page that’s optimized for conversion.</p>
 
-                                    <p className='cursor-pointer absolute -bottom-10 group-hover:-translate-y-4 left-5 text-[#635bff] font-semibold'>Start with checkout</p>
+                                    <p
+                                        onMouseEnter={() => setIsHovered(true)}
+                                        onMouseLeave={() => setIsHovered(false)}
+                                        className='flex gap-1 items-center cursor-pointer absolute -bottom-10 group-hover:-translate-y-4 left-5 text-[#635bff] font-semibold hover:text-[#0a2450]'
+                                    >
+                                        Start with checkout  {isHoverd ? <FiArrowRight /> : <MdKeyboardArrowRight />}</p>
                                 </div>
                             </div>
                         </div>
@@ -115,7 +127,10 @@ function Startup() {
 
                                     <p className='text-[#425466] text-[18px]'>Test your product idea by launching payments with little to no code.</p>
 
-                                    <p className='cursor-pointer absolute -bottom-10 group-hover:-translate-y-4 left-5 text-[#635bff] font-semibold'>Try Payment Links.</p>
+                                    <p
+                                        onMouseEnter={() => setIsHovered(true)}
+                                        onMouseLeave={() => setIsHovered(false)}
+                                        className='flex gap-1 items-center cursor-pointer absolute -bottom-10 group-hover:-translate-y-4 left-5 text-[#635bff] font-semibold hover:text-[#0a2450]'>Try Payment Links  {isHoverd ? <FiArrowRight /> : <MdKeyboardArrowRight />}</p>
                                 </div>
                             </div>
 
@@ -148,7 +163,10 @@ function Startup() {
 
                                     <p className='text-[#425466] text-[18px]'>Launch a B2B business and collect one-time or recurring payments from customers.</p>
 
-                                    <p className='cursor-pointer absolute -bottom-10 group-hover:-translate-y-4 left-5 text-[#635bff] font-semibold'>Explore Invoicing</p>
+                                    <p
+                                        onMouseEnter={() => setIsHovered(true)}
+                                        onMouseLeave={() => setIsHovered(false)}
+                                        className='flex gap-1 items-center cursor-pointer absolute -bottom-10 group-hover:-translate-y-4 left-5 text-[#635bff] font-semibold hover:text-[#0a2450]'>Explore Invoicing {isHoverd ? <FiArrowRight /> : <MdKeyboardArrowRight />}</p>
                                 </div>
                             </div>
                         </div>

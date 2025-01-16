@@ -1,14 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { MdKeyboardArrowRight } from "react-icons/md";
 // import { TiArrowRight } from "react-icons/ti";
 import { details } from '../../constant/Details';
+import { TiArrowRight } from "react-icons/ti";
 
 
 function DetailsComponent() {
+    const [isHoverd, setIsHovered] = useState(null);
     return (
         <div className='space-y-44'>
-            {details.map((item, index) => (
-                <div className="w-full flex flex-col md:flex-row gap-4 items-start md:items-center">
+            {details.map((item) => (
+                <div className="w-full flex flex-col md:flex-row gap-4 items-start md:items-center" key={item.id}>
                     <>
                         {/* Content Section */}
                         <div className="space-y-8 md:w-1/2 w-full">
@@ -26,7 +28,12 @@ function DetailsComponent() {
                                     {item.content}
                                 </p>
 
-                                <p className=' mx-2 md:mx-0 text-white font-semibold flex items-center justify-center pb-[5px] gap-1 px-3 p-1 bg-[#635BFF] rounded-full w-fit'>{item.btn} <span className='pt-[4.5px] font-bold '><MdKeyboardArrowRight /></span></p>
+                                <p
+                                    className='hover:bg-[#0a2450] mx-2 md:mx-0 text-white font-semibold flex items-center justify-center pb-[5px] gap-1 px-3 p-1 bg-[#635BFF] rounded-full w-fit'
+                                    onMouseEnter={() => setIsHovered(item.id)}
+                                    onMouseLeave={() => setIsHovered(null)}
+                                >
+                                    {item.btn} <span className='pt-[4.5px] font-bold '>{isHoverd === item.id ? <TiArrowRight /> : <MdKeyboardArrowRight />}</span></p>
 
                             </div>
                             <div className='space-y-3 font-bold pr-16 mx-2 md:mx-0'>

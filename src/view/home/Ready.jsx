@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { TiArrowRight } from "react-icons/ti";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { FaTags } from "react-icons/fa6";
@@ -7,6 +7,9 @@ import { FaRegFileCode } from "react-icons/fa6";
 
 <TiArrowRight />
 function Ready() {
+    const [isHoverd, setIsHovered] = useState({
+        // start:false,
+    })
     return (
         <div className='bg-[#f2f6f9] w-full text-white z-50 py-16 pb-28 flex justify-center'
             style={{
@@ -27,8 +30,8 @@ function Ready() {
                                     Create an account instantly to get started or contact us to design a custom package for your business.
                                 </p>
                                 <div className='flex items-center gap-1'>
-                                    <p className='bg-[#635BFF] text-white pr-3 pl-4 pb-2 py-1 font-semibold flex items-center rounded-full '>Start now <span className='pt-1'><MdKeyboardArrowRight /></span></p>
-                                    <p className='text-[#635BFF] font-semibold flex items-center pr-3 pl-4 pb-2 py-1 rounded-full'>Contact sales<span className='pt-1'><MdKeyboardArrowRight /></span></p>
+                                    <p className='bg-[#635BFF] cursor-pointer hover:bg-[#0a2450] text-white pr-3 pl-4 pb-2 py-1 font-semibold flex items-center rounded-full '>Start now <span className='pt-1'><MdKeyboardArrowRight /></span></p>
+                                    <p className='text-[#635BFF] cursor-pointer hover:text-[#0a2450] font-semibold flex items-center pr-3 pl-4 pb-2 py-1 rounded-full'>Contact sales<span className='pt-1'><MdKeyboardArrowRight /></span></p>
                                 </div>
                             </div>
 
@@ -40,7 +43,7 @@ function Ready() {
                                 <div className='space-y-2'>
                                     <p className='text-[#0A2540] md:pr-8 text-[15px] font-bold'>Always know what you pay</p>
                                     <p className='text-[#425466] md:pr-8 font-normal'>Integrated per-transaction pricing with no hidden fees.</p>
-                                    <p className='flex items-center pr-8 text-[#635BFF] font-semibold'>Pricing details <span className='pt-1'><MdKeyboardArrowRight /></span></p>
+                                    <p className='flex items-center cursor-pointer hover:text-[#0a2450] pr-8 text-[#635BFF] font-semibold'>Pricing details <span className='pt-1'><MdKeyboardArrowRight /></span></p>
                                 </div>
                             </div>
 
@@ -52,7 +55,7 @@ function Ready() {
                                 <div className='space-y-2'>
                                     <p className='text-[#0A2540] text-[15px] font-bold pr-8'>Start your integration</p>
                                     <p className='text-[#425466] font-normal pr-8'>Get up and running with Stripe in as little as 10 minutes.</p>
-                                    <p className='flex items-center pr-8 text-[#635BFF] font-semibold'>API reference <span className='pt-1'><MdKeyboardArrowRight /></span></p>
+                                    <p className='flex items-center pr-8 cursor-pointer hover:text-[#0a2450] text-[#635BFF] font-semibold'>API reference <span className='pt-1'><MdKeyboardArrowRight /></span></p>
                                 </div>
                             </div>
                         </div>
