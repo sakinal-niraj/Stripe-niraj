@@ -101,15 +101,29 @@ function Header() {
                                         </li>
                                         <li className='relative px-5 hover:opacity-100 group cursor-pointer'>
                                             <button className='text-white group-hover:opacity-50 text-[15px]'>Solutoins</button>
-                                            <Solutions />
+                                            <div className='absolute top-0 left-[-3.5rem] transition group-hover:translate-y-5 translate-y-0 
+                                            opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-300 ease-in-out
+                                            group-hover:transform z-50 min-w-[600px] transform'>
+                                                <Solutions />
+                                            </div>
                                         </li>
                                         <li className='relative px-5 hover:opacity-100 group cursor-pointer'>
                                             <button className='text-white group-hover:opacity-50 text-[15px]'>Developers</button>
-                                            <Developers />
+                                            <div className='absolute top-0 left-[-7.5rem] transition group-hover:translate-y-5 translate-y-0 
+                                            opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-300 ease-in-out
+                                            group-hover:transform z-50 min-w-[550px] transform'>
+
+                                                <Developers />
+                                            </div>
                                         </li>
                                         <li className='relative px-5 hover:opacity-100 group cursor-pointer'>
                                             <button className='text-white group-hover:opacity-50 text-[15px]'>Resources</button>
+                                            <div className='absolute top-0 left-[-7.5rem] transition group-hover:translate-y-5 translate-y-0 
+                                            opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-300 ease-in-out
+                                            group-hover:transform z-50 min-w-[500px] transform'>
+
                                             <Resources />
+                                            </div>
                                         </li>
                                         <li className='relative px-5 hover:opacity-50'>
                                             <Link to={'/'} className=' text-white text-[15px]'>Price</Link>
@@ -212,6 +226,17 @@ function Header() {
                                 content === "Products" && (<Products />)
                             }
 
+                            {
+                                content === "Solutions" && (<Solutions />)
+                            }
+
+                            {
+                                content === "Developers" && (<Developers />)
+                            }
+
+                            {
+                                content === "Resources" && (<Resources />)
+                            }
 
 
                             <div className="fixed bottom-[-4px] left-0 right-0 flex justify-center w-full z-50 bg-white mb-5">

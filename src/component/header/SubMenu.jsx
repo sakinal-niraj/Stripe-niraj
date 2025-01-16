@@ -231,9 +231,7 @@ const Products = () => {
 const Solutions = () => {
     const [isIconHoverd, setIsIconHoverd] = useState(null);
     return (
-        <div className='absolute top-0 left-[-3.5rem] transition group-hover:translate-y-5 translate-y-0 
-                                            opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-300 ease-in-out
-                                            group-hover:transform z-50 min-w-[600px] transform'>
+        
             <div className="relative top-6 bg-[#F6F9FB] rounded-xl shadow-xl w-full">
                 <div className="w-10 h-10  bg-[#F6F9FB] transform rotate-45 absolute top-0 z-0 translate-x-[5rem] rounded-sm"></div>
                 <div>
@@ -366,7 +364,7 @@ const Solutions = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        
     )
 }
 
@@ -376,9 +374,7 @@ const Developers = () => {
 
     const [isIconHoverd, setIsIconHoverd] = useState(null);
     return (
-        <div className='absolute top-0 left-[-7.5rem] transition group-hover:translate-y-5 translate-y-0 
-                                            opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-300 ease-in-out
-                                            group-hover:transform z-50 min-w-[550px] transform'>
+       
             <div className="relative top-6 bg-[white] rounded-xl shadow-xl shadow-gray-400 w-full">
                 <div className="w-10 h-10  bg-[white] transform rotate-45 absolute top-0 z-0 translate-x-[9rem] rounded-sm"></div>
                 <div>
@@ -451,7 +447,6 @@ const Developers = () => {
                     </div>
                 </div>
             </div>
-        </div>
     )
 }
 
@@ -459,9 +454,7 @@ const Developers = () => {
 const Resources = () => {
     const [isIconHoverd, setIsIconHoverd] = useState(null);
     return (
-        <div className='absolute top-0 left-[-7.5rem] transition group-hover:translate-y-5 translate-y-0 
-                                            opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-300 ease-in-out
-                                            group-hover:transform z-50 min-w-[500px] transform'>
+       
             <div className="relative top-6 bg-[white] rounded-xl shadow-xl shadow-gray-400 w-full">
                 <div className="w-10 h-10  bg-[white] transform rotate-45 absolute top-0 z-0 translate-x-[9rem] rounded-sm"></div>
                 <div>
@@ -520,7 +513,7 @@ const Resources = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        
     )
 }
 
