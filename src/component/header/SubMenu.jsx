@@ -31,6 +31,9 @@ import { useState } from "react";
 import { LuDot } from "react-icons/lu";
 import { ProductConstant, ProductGlobal, RevenueFinance } from "../../constant/Products";
 import { paymentHover } from "../../constant/Hover";
+import { businessModel, byStage, ecosystem, useCase } from "../../constant/Solutions";
+import { developers } from "../../constant/Developers";
+import { resources, resources2 } from "../../constant/Resources";
 
 
 
@@ -209,7 +212,7 @@ const Products = () => {
                                         <span>{hoveredIcon === item.id ? item.hover : item.default}</span>
                                     </p>
                                     <p
-                                        className={`transition-all duration-700 font-[300] text-[13px] text-[#0a2540] opacity-50 max-h-0 overflow-hidden ${hoveredIcon === item.id ? 'max-h-40' : ''}`}
+                                        className={`transition-all duration-1000 font-[300] text-[13px] text-[#0a2540] opacity-50 max-h-0 overflow-hidden ${hoveredIcon === item.id ? 'max-h-40' : ''}`}
                                     >
                                         {item?.description}
                                     </p>
@@ -229,7 +232,7 @@ const Products = () => {
 
 
 const Solutions = () => {
-    const [logoHoverd, setLogoHover] = useState(false);
+    const [isIconHoverd, setIsIconHoverd] = useState(null);
     return (
         <div className='absolute top-0 left-[-3.5rem] transition group-hover:translate-y-5 translate-y-0 
                                             opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-300 ease-in-out
@@ -243,27 +246,31 @@ const Solutions = () => {
                             <h1 className="uppercase text-[#0a2540] text-[13px] font-[550] tracking-tight">by stage</h1>
 
                             <div className="grid grid-cols-2 mt-2">
-                                <span className="flex items-center gap-2 font-[550] text-[#0a2540] opacity-90 text-[14px] "
-                                    onMouseEnter={() => setLogoHover(true)}
-                                    onMouseLeave={() => setLogoHover(false)}
-                                >
-                                    <svg
-                                        className={`${logoHoverd ? "fill-[#0a2540]" : "fill-[#88add2]"}`}
-                                        width="16"
-                                        height="16"
-                                        viewBox="0 0 16 16"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path
-                                            fillRule="evenodd"
-                                            clipRule="evenodd"
-                                            d="M9.84619 14.1016H9.8461V1.00061C9.8461 0.33623 9.21019 -0.143434 8.57138 0.0390845L1.95599 1.92919C1.52669 2.05185 1.23071 2.44424 1.23071 2.89072V14.1016H0.923077C0.413276 14.1016 0 14.5148 0 15.0246C0 15.5344 0.413276 15.9477 0.923077 15.9477H15.0769C15.5867 15.9477 16 15.5344 16 15.0246C16 14.5148 15.5867 14.1016 15.0769 14.1016H14.7693V6.26716C14.7693 5.80829 14.457 5.40831 14.0118 5.29702L9.84619 4.25562V14.1016ZM2.99994 5.50007C2.99994 5.22393 3.2238 5.00007 3.49994 5.00007H4.49994C4.77608 5.00007 4.99994 5.22393 4.99994 5.50007V6.50007C4.99994 6.77622 4.77608 7.00007 4.49994 7.00007H3.49994C3.2238 7.00007 2.99994 6.77622 2.99994 6.50007V5.50007ZM2.99994 8.50007C2.99994 8.22393 3.2238 8.00007 3.49994 8.00007H4.49994C4.77608 8.00007 4.99994 8.22393 4.99994 8.50007V9.50007C4.99994 9.77622 4.77608 10.0001 4.49994 10.0001H3.49994C3.2238 10.0001 2.99994 9.77622 2.99994 9.50007V8.50007ZM3.49994 11.0001C3.2238 11.0001 2.99994 11.2239 2.99994 11.5001V12.5001C2.99994 12.7762 3.2238 13.0001 3.49994 13.0001H4.49994C4.77608 13.0001 4.99994 12.7762 4.99994 12.5001V11.5001C4.99994 11.2239 4.77608 11.0001 4.49994 11.0001H3.49994ZM5.99994 5.50007C5.99994 5.22393 6.2238 5.00007 6.49994 5.00007H7.49994C7.77608 5.00007 7.99994 5.22393 7.99994 5.50007V6.50007C7.99994 6.77622 7.77608 7.00007 7.49994 7.00007H6.49994C6.2238 7.00007 5.99994 6.77622 5.99994 6.50007V5.50007ZM6.49994 8.00007C6.2238 8.00007 5.99994 8.22393 5.99994 8.50007V9.50007C5.99994 9.77622 6.2238 10.0001 6.49994 10.0001H7.49994C7.77608 10.0001 7.99994 9.77622 7.99994 9.50007V8.50007C7.99994 8.22393 7.77608 8.00007 7.49994 8.00007H6.49994ZM5.99994 11.5001C5.99994 11.2239 6.2238 11.0001 6.49994 11.0001H7.49994C7.77608 11.0001 7.99994 11.2239 7.99994 11.5001V12.5001C7.99994 12.7762 7.77608 13.0001 7.49994 13.0001H6.49994C6.2238 13.0001 5.99994 12.7762 5.99994 12.5001V11.5001ZM11.5 8C11.2239 8 11 8.22386 11 8.5V9.5C11 9.77614 11.2239 10 11.5 10H12.5C12.7762 10 13 9.77614 13 9.5V8.5C13 8.22386 12.7762 8 12.5 8H11.5ZM11.5 11C11.2239 11 11 11.2239 11 11.5V12.5C11 12.7761 11.2239 13 11.5 13H12.5C12.7762 13 13 12.7761 13 12.5V11.5C13 11.2239 12.7762 11 12.5 11H11.5Z"
-                                        ></path>
-                                    </svg>
-                                    Enterprise
-                                </span>
-                                <span className="flex items-center gap-2 font-[550] text-[#0a2540] opacity-90 text-[14px]"><IoIosRocket /> Startups</span>
+                                {
+                                    byStage.map((item) => (
+                                        <span
+                                            onMouseEnter={() => setIsIconHoverd(item.id)}
+                                            onMouseLeave={() => setIsIconHoverd(null)}
+                                            key={item.id}
+                                            className=""
+                                        >
+                                            <span className="flex items-center gap-2 font-[550] text-[#0a2540] opacity-90 text-[14px] capitalize">
+                                                <svg
+                                                    className={`${isIconHoverd === item.id ? 'fill-[#0a2540]' : 'fill-[#88add2]'} duration-100`}
+                                                    width="14"
+                                                    height="14"
+                                                    viewBox="0 0 16 16"
+                                                    fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                >
+                                                    {item.svg}
+                                                </svg>
+                                                {item.title}
+                                            </span>
+                                        </span>
+                                    ))
+                                }
+
                             </div>
                         </div>
 
@@ -273,10 +280,27 @@ const Solutions = () => {
 
                             <div className="">
                                 <div className="grid md:grid-cols-2 grid-cols-1   mt-2 space-y-3">
-                                    <span className="flex items-center gap-2 font-[550] text-[#0a2540] opacity-90 text-[14px]"><BsFillBasket3Fill /> E-commerce</span>
-                                    <span className="flex items-center gap-2 font-[550] text-[#0a2540] opacity-90 text-[14px]"><PiArrowsClockwiseBold /> SaaS</span>
-                                    <span className="flex items-center gap-2 font-[550] text-[#0a2540] opacity-90 text-[14px]"><BiSolidLayer /> plateforms</span>
-                                    <span className="flex items-center gap-2 font-[550] text-[#0a2540] opacity-90 text-[14px]"><BsShop /> Marketplaces</span>
+                                    {
+                                        businessModel.map((item) => (
+                                            <span
+                                                key={item.id}
+                                                onMouseEnter={() => setIsIconHoverd(item.id)}
+                                                onMouseLeave={() => setIsIconHoverd(null)}
+                                                className="flex items-center gap-2 font-[550] text-[#0a2540] opacity-90 text-[14px] capitalize">
+                                                <svg
+                                                    className={`${isIconHoverd === item.id ? 'fill-[#0a2540]' : 'fill-[#88add2]'} duration-100`}
+                                                    width="14"
+                                                    height="14"
+                                                    viewBox="0 0 16 16"
+                                                    fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                >
+                                                    {item.svg}
+                                                </svg>
+                                                {item.title}
+                                            </span>
+                                        ))
+                                    }
                                 </div>
                             </div>
                         </div>
@@ -287,12 +311,27 @@ const Solutions = () => {
 
                             <div className="">
                                 <div className="grid grid-cols-2 mt-2 space-y-3">
-                                    <span className="flex items-center gap-2 font-[550] text-[#0a2540] opacity-90 text-[14px]"><LuChartNoAxesColumn /> Finance automation</span>
-                                    <span className="flex items-center gap-2 font-[550] text-[#0a2540] opacity-90 text-[14px]"><ImPieChart /> Embedded finance</span>
-                                    <span className="flex items-center gap-2 font-[550] text-[#0a2540] opacity-90 text-[14px]"><TbGlobeFilled /> Global business</span>
-                                    <span className="flex items-center gap-2 font-[550] text-[#0a2540] opacity-90 text-[14px]"><IoMdRadio /> Crypto</span>
-                                    <span className="flex items-center gap-2 font-[550] text-[#0a2540] opacity-90 text-[14px]"><FaLightbulb /> Createor economy</span>
-                                    <span className="flex items-center gap-2 font-[550] text-[#0a2540] opacity-90 text-[14px]"><CiShop /> Retail</span>
+                                    {
+                                        useCase.map((item) => (
+                                            <span
+                                                key={item.id}
+                                                className="flex items-center gap-2 font-[550] text-[#0a2540] opacity-90 text-[14px] capitalize"
+                                                onMouseEnter={() => setIsIconHoverd(item.id)}
+                                                onMouseLeave={() => setIsIconHoverd(null)}
+                                            >
+                                                <svg
+                                                    width="14"
+                                                    height="14"
+                                                    viewBox="0 0 16 16"
+                                                    fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    className={`${isIconHoverd === item.id ? "fill-[#0a2540]" : "fill-[#88add2]"} `}>
+                                                    {item.svg}
+                                                </svg>
+                                                {item.title}
+                                            </span>
+                                        ))
+                                    }
                                 </div>
                             </div>
                         </div>
@@ -303,9 +342,27 @@ const Solutions = () => {
 
                             <div className="">
                                 <div className="grid grid-cols-2 mt-2 space-y-3">
-                                    <span className="flex items-center gap-2 font-[550] text-[#0a2540] opacity-90 text-[14px]"><AiFillPlusSquare /> Stripe App Marketplace</span>
-                                    <span className="flex items-center gap-2 font-[550] text-[#0a2540] opacity-90 text-[14px]"><PiArrowsClockwiseBold /> Partners</span>
-                                    <span className="flex items-center gap-2 font-[550] text-[#0a2540] opacity-90 text-[14px]"><IoMdPeople /> Professional Services</span>
+                                    {
+                                        ecosystem.map((item) => (
+                                            <span
+                                                key={item.id}
+                                                className="flex items-center gap-2 font-[550] text-[#0a2540] opacity-90 text-[14px] capitalize"
+                                                onMouseEnter={() => setIsIconHoverd(item.id)}
+                                                onMouseLeave={() => setIsIconHoverd(null)}
+                                            >
+                                                <svg
+                                                    width="14"
+                                                    height="14"
+                                                    viewBox="0 0 16 16"
+                                                    fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    className={`${isIconHoverd === item.id ? "fill-[#0a2540]" : "fill-[#88add2]"} `}>
+                                                    {item.svg}
+                                                </svg>
+                                                {item.title}
+                                            </span>
+                                        ))
+                                    }
                                 </div>
                             </div>
                         </div>
@@ -318,6 +375,9 @@ const Solutions = () => {
 
 
 const Developers = () => {
+    const [isHovered, setIsHovered] = useState(false);
+
+    const [isIconHoverd, setIsIconHoverd] = useState(null);
     return (
         <div className='absolute top-0 left-[-7.5rem] transition group-hover:translate-y-5 translate-y-0 
                                             opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-300 ease-in-out
@@ -330,32 +390,65 @@ const Developers = () => {
                     <div className="p-1 space-y-1 text-[15px]">
                         <div className="relative z-10 w-full bg-white shadow-white  rounded-xl space-y-6">
                             <div className="mb-2 pt-5 space-y-2 px-6">
-                                <span className="flex items-center gap-2  uppercase text-[#0a2540] text-[13px] font-[550] tracking-tight"><FaBookOpen /> Documentation</span>
-
+                                <div className="flex  gap-2"
+                                    onMouseEnter={() =>
+                                        setIsHovered(true)
+                                    }
+                                    onMouseLeave={() =>
+                                        setIsHovered(false)
+                                    }
+                                >
+                                    <span className="pt-[2px]">
+                                        <svg class={`${isHovered ? 'fill-[#0a2540]' : 'fill-[#88add2]'}`} width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M4.04 2c1.91 0 3.46.9 3.46 2.55V15c-.45 0-.9-.3-1.17-.53-.86-.71-2.52-.75-4.31-.75H.83a.82.82 0 0 1-.59-.25.86.86 0 0 1-.24-.6V2.85C0 2.38.37 2 .83 2h3.2zm11.13 0c.22 0 .43.1.59.25.15.16.24.38.24.6v10.02c0 .23-.09.44-.24.6a.82.82 0 0 1-.6.25h-1.18c-1.8 0-3.45.04-4.3.75-.28.23-.73.53-1.18.53V4.55C8.5 2.91 10.05 2 11.96 2h3.2z" fill-rule="evenodd"></path></svg>
+                                    </span>
+                                    <div
+                                        className="space-y-[2px]"
+                                    >
+                                        <p className="flex items-center gap-1 uppercase text-[#0a2540] font-[550] tracking-tight text-[13px]"> Documentation{isHovered ? <BsArrowRightShort size={20} /> : ""}</p>
+                                        <p className={`transition-opacity duration-100  text-[#0a2540] ${isHovered ? "opacity-100" : "opacity-60"} text-[13px] font-normal `}>Start intergating Stripe's products and tools</p>
+                                    </div>
+                                </div>
                             </div>
 
                             <div className="grid grid-cols-2 mb-2 pt-2 space-y-2 px-10">
-                                <div className="mt-1.5 space-y-2">
-                                    <span className="flex items-center gap-2 font-bold">Get Started</span>
-                                    <span className="flex items-center gap-2">Libraries and SDKs</span>
-                                    <span className="flex items-center gap-2">Pre-built checkout </span>
-                                    <span className="flex items-center gap-2">App integrations</span>
-                                    <span className="flex items-center gap-2">Code samples </span>
+                                <div className="mt-1.5 space-y-1.5">
+                                    <span className="flex items-center gap-2 uppercase text-[#0a2540] text-[13px] font-[600] tracking-tight">Get Started</span>
+                                    <span className="capitalize text-[#0a2540] text-[14px] font-[500] opacity-75 hover:opacity-100 flex items-center gap-2">Pre-built checkout </span>
+                                    <span className="capitalize text-[#0a2540] text-[14px] font-[500] opacity-75 hover:opacity-100 flex items-center gap-2">Libraries and SDKs</span>
+                                    <span className="capitalize text-[#0a2540] text-[14px] font-[500] opacity-75 hover:opacity-100 flex items-center gap-2">App integrations</span>
+                                    <span className="capitalize text-[#0a2540] text-[14px] font-[500] opacity-75 hover:opacity-100 flex items-center gap-2">Code samples </span>
                                 </div>
                                 <div className="mt-1.5 space-y-2">
                                     <span className="flex items-center gap-2 uppercase text-[#0a2540] text-[13px] font-[600]">Guied</span>
-                                    <span className="uppercase text-[#0a2540] text-[12px] font-medium hover:font-[600] flex items-center gap-2">Accept online payments</span>
-                                    <span className="uppercase text-[#0a2540] text-[12px] font-medium hover:font-[600] flex items-center gap-2">Manage subscriptions</span>
-                                    <span className="uppercase text-[#0a2540] text-[12px] font-medium hover:font-[600] flex items-center gap-2">Send payments</span>
-                                    <span className="uppercase text-[#0a2540] text-[12px] font-medium hover:font-[600] flex items-center gap-2">Set up in-person payments</span>
+                                    <span className="capitalize text-[#0a2540] text-[14px] font-[500] opacity-75 hover:opacity-100 flex items-center gap-2">Accept online payments</span>
+                                    <span className="capitalize text-[#0a2540] text-[14px] font-[500] opacity-75 hover:opacity-100 flex items-center gap-2">Manage subscriptions</span>
+                                    <span className="capitalize text-[#0a2540] text-[14px] font-[500] opacity-75 hover:opacity-100 flex items-center gap-2">Send payments</span>
+                                    <span className="capitalize text-[#0a2540] text-[14px] font-[500] opacity-75 hover:opacity-100 flex items-center gap-2">Set up in-person payments</span>
                                 </div>
                             </div>
 
-                            <div className="my-2 px-6 py-6 bg-[#F6F9FB]  grid grid-cols-2 space-y-3 shadow-xl text-black shadow-white rounded-md">
-                                <span className="flex items-center gap-2 uppercase text-[#0a2540] text-[13px] font-[550]"><HiOutlineBars4 /> Full API reference</span>
-                                <span className="flex items-center gap-2 uppercase text-[#0a2540] text-[13px] font-[550]"><IoAnalytics /> API changelog</span>
-                                <span className="flex items-center gap-2 uppercase text-[#0a2540] text-[13px] font-[550]"><FaArrowsAltH /> API status</span>
-                                <span className="flex items-center gap-2 uppercase text-[#0a2540] text-[13px] font-[550]"><BsFiles /> Build on Stripe Apps</span>
+                            <div className="my-2 px-6 py-6 bg-[#F6F9FB]  grid grid-cols-2 space-y-3 rounded-md">
+                                {
+                                    developers.map((item) => (
+                                        <span
+                                            key={item.id}
+                                            className="flex items-center gap-2 font-[550] text-[#0a2540] opacity-90 text-[14px] capitalize"
+                                            onMouseEnter={() => setIsIconHoverd(item.id)}
+                                            onMouseLeave={() => setIsIconHoverd(null)}
+                                        >
+                                            <svg
+                                                width="14"
+                                                height="14"
+                                                viewBox="0 0 16 16"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                className={`${isIconHoverd === item.id ? "fill-[#0a2540] stroke-[#0a2540]" : "fill-[#88add2] stroke-[#88add2]"} `}>
+                                                {item.svg}
+                                            </svg>
+                                            {item.title}
+                                        </span>
+                                    ))
+                                }
                             </div>
                         </div>
                     </div>
@@ -367,6 +460,7 @@ const Developers = () => {
 
 
 const Resources = () => {
+    const [isIconHoverd, setIsIconHoverd] = useState(null);
     return (
         <div className='absolute top-0 left-[-7.5rem] transition group-hover:translate-y-5 translate-y-0 
                                             opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-300 ease-in-out
@@ -378,21 +472,52 @@ const Resources = () => {
                     {/* first row */}
                     <div className="p-1 space-y-1 text-[15px]">
                         <div className="relative z-10 w-full bg-white shadow-white  rounded-xl space-y-6">
-                            <div className="grid grid-cols-2 mb-2 pt-5 space-y-2 px-6">
-                                <span className="flex items-center gap-2"><RiLifebuoyFill size={18} /> Support center</span>
-                                <span className="flex items-center gap-2"><FaTag /> Support plans</span>
-                                <span className="flex items-center gap-2"><FaFile /> Guides</span>
-                                <span className="flex items-center gap-2"><RiCustomerService2Fill /> Customer stories</span>
-                                <span className="flex items-center gap-2"><FaPenNib /> Blog</span>
-                                <span className="flex items-center gap-2"><FaCalendar /> Sessions</span>
-                                <span className="flex items-center gap-2"><TiMessages size={17} /> Contact sales</span>
+                            <div className="grid grid-cols-2 mt-6 space-y-2 px-6">
+                                {
+                                    resources.map((item) => (
+                                        <span
+                                            key={item.id}
+                                            className="flex items-center gap-2 font-[550] text-[#0a2540] opacity-90 text-[14px] capitalize"
+                                            onMouseEnter={() => setIsIconHoverd(item.id)}
+                                            onMouseLeave={() => setIsIconHoverd(null)}
+                                        >
+                                            <svg
+                                                width="16"
+                                                height="16"
+                                                viewBox="0 0 16 16"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                className={`${isIconHoverd === item.id ? "fill-[#0a2540]" : "fill-[#88add2]"} `}>
+                                                {item.svg}
+                                            </svg>
+                                            {item.title}
+                                        </span>
+                                    ))
+                                }
                             </div>
 
                             <div className="my-2 px-6 py-6 bg-[#F6F9FB] grid grid-cols-2 space-y-3 shadow-xl text-black shadow-white rounded-md">
-                                <span className="flex items-center gap-2"><PiBagSimpleFill /> Jobs</span>
-                                <span className="flex items-center gap-2"><FaNewspaper /> Newsroom</span>
-                                <span className="flex items-center gap-2"><FaBookOpen /> Stripe Press</span>
-                                <span className="flex items-center gap-2"><BsAwardFill /> Become a partner</span>
+                                {
+                                    resources2.map((item) => (
+                                        <span
+                                            key={item.id}
+                                            className="flex items-center gap-2 font-[550] text-[#0a2540] opacity-90 text-[14px] capitalize"
+                                            onMouseEnter={() => setIsIconHoverd(item.id)}
+                                            onMouseLeave={() => setIsIconHoverd(null)}
+                                        >
+                                            <svg
+                                                width="16"
+                                                height="16"
+                                                viewBox="0 0 16 16"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                className={`${isIconHoverd === item.id ? "fill-[#0a2540]" : "fill-[#88add2]"} `}>
+                                                {item.svg}
+                                            </svg>
+                                            {item.title}
+                                        </span>
+                                    ))
+                                }
                             </div>
                         </div>
                     </div>

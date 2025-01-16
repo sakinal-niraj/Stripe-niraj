@@ -15,8 +15,8 @@ function Header() {
     return (
         <>
             <header className='w-full h-14 mt-2 z-50 '>
-                <nav className='px-2 md:px-4 xl:px-24 2xl:px-[220px] 3xl:flex justify-center'>
-                    <div className={`lg:mt-0 md:pt-2 px-3 flex justify-between items-center font-bold ${isOpen} ? mt-8 md:mt-4 : mt-3 md:mt-2`}>
+                <nav className='px-2 md:px-4 xl:px-24 2xl:px-[230px] 3xl:flex justify-center xl:w-full'>
+                    <div className={`lg:mt-0 md:pt-2 px-3 3xl:px-0 flex justify-between 3xl:w-full 3xl:max-w-[1100px] items-center font-bold ${isOpen} ? mt-8 md:mt-4 : mt-3 md:mt-2`}>
                         {/* right side */}
                         <div className='flex items-center justify-center space-x-6'>
                             {/* Logo */}
@@ -65,7 +65,7 @@ function Header() {
                         </div>
 
                         {/* left side */}
-                        <div className='lg:flex space-y-2 space-x-2 items-center hidden'>
+                        <div className='lg:flex space-y-2 space-x-2 items-center hidden 3xl:ml-24'>
                             {/* Sign in */}
                             <div
                                 className='flex items-center pt-1 font-bold first-letter:uppercase transform text-[15px] hover:opacity-50 text-white'
