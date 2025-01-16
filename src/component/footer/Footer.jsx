@@ -33,7 +33,7 @@ function Footer() {
                                     <div className='flex flex-col space-y-1 text-[#0A2540] text-[15px]'>
                                         {
                                             productsPricing.map((item, index) => (
-                                                <Link className='hover:opacity-60' to={item.path} key={item.key}>{item.label}</Link>
+                                                <Link className='hover:opacity-60 duration-0' to={item.path} key={item.index}>{item.label}</Link>
                                             ))
                                         }
                                     </div>
@@ -61,7 +61,7 @@ function Footer() {
                                         <div className='flex flex-col space-y-1 text-[#0A2540] text-[15px]'>
                                             {
                                                 integrationCustom.map((item, index) => (
-                                                    <Link className='hover:opacity-60' to={item.path} key={item.key}>{item.label}</Link>
+                                                    <Link className='hover:opacity-60' to={item.path} key={item.index}>{item.label}</Link>
                                                 ))
                                             }
                                         </div>
@@ -74,7 +74,7 @@ function Footer() {
                                         <div className='flex flex-col space-y-1 text-[#0A2540] text-[15px]'>
                                             {
                                                 developersData.map((item, index) => (
-                                                    <Link className='hover:opacity-60' to={item.path} key={item.key}>{item.label}</Link>
+                                                    <Link className='hover:opacity-60' to={item.path} key={item.index}>{item.label}</Link>
                                                 ))
                                             }
                                         </div>
@@ -90,7 +90,7 @@ function Footer() {
                                         <div className='flex flex-col space-y-1 text-[#0A2540] text-[15px]'>
                                             {
                                                 resourcesData.map((item, index) => (
-                                                    <Link className='hover:opacity-60' to={item.path} key={item.key}>{item.label}</Link>
+                                                    <Link className='hover:opacity-60' to={item.path} key={item.index}>{item.label}</Link>
                                                 ))
                                             }
                                         </div>
@@ -103,7 +103,7 @@ function Footer() {
                                         <div className='flex flex-col space-y-1 text-[#0A2540] text-[15px]'>
                                             {
                                                 companyData.map((item, index) => (
-                                                    <Link className='hover:opacity-60' to={item.path} key={item.key}>{item.label}</Link>
+                                                    <Link className='hover:opacity-60' to={item.path} key={item.index}>{item.label}</Link>
                                                 ))
                                             }
                                         </div>
@@ -116,7 +116,7 @@ function Footer() {
                                         <div className='flex flex-col space-y-1 text-[#0A2540] text-[15px]'>
                                             {
                                                 supportData.map((item, index) => (
-                                                    <Link className='hover:opacity-60' to={item.path} key={item.key}>{item.label}</Link>
+                                                    <Link className='hover:opacity-60 duration-0' to={item.path} key={item.index}>{item.label}</Link>
                                                 ))
                                             }
                                         </div>

@@ -56,9 +56,7 @@ const Products = () => {
     // icons
     const [hoveredIcon, setHoveredIcon] = useState(null);
     return (
-        <div className='absolute top-0 left-[-6.5rem] transition group-hover:translate-y-5 translate-y-0
-                                            md:opacity-0 invisible md:group-hover:opacity-100 group-hover:visible duration-300 ease-in-out
-                                            group-hover:transform z-50 min-w-[950px] transform'>
+       
             <div className="relative top-6 bg-[#F6F9FB] rounded-xl shadow-xl w-full">
                 <div className="w-10 h-10  bg-[#F6F9FB] transform rotate-45 absolute top-0 z-0 translate-x-[8rem] rounded-sm"></div>
                 <div>
@@ -222,7 +220,6 @@ const Products = () => {
                     </div>
                 </div>
             </div>
-        </div>
 
     );
 };
