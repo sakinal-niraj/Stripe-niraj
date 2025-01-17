@@ -11,16 +11,16 @@ function Details() {
             >
                 {/* First Clipped Section */}
                 <div className='pb-28 2xl:ml-36 z-10 3xl:max-w-[1600px]'>
-                    <div className="px-5 md:px-6 xl:px-20 3xl:px-56 py-20 pt-28 space-y-32">
+                    <div className="px-5 md:px-6 xl:px-20 3xl:px-56 py-20 pt-28 space-y-20 lg:space-y-24 3xl:space-y-52">
                         <div className="flex flex-col md:flex-row gap-8 items-start md:items-center">
                             <div className="space-y-6 md:w-1/2 w-full">
                                 <h2 className="text-[#635BFF] font-bold text-[18px] pl-2 pb-2 flex items-center gap-2">
                                     Modular solutions
                                 </h2>
-                                <p className="tracking-[-3px] font-bold text-[48px] xl:text-[56px] text-[#0A2540] leading-tight  pl-2 lg:pr-[100px]">
+                                <p className="tracking-[-3px] font-bold text-[48px] xl:text-[56px] text-[#0A2540] leading-tight pr-[20px] pl-2 lg:pr-[100px]">
                                     A fully integrated suite of financial and payments products
                                 </p>
-                                <p className="text-lg text-[#425466] pl-2 pr-14">
+                                <p className="text-lg text-[#425466] pl-2 lg:pr-[135px] pr-6">
                                     Reduce costs, grow revenue, and run your business more efficiently on a
                                     fully integrated platform. Use Stripe to handle all of your
                                     payments-related needs, manage revenue operations, and launch (or invent)

@@ -61,22 +61,24 @@ const CanvasAnimation = () => {
 
     return (
         <div className=''>
-            <canvas
-                ref={canvasRef}
-                width="32"
-                height="32"
-                className="absolute top-0 left-0 w-full h-full -z-20"
-                style={{
-                    clipPath: 'polygon(0 0, 100% 0, 100% 33%, 0 83%)',
-                }}
-            >
+            <div>
+                <canvas
+                    width={"32"}
+                    height={"32"}
+                    ref={canvasRef}
+                    className="absolute top-0 left-0 w-full h-full -z-20"
+                    style={{
+                        clipPath: 'polygon(0 0, 100% 0, 100% 34%, 0 83%)',
+                    }}
+                >
+                </canvas>
+            </div>
 
-            </canvas>
             <div className='relative -z-10 mt-5 md:mt-16 flex justify-between w-full h-full 3xl:justify-center  pl-5 sm:pl-6 md:ml-0 lg:ml-0 2xl:pl-[240px] 3xl:pl-[0px] 3xl:ml-0 overflow-hidden'>
                 <div className='flex justify-between 3xl:max-w-[1050px] 3xl:w-full '>
                     <div className="text-black mr-[90px] 3xl:w-full">
                         {/* Preview Tag */}
-                        <div className="flex justify-start items-center mb-10">
+                        <div className="flex justify-start items-center mb-8">
                             <h1 className="w-fit text-center px-3 py-2 rounded-sm md:py-[3px] md:px-[11px] md:rounded-full bg-gray-800/50 text-white text-[13px] font-bold tracking-wide">
                                 Preview
                             </h1>
@@ -90,7 +92,7 @@ const CanvasAnimation = () => {
                             </h1>
 
                             {/* Subheading */}
-                            <p className="text-gray-700 font-medium text-lg leading-relaxed">
+                            <p className="text-gray-700 font-medium text-lg leading-relaxed pr-[40px]">
                                 Join millions of companies of all sizes using Stripe to accept payments online and in person, embed financial services, power custom revenue models, and build a more profitable business.
                             </p>
 
@@ -141,7 +143,7 @@ const CanvasAnimation = () => {
 
                 {/* <div className=' w-full' >hello</div> */}
             </div>
-        </div>
+        </div >
     );
 };
 

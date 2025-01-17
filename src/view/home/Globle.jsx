@@ -21,7 +21,7 @@ function Globle() {
                     </div>
 
                     {/* Cards */}
-                    <div className='grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 w-full px-4 gap-5'>
+                    <div className='grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 w-full px-4 gap-5 mt-16'>
                         {/* card1  */}
                         <div className="h-[540px] w-full shadow-lg shadow-gay-150 overflow-hidden hover:cursor-pointer relative group p-1 rounded-md">
                             {/* Image Section */}

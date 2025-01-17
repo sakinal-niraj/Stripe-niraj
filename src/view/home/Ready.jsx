@@ -3,7 +3,8 @@ import { TiArrowRight } from "react-icons/ti";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { FaTags } from "react-icons/fa6";
 import { FaRegFileCode } from "react-icons/fa6";
-
+import logo1 from '../../assets/images/icon_logo1.png'
+import logo2 from '../../assets/images/icon_logo2.png'
 
 <TiArrowRight />
 function Ready() {
@@ -20,7 +21,7 @@ function Ready() {
             <div className=" bg-[#f2f6f9] mb-10">
                 <div className="text-black px-5 md:px-10 xl:px-24 2xl:px-56 pt-16 w-full 3xl:ml-20">
                     <div className='3xl:max-w-[1050px]'>
-                        <div className="grid grid-cols-[100%] md:grid-cols-[50%_25%_25%] gap-4 w-full">
+                        <div className="grid grid-cols-[100%] md:grid-cols-[50%_25%_25%] gap-4 w-full space-y-10 md:space-y-0">
                             {/* First Grid: 50% Width */}
                             <div className="space-y-6">
                                 <h1 className="text-[24px] font-semibold text-[#0A2540]">
@@ -30,15 +31,16 @@ function Ready() {
                                     Create an account instantly to get started or contact us to design a custom package for your business.
                                 </p>
                                 <div className='flex items-center gap-1'>
-                                    <p className='bg-[#635BFF] cursor-pointer hover:bg-[#0a2450] text-white pr-3 pl-4 pb-2 py-1 font-semibold flex items-center rounded-full '>Start now <span className='pt-1'><MdKeyboardArrowRight /></span></p>
+                                    <p className='bg-[#635BFF] cursor-pointer hover:bg-[#0a2450] text-white pr-3 pl-4 pb-1.5 py-1 font-semibold flex items-center rounded-full '>Start now <span className='pt-[1.5px]'><MdKeyboardArrowRight /></span></p>
                                     <p className='text-[#635BFF] cursor-pointer hover:text-[#0a2450] font-semibold flex items-center pr-3 pl-4 pb-2 py-1 rounded-full'>Contact sales<span className='pt-1'><MdKeyboardArrowRight /></span></p>
                                 </div>
                             </div>
 
                             {/* Second Grid: 25% Width */}
                             <div className="space-y-4">
-                                <div>
-                                    <FaTags />
+                                <div className='pb-1.5'>
+                                    {/* img */}
+                                    <img src={logo1} alt="" />
                                 </div>
                                 <div className='space-y-2'>
                                     <p className='text-[#0A2540] md:pr-8 text-[15px] font-bold'>Always know what you pay</p>
@@ -50,7 +52,7 @@ function Ready() {
                             {/* Third Grid: 25% Width */}
                             <div className="space-y-4 ">
                                 <div>
-                                    <FaTags />
+                                    <img src={logo2} alt="" />
                                 </div>
                                 <div className='space-y-2'>
                                     <p className='text-[#0A2540] text-[15px] font-bold pr-8'>Start your integration</p>

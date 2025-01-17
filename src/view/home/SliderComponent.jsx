@@ -13,7 +13,7 @@ function SliderComponent() {
   const [sliderRef, setSliderRef] = useState(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const [isHoverd , setIsHovered] = useState(false);
+  const [isHoverd, setIsHovered] = useState(false);
 
   const settings = {
     dots: false,
@@ -74,13 +74,13 @@ function SliderComponent() {
 
             <div className='w-full pt-4'>
               <button
-              onMouseEnter={()=> { setIsHovered(true)}}
-              onMouseLeave={()=> { setIsHovered(false)}}
-               className='gap-2 bg-[#635BFF] flex items-center pl-4 pr-2 py-1 pb-1.5 text-white font-bold rounded-full hover:bg-[#1a2657]'>
+                onMouseEnter={() => { setIsHovered(true) }}
+                onMouseLeave={() => { setIsHovered(false) }}
+                className='gap-2 bg-[#635BFF] flex items-center pl-4 pr-2 py-1 pb-1.5 text-white font-bold rounded-full hover:bg-[#1a2657]'>
                 Explore Stripe for enterprises
-                <span 
-                
-                className='pt-[1px] font-bold'>{isHoverd ? <FiArrowRight style={{ width: '20px', fontWeight: '800', height: 'auto' }} /> : <MdKeyboardArrowRight style={{ width: '20px', fontWeight: '800', height: 'auto' }} />}</span>
+                <span
+
+                  className='pt-[1px] font-bold'>{isHoverd ? <FiArrowRight style={{ width: '20px', fontWeight: '800', height: 'auto' }} /> : <MdKeyboardArrowRight style={{ width: '20px', fontWeight: '800', height: 'auto' }} />}</span>
               </button>
             </div>
           </div>
@@ -89,14 +89,14 @@ function SliderComponent() {
 
 
         {/* slider */}
-        <div>
-          <Slider ref={(slider) => setSliderRef(slider)} {...settings}>
+        <div className=''>
+          <Slider ref={(slider) => setSliderRef(slider)} {...settings} className='mb-5 sm:mb-0'>
 
             {/* first slider */}
             <div className="w-full  relative z-0 rounded-lg group overflow-hidden cursor-pointer">
               <div className='grid md:grid-cols-[1fr_3fr]  gap-5'>
                 {/* content */}
-                <div className='w-full md:space-y-10 grid grid-cols-2 md:block'>
+                <div className='w-full space-y-10 grid grid-cols-1  sm:grid-cols-2 md:block'>
                   {/* first row */}
                   <div className='space-y-2'>
                     <h1 className='font-bold text-2xl border-l-[1px] border-[#635BFF] pl-3 py-0'>Millions</h1>
@@ -166,7 +166,7 @@ function SliderComponent() {
             <div className="w-full  relative z-0 rounded-lg group overflow-hidden cursor-pointer">
               <div className='grid  md:grid-cols-[1fr_3fr]  gap-5'>
                 {/* content */}
-                <div className='w-full md:space-y-10 grid grid-cols-2 md:block'>
+                <div className='w-full md:space-y-10 space-y-10 grid grid-cols-1 sm:grid-cols-2 md:block'>
                   {/* first row */}
                   <div className='space-y-2'>
                     <h1 className='font-bold text-2xl border-l-[1px] border-[#635BFF] pl-3 py-0'>5+</h1>
@@ -236,7 +236,7 @@ function SliderComponent() {
             <div className="w-full  relative z-0 rounded-lg group overflow-hidden cursor-pointer">
               <div className='grid  md:grid-cols-[1fr_3fr]  gap-5'>
                 {/* content */}
-                <div className='w-full md:space-y-10 grid grid-cols-2 md:block'>
+                <div className='w-full space-y-10 grid grid-cols-1 sm:grid-cols-2 md:block'>
                   {/* first row */}
                   <div className='space-y-2'>
                     <h1 className='font-bold text-2xl border-l-[1px] border-[#635BFF] pl-3 py-0'>130</h1>
@@ -305,7 +305,7 @@ function SliderComponent() {
             <div className="w-full  relative z-0 rounded-lg group overflow-hidden cursor-pointer">
               <div className='grid  md:grid-cols-[1fr_3fr]  gap-5'>
                 {/* content */}
-                <div className='w-full md:space-y-10 grid grid-cols-2 md:block'>
+                <div className='w-full space-y-10 grid grid-cols-1 sm:grid-cols-2 md:block'>
                   {/* first row */}
                   <div className='space-y-2'>
                     <h1 className='font-bold text-2xl border-l-[1px] border-[#635BFF] pl-3 py-0'>+5.5%</h1>
@@ -390,6 +390,15 @@ function SliderComponent() {
                 {item.svg}
               </div>
             ))}
+          </div>
+
+          {/* arrows */}
+          <div className='text-center flex items-center justify-center gap-1 md:hidden'>
+          {
+            logoLinks.map((item, index)=>(
+                <div className={`w-6 h-0.5 rounded-sm ${activeIndex === index ? "bg-blue-600" : "bg-gray-500"} duration-300`}></div>
+            ))
+          }
           </div>
         </div>
       </div>

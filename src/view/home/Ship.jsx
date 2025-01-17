@@ -29,12 +29,12 @@ function Ship() {
                     {/* row 1 */}
                     <div className='grid sm:grid-cols-2 grid-cols-1 space-y-6 md:pl-4'>
                         {/* col1 */}
-                        <div className='space-y-6'>
+                        <div className='space-y-6 md:pt-6 pl-4'>
                             <p className='text-[#00d4ff] font-semibold text-[18px] lg:pr-16'>Designed for develoeprs</p>
 
                             <h1 className='text-white text-4xl font-semibold leading-[2.8rem] lg:pr-16 tracking-tighter'>Ship more quickly with powerful and easy-to-use APIs</h1>
 
-                            <p className='pl-5 pr-5 sm:pl-0 md:pr-20 text-[#adbdcc] leading-7 text-[18px] '>
+                            <p className=' pr-5 sm:pl-0 md:pr-20 text-[#adbdcc] leading-7 text-[18px] '>
                                 Save engineering time with unified payments functionality. We obsess over the maze of gateways, payments rails, and financial institutions that make up the global economic landscape so that your teams can build what you need on one platform.
                             </p>
 
@@ -48,14 +48,14 @@ function Ship() {
                         </div>
 
                         {/* col2 */}
-                        <div>
+                        <div className='pb-10'>
                             <img src={code} alt="" />
                         </div>
                     </div>
 
 
                     {/* row 2 */}
-                    <div className='grid md:grid-cols-4 grid-cols-2'>
+                    <div className='grid grid-cols-1 md:grid-cols-4 sm:grid-cols-2'>
                         {/* col1 */}
                         {
                             shipData.map((item) => (

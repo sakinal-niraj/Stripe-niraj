@@ -8,14 +8,14 @@ import { TiArrowRight } from "react-icons/ti";
 function DetailsComponent() {
     const [isHoverd, setIsHovered] = useState(null);
     return (
-        <div className='space-y-44'>
+        <div className='space-y-20 lg:space-y-[280px]  3xl:space-y-[440px]'>
             {details.map((item) => (
                 <div className="w-full flex flex-col md:flex-row gap-4 items-start md:items-center" key={item.id}>
                     <>
                         {/* Content Section */}
                         <div className="space-y-8 md:w-1/2 w-full">
                             <div className='space-y-6'>
-                                <h2 className="text-[#635BFF] font-bold text-xl pr-16 flex items-center gap-2">
+                                <h2 className="text-[#0a2450] font-bold text-xl pr-16 flex items-center gap-2">
                                     {/* svg */}
                                     {item.svg}
                                     {item.title}</h2>
@@ -24,7 +24,7 @@ function DetailsComponent() {
                                     {item.heading}
                                 </p>
 
-                                <p className="text-base px-2 md:px-0 text-[#425466] text-[18px] md:pr-[64px] pr-16 ">
+                                <p className="text-base px-2 md:px-0 text-[#425466] text-[18px] md:pr-[170px] pr-16 ">
                                     {item.content}
                                 </p>
 
@@ -36,7 +36,7 @@ function DetailsComponent() {
                                     {item.btn} <span className='pt-[4.5px] font-bold '>{isHoverd === item.id ? <TiArrowRight /> : <MdKeyboardArrowRight />}</span></p>
 
                             </div>
-                            <div className='space-y-3 font-bold pr-16 mx-2 md:mx-0'>
+                            <div className='space-y-3 font-bold pt-8 pr-16 mx-2 md:mx-0'>
                                 <p className='text-[15px] text-[#0A2540]'>See also</p>
 
                                 <div className='space-y-1'>
