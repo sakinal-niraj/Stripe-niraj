@@ -62,7 +62,7 @@ function Header() {
 
     return (
         <>
-            <header className='w-full h-14 mt-2 z-50 '>
+            <header className='w-full h-10 mt-2 z-50 '>
                 <nav className='px-2 md:px-4 xl:px-24 2xl:px-[230px] 3xl:flex justify-center xl:w-full'>
                     <div className={`lg:mt-0 md:pt-2 px-3 3xl:px-0 flex justify-between 3xl:w-full 3xl:max-w-[1100px] items-center font-bold ${isOpen} ? mt-8 md:mt-4 : mt-3 md:mt-2`}>
                         {/* right side */}
@@ -154,7 +154,7 @@ function Header() {
                         </div>
 
 
-                        <div className='lg:hidden flex justify-center items-center font-bold text-2xl' onClick={() => setIsDrawerOpen(true)}>
+                        <div className='lg:hidden rounded-2xl bg-[#ffffff27] mr-2 px-3.5 py-1.5 text-white flex justify-center items-center font-bold text-xl' onClick={() => setIsDrawerOpen(true)}>
                             <ion-icon name={'menu'}></ion-icon>
                         </div>
 
@@ -163,7 +163,7 @@ function Header() {
 
                     {isDrawerOpen && (
                         <div
-                            className={`fixed lg:hidden top-0 left-0 z-40 h-screen lg:px-4 overflow-y-auto transition-transform transform ${isDrawerOpen ? "translate-x-0" : "-translate-x-full"
+                            className={`fixed lg:hidden top-0 left-0 z-40 h-full lg:px-4 overflow-y-auto transition-transform transform ${isDrawerOpen ? "translate-x-0" : "-translate-x-full"
                                 } bg-white w-full`}
                             aria-labelledby="drawer-label"
                         >

@@ -33,7 +33,7 @@ function DetailsComponent() {
                                     onMouseEnter={() => setIsHovered(item.id)}
                                     onMouseLeave={() => setIsHovered(null)}
                                 >
-                                    {item.btn} <span className='pt-[4.5px] font-bold '>{isHoverd === item.id ? <TiArrowRight /> : <MdKeyboardArrowRight />}</span></p>
+                                    {item.btn} <span className='pt-[3px] 3xl:pt-[1px] font-bold '>{isHoverd === item.id ? <TiArrowRight /> : <MdKeyboardArrowRight />}</span></p>
 
                             </div>
                             <div className='space-y-3 font-bold pt-8 pr-16 mx-2 md:mx-0'>

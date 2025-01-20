@@ -7,7 +7,8 @@ import twilio from '../../assets/images/Twilio.jpg';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick';
-import { FiArrowRight } from 'react-icons/fi';
+import { FaArrowRight } from "react-icons/fa";
+<FaArrowRight />
 
 function SliderComponent() {
   const [sliderRef, setSliderRef] = useState(null);
@@ -20,7 +21,7 @@ function SliderComponent() {
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrows: false,
+    // arrows: false,
     autoplay: true,
     speed: 1000,
     autoplaySpeed: 2000,
@@ -76,11 +77,11 @@ function SliderComponent() {
               <button
                 onMouseEnter={() => { setIsHovered(true) }}
                 onMouseLeave={() => { setIsHovered(false) }}
-                className='gap-2 bg-[#635BFF] flex items-center pl-4 pr-2 py-1 pb-1.5 text-white font-bold rounded-full hover:bg-[#1a2657]'>
+                className='gap-0 bg-[#635BFF] flex items-center pl-4 pr-2 py-1 pb-1.5 text-white font-bold rounded-full hover:bg-[#1a2657]'>
                 Explore Stripe for enterprises
                 <span
 
-                  className='pt-[1px] font-bold'>{isHoverd ? <FiArrowRight style={{ width: '20px', fontWeight: '800', height: 'auto' }} /> : <MdKeyboardArrowRight style={{ width: '20px', fontWeight: '800', height: 'auto' }} />}</span>
+                  className='pt-[1px] font-bold'>{isHoverd ? <FaArrowRight size={20} style={{ fontWeight: '800', }} className='p-1 transform translate-x-1 duration-700' /> : <MdKeyboardArrowRight size={18} className='transform  duration-700' style={{ fontWeight: '800' }} />}</span>
               </button>
             </div>
           </div>
@@ -154,7 +155,12 @@ function SliderComponent() {
 
                     <h1 className='px-2 leading-8 absolute left-5 max-w-[468px] text-[28px] bottom-5 text-white group-hover:translate-y-[-38px] transition-transform duration-[600ms] ease-in-out'>Learn why BMW chose Stripe to power e-commerce and payments</h1>
 
-                    <span className='text-[15px] text-white absolute left-7 bottom-0 translate-y-10 group-hover:translate-y-[-20px] transition-transform duration-[600ms] ease-in-out'>Read story</span>
+                    <p className='text-[15px] text-white absolute left-7 bottom-0 translate-y-10 group-hover:translate-y-[-20px] transition-transform duration-[600ms] ease-in-out'>
+                      Read story
+                      <span>
+                        
+                      </span>
+                    </p>
                   </div>
                 </div>
 
@@ -394,11 +400,11 @@ function SliderComponent() {
 
           {/* arrows */}
           <div className='text-center flex items-center justify-center gap-1 md:hidden'>
-          {
-            logoLinks.map((item, index)=>(
+            {
+              logoLinks.map((item, index) => (
                 <div className={`w-6 h-0.5 rounded-sm ${activeIndex === index ? "bg-blue-600" : "bg-gray-500"} duration-300`}></div>
-            ))
-          }
+              ))
+            }
           </div>
         </div>
       </div>

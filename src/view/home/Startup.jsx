@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import startupCard1 from '../../assets/images/startupCard1.jpg';
+import startupCard3 from '../../assets/images/startupCard3.jpg';
 import { MdKeyboardArrowRight } from "react-icons/md";
-import { FiArrowRight } from "react-icons/fi";
+import { FaArrowRight } from "react-icons/fa";
+
+
 
 
 function Startup() {
@@ -62,7 +65,7 @@ function Startup() {
                                     <p
                                         onMouseEnter={() => setIsHovered(true)}
                                         onMouseLeave={() => setIsHovered(false)}
-                                        className='flex items-center cursor-pointer absolute -bottom-10 group-hover:-translate-y-4 left-5 text-[#635bff] font-semibold hover:text-[#0a2450] '>Learn about Atlas  {isHoverd ? <FiArrowRight /> : <MdKeyboardArrowRight />} </p>
+                                        className='flex items-center cursor-pointer absolute -bottom-10 group-hover:-translate-y-4 left-5 text-[#635bff] font-semibold hover:text-[#0a2450]  '>Learn about Atlas  <span className='pt-[1.5px]'>{isHoverd ? <FaArrowRight className='pl-1 transition-all duration-300 ease-in-out' size={14} /> : <MdKeyboardArrowRight className='transition-all duration-300 ease-in-out' />} </span></p>
                                 </div>
                             </div>
 
@@ -71,8 +74,8 @@ function Startup() {
                                 {/* Header Section */}
                                 <header className='bg-[rgb(240,247,254)] lg:h-[340px] md:h-[250px] sm:h-[200px] overflow-hidden w-full'>
                                     <img
-                                        src={startupCard1}
-                                        className="pt-[70px] md:pt-[75px] pl-[70px] group-hover:rounded-t-lg group-hover:bg-[radial-gradient(circle_at_top_center,#ffcb57,_transparent_70%),_radial-gradient(circle_at_left_center,#D7B0B0,_transparent_40%)] transition-transform duration-300 group-hover:-translate-y-2"
+                                        src={startupCard3}
+                                        className="pt-[70px] rounded-t-xl md:pt-[75px] pl-[70px] group-hover:rounded-t-xl group-hover:bg-[radial-gradient(circle_at_top_center,#11EFE3,_transparent_70%),_radial-gradient(circle_at_bottom_center,white,_transparent_40%)] transition-transform duration-300 group-hover:-translate-y-2"
                                         alt="Startup Card"
                                     />
 
@@ -102,7 +105,7 @@ function Startup() {
                                         onMouseLeave={() => setIsHovered(false)}
                                         className='flex gap-1 items-center cursor-pointer absolute -bottom-10 group-hover:-translate-y-4 left-5 text-[#635bff] font-semibold hover:text-[#0a2450]'
                                     >
-                                        Start with checkout  {isHoverd ? <FiArrowRight /> : <MdKeyboardArrowRight />}</p>
+                                        Start with checkout  <span className='pt-[1.5px]'>{isHoverd ? <FaArrowRight className='pl-1' size={14} /> : <MdKeyboardArrowRight />} </span></p>
                                 </div>
                             </div>
                         </div>
@@ -137,7 +140,7 @@ function Startup() {
                                     <p
                                         onMouseEnter={() => setIsHovered(true)}
                                         onMouseLeave={() => setIsHovered(false)}
-                                        className='flex gap-1 items-center cursor-pointer absolute -bottom-10 group-hover:-translate-y-4 left-5 text-[#635bff] font-semibold hover:text-[#0a2450]'>Try Payment Links  {isHoverd ? <FiArrowRight /> : <MdKeyboardArrowRight />}</p>
+                                        className='flex gap-1 items-center cursor-pointer absolute -bottom-10 group-hover:-translate-y-4 left-5 text-[#635bff] font-semibold hover:text-[#0a2450]'>Try Payment Links  <span className='pt-[1.5px]'>{isHoverd ? <FaArrowRight className='pl-1' size={14} /> : <MdKeyboardArrowRight />} </span></p>
                                 </div>
                             </div>
 
@@ -176,7 +179,7 @@ function Startup() {
                                     <p
                                         onMouseEnter={() => setIsHovered(true)}
                                         onMouseLeave={() => setIsHovered(false)}
-                                        className='flex gap-1 items-center cursor-pointer absolute -bottom-10 group-hover:-translate-y-4 left-5 text-[#635bff] font-semibold hover:text-[#0a2450]'>Explore Invoicing {isHoverd ? <FiArrowRight /> : <MdKeyboardArrowRight />}</p>
+                                        className='flex gap-1 items-center cursor-pointer absolute -bottom-10 group-hover:-translate-y-4 left-5 text-[#635bff] font-semibold hover:text-[#0a2450]'>Explore Invoicing <span className='pt-[1.5px]'>{isHoverd ? <FaArrowRight className='pl-1' size={14} /> : <MdKeyboardArrowRight />} </span></p>
                                 </div>
                             </div>
                         </div>

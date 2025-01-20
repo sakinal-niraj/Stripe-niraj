@@ -5,7 +5,7 @@ import icon1 from '../../assets/images/icon1.png';
 import icon2 from '../../assets/images/icon2.png';
 import icon3 from '../../assets/images/icon3.png';
 import icon4 from '../../assets/images/icon4.png';
-import { FiArrowRight } from 'react-icons/fi';
+import { FaArrowRight } from "react-icons/fa";
 import { shipData } from '../../constant/ShipData';
 
 
@@ -25,11 +25,11 @@ function Ship() {
 
         >
             <div className='py-20 pt-48 px-5 md:px-4 md:pl-8 xl:px-24 2xl:px-56  w-full 3xl:flex justify-center text-white z-10 relative'>
-                <div className='space-y-16 pt-5 max-w-[1100px] 3xl:ml-10'>
+                <div className='md:space-y-16 pt-5 max-w-[1100px] 3xl:ml-10'>
                     {/* row 1 */}
                     <div className='grid sm:grid-cols-2 grid-cols-1 space-y-6 md:pl-4'>
                         {/* col1 */}
-                        <div className='space-y-6 md:pt-6 pl-4'>
+                        <div className='space-y-6 md:pt-6 3xl:mt-6'>
                             <p className='text-[#00d4ff] font-semibold text-[18px] lg:pr-16'>Designed for develoeprs</p>
 
                             <h1 className='text-white text-4xl font-semibold leading-[2.8rem] lg:pr-16 tracking-tighter'>Ship more quickly with powerful and easy-to-use APIs</h1>
@@ -41,21 +41,21 @@ function Ship() {
                             <button
                                 onMouseEnter={() => setIsHovered(true)}
                                 onMouseLeave={() => setIsHovered(false)}
-                                className='flex items-center gap-1 hover:bg-white bg-[#00d4ff] text-[#0a2540] text-[15px] font-[550] p-[6px_12px_6px_16px] rounded-full'>
+                                className='flex items-center gap-0 transition-all transform duration-[400ms] hover:bg-white bg-[#00d4ff] text-[#0a2540] text-[15px] font-[550] p-[6px_12px_6px_16px] rounded-full'>
                                 Read the docs
-                                {isHoverd ? <FiArrowRight /> : <MdKeyboardArrowRight />}
+                                {isHoverd ? <FaArrowRight size={10} className='transfrom ease-in-out duration-300 ml-1.5' /> : <MdKeyboardArrowRight className='ease-in-out transfrom duration-300' />}
                             </button>
                         </div>
 
                         {/* col2 */}
-                        <div className='pb-10'>
+                        <div className='pb-10 '>
                             <img src={code} alt="" />
                         </div>
                     </div>
 
 
                     {/* row 2 */}
-                    <div className='grid grid-cols-1 md:grid-cols-4 sm:grid-cols-2'>
+                    <div className='grid grid-cols-1 md:grid-cols-4 sm:grid-cols-2 space-y-12 md:space-y-0'>
                         {/* col1 */}
                         {
                             shipData.map((item) => (
@@ -76,7 +76,21 @@ function Ship() {
                                     <p
                                         onMouseEnter={() => setIsIconHoverd(item.id)}
                                         onMouseLeave={() => setIsIconHoverd(null)}
-                                        className='gap-1.5 flex items-center text-[15px] pl-4 text-[#00d4ff] hover:text-white font-medium'>{item.btn} <span>{isIconHoverd === item.id ? <FiArrowRight /> : <MdKeyboardArrowRight />}</span> </p>
+                                        className='flex transition-all duration-300 items-center text-[15px] pl-4 text-[#00d4ff] hover:text-white font-medium  ease-in-out'>
+                                        {item.btn}
+                                        <span className='pt-[1px]'>
+                                            {isIconHoverd === item.id ? (
+                                                <FaArrowRight
+                                                    size={10}
+                                                    className='transfrom translate-x-2 duration-100 ease-in-out ml-[0px] '
+                                                />
+                                            ) : (
+                                                <MdKeyboardArrowRight
+                                                    className='translate-x-0 transform duration-100 ease-in-out'
+                                                />
+                                            )}
+                                        </span>
+                                    </p>
                                 </div>
                             ))
                         }

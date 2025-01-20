@@ -1,10 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import card1 from '../../assets/images/card1.svg';
 import card2 from '../../assets/images/card2.svg';
 import t from '../../assets/images/t.png';
+import { FaArrowRight } from 'react-icons/fa';
+import { MdKeyboardArrowRight } from 'react-icons/md';
 
 
 function Globle() {
+    const [isHoverd, setIsHovered] = useState({
+        directory: false,
+        partners: false,
+        explore: false,
+    })
     return (
         <section className="relative "
         >
@@ -42,8 +49,14 @@ function Globle() {
                                     Explore our directory to find out-of-the-box solutions that connect with Stripe, such as Squarespace and Lightspeed.
                                 </p>
                                 {/* Hidden Button */}
-                                <p className="h-[10px] w-full hover:text-[#0a2450] box-border absolute text-[#9966FF] text-[18px] font-semibold bottom-[-20px] transition-all duration-300 group-hover:bottom-10">
+                                <p
+                                    onMouseEnter={() => setIsHovered({ ...isHoverd, directory: true })}
+                                    onMouseLeave={() => setIsHovered({ ...isHoverd, directory: false })}
+                                    className="h-[10px] w-full flex items-center hover:text-[#0a2450] box-border absolute text-[#9966FF] text-[18px] font-semibold bottom-[-20px] transition-all duration-300 group-hover:bottom-10">
                                     See directory
+                                    <span className='pt-[1.5px]'>
+                                        {isHoverd.directory ? <FaArrowRight size={10} className='transform translate-x-0.5 ml-1 ' /> : <MdKeyboardArrowRight />}
+                                    </span>
                                 </p>
                             </div>
                         </div>
@@ -68,8 +81,14 @@ function Globle() {
                                     Work with a Stripe consulting partner that can integrate and deploy Stripe solutions for you.
                                 </p>
                                 {/* Hidden Button */}
-                                <p className="h-[10px] w-full box-border hover:text-[#0a2450] absolute text-[#9966FF] text-[18px] font-semibold bottom-[-20px] transition-all duration-300 group-hover:bottom-10">
+                                <p
+                                    onMouseEnter={() => setIsHovered({ ...isHoverd, partners: true })}
+                                    onMouseLeave={() => setIsHovered({ ...isHoverd, partners: false })}
+                                    className="h-[10px] flex items-center w-full box-border hover:text-[#0a2450] absolute text-[#9966FF] text-[18px] font-semibold bottom-[-20px] transition-all duration-300 group-hover:bottom-10">
                                     View partners
+                                    <span className='pt-[1.5px]'>
+                                        {isHoverd.partners ? <FaArrowRight size={10} className='transform translate-x-0.5 ml-1 ' /> : <MdKeyboardArrowRight />}
+                                    </span>
                                 </p>
                             </div>
                         </div>
@@ -94,8 +113,14 @@ function Globle() {
                                     Create an invoice, accept an in-person payment with your phone, or share a payment link directly from your Dashboard to start generating revenue in minutes – no code required.
                                 </p>
                                 {/* Hidden Button */}
-                                <p className="h-[10px] w-full box-border hover:text-[#0a2450] absolute text-[#9966FF] text-[18px] font-semibold bottom-[-20px] transition-all duration-300 group-hover:bottom-10">
+                                <p
+                                    onMouseEnter={() => setIsHovered({ ...isHoverd, explore: true })}
+                                    onMouseLeave={() => setIsHovered({ ...isHoverd, explore: false })}
+                                    className="h-[10px] w-full flex items-center box-border hover:text-[#0a2450] absolute text-[#9966FF] text-[18px] font-semibold bottom-[-20px] transition-all duration-300 group-hover:bottom-10">
                                     Explore no-code
+                                    <span className='pt-[1.5px]'>
+                                        {isHoverd.explore ? <FaArrowRight size={10} className='transform translate-x-0.5 ml-1 ' /> : <MdKeyboardArrowRight />}
+                                    </span>
                                 </p>
                             </div>
                         </div>
