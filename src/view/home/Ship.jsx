@@ -1,10 +1,6 @@
 import React, { useState } from 'react';
 import { MdKeyboardArrowRight } from "react-icons/md";
 import code from '../../assets/images/code.jpg';
-import icon1 from '../../assets/images/icon1.png';
-import icon2 from '../../assets/images/icon2.png';
-import icon3 from '../../assets/images/icon3.png';
-import icon4 from '../../assets/images/icon4.png';
 import { FaArrowRight } from "react-icons/fa";
 import { shipData } from '../../constant/ShipData';
 
@@ -15,16 +11,16 @@ function Ship() {
     return (
         <section
             className="
-            bg-[#0a2540] z-20 2xl:-translate-y-32
+            bg-[#0a2540] z-20 2xl:-translate-y-32  -translate-y-20
             after:content-[''] after:block after:w-full after:h-40 ship_canvas"
-            style={{
-                clipPath: 'polygon(0 10%, 100% 0, 100% 90%, 0% 100%)',
-                WebkitClipPath: 'polygon(0 10%, 100% 0, 100% 90%, 0% 100%)',
-            }}
+            // style={{
+            //     clipPath: 'polygon(0 10%, 100% 0, 100% 90%, 0% 100%)',
+            //     WebkitClipPath: 'polygon(0 10%, 100% 0, 100% 90%, 0% 100%)',
+            // }}
 
 
         >
-            <div className='py-20 pt-48 px-5 md:px-4 md:pl-8 xl:px-24 2xl:px-56  w-full 3xl:flex justify-center text-white z-10 relative'>
+            <div className=' pt-36 md:pt-80 px-5 md:px-4 md:pl-8 xl:px-24 2xl:px-56  w-full 3xl:flex justify-center text-white z-10 relative'>
                 <div className='md:space-y-16 pt-5 max-w-[1100px] 3xl:ml-10'>
                     {/* row 1 */}
                     <div className='grid sm:grid-cols-2 grid-cols-1 space-y-6 md:pl-4'>
