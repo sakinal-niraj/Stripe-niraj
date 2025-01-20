@@ -15,24 +15,44 @@ body{
     margin: 0;
     padding: 0;
 }
+@media (max-width: 767px) {
+  .canvas {
+    clip-path: polygon(0 0, 100% 0, 100% 48%, 0 60%);
+  }
+}
 
 @media (min-width: 768px) and (max-width: 1550px) {
-.canvas {
+  .canvas {
     clip-path: polygon(0 0, 100% 0, 100% 34%, 0 83%);
   }
 }
 
-@media(max-width:767px){
-    .canvas {
-        clip-path: polygon(0 0, 100% 0, 100% 48%, 0 60%);
-      }
+@media (min-width: 1551px) and (max-width: 1750px) {
+  .canvas {
+    clip-path: polygon(0 0, 100% 0, 100% 30%, 0 80%);
+  }
 }
 
-  
-
-  @media (min-width: 1550px) {
-    .canvas {
-      clip-path: polygon(0 0, 100% 0, 100% 4%, 0 43%);
-    }
+@media (min-width: 1751px) and (max-width: 1950px) {
+  .canvas {
+    clip-path: polygon(0 0, 100% 0, 100% 16%, 0 70%);
   }
+}
 
+@media (min-width: 1951px) and (max-width: 2250px) {
+  .canvas {
+    clip-path: polygon(0 0, 100% 0, 100% 14%, 0 67%);
+  }
+}
+
+@media (min-width: 2251px) and (max-width: 2450px){
+  .canvas {
+    clip-path: polygon(0 0, 100% 0, 100% 16%, 0 60%);
+  }
+}
+
+@media (min-width: 2450px){
+  .canvas {
+    clip-path: polygon(0 0, 100% 0, 100% 6%, 0 30%);
+  }
+}

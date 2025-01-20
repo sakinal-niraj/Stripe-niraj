@@ -60,7 +60,7 @@ function Ready() {
                                         <p
                                             onMouseEnter={() => setIsHovered({ ...isHoverd, pricing: true })}
                                             onMouseLeave={() => setIsHovered({ ...isHoverd, pricing: false })}
-                                            className='flex items-center cursor-pointer hover:text-[#0a2450] pr-8 text-[#635BFF] text-[15px] font-[550]'>Pricing details <span className=''>{isHoverd.pricing ? <FaArrowRight size={10} className='transform translate-x-1.5 ' /> : <MdKeyboardArrowRight />}</span></p>
+                                            className='flex items-center cursor-pointer hover:text-[#0a2450] pr-8 text-[#635BFF] text-[15px] font-[550]'>Pricing details <span className='3xl:pt-[1px]'>{isHoverd.pricing ? <FaArrowRight size={10} className='transform translate-x-1.5 ' /> : <MdKeyboardArrowRight />}</span></p>
                                     </div>
                                 </div>
                             </div>
@@ -78,7 +78,7 @@ function Ready() {
                                         <p
                                             onMouseEnter={() => setIsHovered({ ...isHoverd, api: true })}
                                             onMouseLeave={() => setIsHovered({ ...isHoverd, api: false })}
-                                            className='flex items-center pr-8 cursor-pointer hover:text-[#0a2450] text-[#635BFF] text-[15px]  font-[550]'>API reference <span className=''>{isHoverd.api ? <FaArrowRight size={10} className='transform translate-x-1.5 ' /> : <MdKeyboardArrowRight />}</span></p>
+                                            className='flex items-center pr-8 cursor-pointer hover:text-[#0a2450] text-[#635BFF] text-[15px]  font-[550]'>API reference <span className='pt-[1px]'>{isHoverd.api ? <FaArrowRight size={10} className='transform translate-x-1.5 ' /> : <MdKeyboardArrowRight />}</span></p>
                                     </div>
                                 </div>
                             </div>

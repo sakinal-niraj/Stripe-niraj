@@ -54,7 +54,7 @@ function SliderComponent() {
 
   ]
   return (
-    <section className='pt-32 px-5 md:px-10 xl:px-24 2xl:px-56 py-16 w-full space-y-12 3xl:flex justify-center'>
+    <section className='pt-32 px-5 md:px-10 xl:px-24 2xl:px-56 py-16 w-full space-y-12 3xl:flex justify-center overflow-hidden'>
       <div className='space-y-14 3xl:max-w-[1050px]'>
         {/* Content */}
         <div className="grid md:grid-cols-[3fr_1fr] md:pr-12">
@@ -140,7 +140,7 @@ function SliderComponent() {
                 </div>
 
                 {/* img1 */}
-                <div className='w-full h-[410px] relative z-0 rounded-lg group overflow-hidden cursor-pointer'>
+                <div className='w-full h-[400px] relative z-0 rounded-lg group overflow-hidden cursor-pointer'>
                   <img src={bmw} alt="" className='w-full h-full object-cover rounded-lg shadow-gray-100 shadow-xl max-w-full scale-[1.04] group-hover:scale-[1] group-hover:translate-y-[-4px] transition-transform duration-700 ease-out;' />
                   {/* for opacity */}
                   <div className="absolute inset-0 bg-[#0066B1] bg-gradient-to-t from-[#2c5775] opacity-50 rounded-lg" />
@@ -153,9 +153,9 @@ function SliderComponent() {
                     <svg class="absolute right-8 top-5 " role="presentation" width="20" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.9.27c1.62 0 2.92 1.3 2.92 2.91v13.1c0 .8-.65 1.45-1.46 1.45H3.42c-2.15 0-3.24-1.05-3.24-2.83V6.4c0-2.45 2.18-3.2 4.12-3.2C4.3 1.57 5.6.26 7.21.26h9.7zM7.83 3.55a1.1 1.1 0 1 0 0 2.18h5.45a1.1 1.1 0 1 0 0-2.18H7.82zm0 4.36a1.1 1.1 0 1 0 0 2.18h8.73a1.1 1.1 0 0 0 0-2.18H7.82zm0 4.36a1.1 1.1 0 1 0 0 2.18h8.73a1.1 1.1 0 1 0 0-2.18H7.82zM4 5.73c-.9 0-1.64.73-1.64 1.63v7.1c0 .6.5 1.09 1.1 1.09h1.09V5.73H4z" fill="#fff"></path>
                     </svg>
 
-                    <h1 className='px-2 leading-8 absolute left-5 max-w-[468px] text-[28px] bottom-5 text-white group-hover:translate-y-[-38px] transition-transform duration-[600ms] ease-in-out'>Learn why BMW chose Stripe to power e-commerce and payments</h1>
+                    <h1 className='md:px-2 leading-8 absolute left-5 max-w-[468px] text-[28px] bottom-5 text-white group-hover:translate-y-[-38px] transition-transform duration-[600ms] ease-in-out'>Learn why BMW chose Stripe to power e-commerce and payments</h1>
 
-                    <p className='text-[15px] text-white absolute left-7 bottom-0 translate-y-10 group-hover:translate-y-[-20px] transition-transform duration-[600ms] ease-in-out'>
+                    <p className='text-[15px] text-white absolute md:left-7 bottom-0 translate-y-10 group-hover:translate-y-[-20px] transition-transform duration-[600ms] ease-in-out'>
                       Read story
                       <span>
                         
@@ -215,7 +215,7 @@ function SliderComponent() {
                 </div>
 
                 {/* img1 */}
-                <div className='w-full h-[410px] relative z-0 rounded-lg group overflow-hidden cursor-pointer'>
+                <div className='w-full h-[400px] relative z-0 rounded-lg group overflow-hidden cursor-pointer'>
                   <img src={amazon} alt="" className='w-full h-full object-cover rounded-lg shadow-gray-100 shadow-xl max-w-full scale-[1.04] group-hover:scale-[1] group-hover:translate-y-[-4px] transition-transform duration-700 ease-out;' />
                   {/* for opacity */}
                   <div className="absolute inset-0 bg-[#EFA82E] opacity-50 rounded-lg" />
@@ -228,9 +228,9 @@ function SliderComponent() {
                     <svg class="absolute right-8 top-5 " role="presentation" width="20" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.9.27c1.62 0 2.92 1.3 2.92 2.91v13.1c0 .8-.65 1.45-1.46 1.45H3.42c-2.15 0-3.24-1.05-3.24-2.83V6.4c0-2.45 2.18-3.2 4.12-3.2C4.3 1.57 5.6.26 7.21.26h9.7zM7.83 3.55a1.1 1.1 0 1 0 0 2.18h5.45a1.1 1.1 0 1 0 0-2.18H7.82zm0 4.36a1.1 1.1 0 1 0 0 2.18h8.73a1.1 1.1 0 0 0 0-2.18H7.82zm0 4.36a1.1 1.1 0 1 0 0 2.18h8.73a1.1 1.1 0 1 0 0-2.18H7.82zM4 5.73c-.9 0-1.64.73-1.64 1.63v7.1c0 .6.5 1.09 1.1 1.09h1.09V5.73H4z" fill="#fff"></path>
                     </svg>
 
-                    <h1 className='px-2 leading-8 absolute left-5 max-w-[468px] text-[28px] bottom-5 text-white group-hover:translate-y-[-38px] transition-transform duration-[600ms] ease-in-out'>See how Amazon simplied cross-border payments with Stripe</h1>
+                    <h1 className='md:px-2 leading-8 absolute left-5 max-w-[468px] text-[28px] bottom-5 text-white group-hover:translate-y-[-38px] transition-transform duration-[600ms] ease-in-out'>See how Amazon simplied cross-border payments with Stripe</h1>
 
-                    <span className='text-[15px] text-white absolute left-7 bottom-0 translate-y-10 group-hover:translate-y-[-20px] transition-transform duration-[600ms] ease-in-out'>Read story</span>
+                    <span className='text-[15px] text-white absolute left-5 md:left-7 bottom-0 translate-y-10 group-hover:translate-y-[-20px] transition-transform duration-[600ms] ease-in-out'>Read story</span>
                   </div>
                 </div>
 
@@ -285,7 +285,7 @@ function SliderComponent() {
                 </div>
 
                 {/* img1 */}
-                <div className='w-full h-[410px] relative z-0 rounded-lg group overflow-hidden cursor-pointer'>
+                <div className='w-full h-[400px] relative z-0 rounded-lg group overflow-hidden cursor-pointer'>
                   <img src={maersk} alt="" className='w-full h-full object-cover rounded-lg shadow-gray-100 shadow-xl max-w-full scale-[1.04] group-hover:scale-[1] group-hover:translate-y-[-4px] transition-transform duration-700 ease-out;' />
                   {/* for opacity */}
                   <div className="absolute inset-0 bg-[#42B0D5]  opacity-50 rounded-lg" />
@@ -354,7 +354,7 @@ function SliderComponent() {
                 </div>
 
                 {/* img1 */}
-                <div className='w-full h-[410px] relative z-0 rounded-lg group overflow-hidden cursor-pointer '>
+                <div className='w-full h-[400px] relative z-0 rounded-lg group overflow-hidden cursor-pointer '>
                   <img src={twilio} alt="" className='w-full h-full object-cover rounded-lg shadow-gray-100 shadow-xl max-w-full scale-[1.04] group-hover:scale-[1] group-hover:translate-y-[-4px] transition-transform duration-700 ease-out;' />
                   {/* for opacity */}
                   <div className="absolute inset-0 bg-[#d55a5a] bg-gradient-to-t from-[#d55a5a] opacity-50 rounded-lg" />

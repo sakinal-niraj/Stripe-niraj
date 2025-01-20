@@ -82,11 +82,11 @@ function Ship() {
                                             {isIconHoverd === item.id ? (
                                                 <FaArrowRight
                                                     size={10}
-                                                    className='transfrom translate-x-2 duration-100 ease-in-out ml-[0px] '
+                                                    className='transfrom translate-x-1 duration-0 ease-in-out ml-[0px] '
                                                 />
                                             ) : (
                                                 <MdKeyboardArrowRight
-                                                    className='translate-x-0 transform duration-100 ease-in-out'
+                                                    className='translate-x-0 transform duration-0 ease-in-out'
                                                 />
                                             )}
                                         </span>

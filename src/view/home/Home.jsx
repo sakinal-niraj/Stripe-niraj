@@ -15,7 +15,7 @@ import Ship from './Ship';
 
 function Home() {
   return (
-    <>
+    <div className=''>
       <div className=''>
         <Header />
         <CanvasAnimation />
@@ -28,7 +28,7 @@ function Home() {
       <Ship />
       <Globle />
       <Ready />
-    </>
+    </div>
   );
 }
 
