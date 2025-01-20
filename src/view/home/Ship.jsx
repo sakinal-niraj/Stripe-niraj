@@ -15,8 +15,14 @@ function Ship() {
     return (
         <section
             className="
-            bg-[#0a2540] z-20 3xl:-translate-y-32
+            bg-[#0a2540] z-20 2xl:-translate-y-32
             after:content-[''] after:block after:w-full after:h-40 ship_canvas"
+            style={{
+                clipPath: 'polygon(0 10%, 100% 0, 100% 90%, 0% 100%)',
+                WebkitClipPath: 'polygon(0 10%, 100% 0, 100% 90%, 0% 100%)',
+            }}
+
+
         >
             <div className='py-20 pt-48 px-5 md:px-4 md:pl-8 xl:px-24 2xl:px-56  w-full 3xl:flex justify-center text-white z-10 relative'>
                 <div className='md:space-y-16 pt-5 max-w-[1100px] 3xl:ml-10'>

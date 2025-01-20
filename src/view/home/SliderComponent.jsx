@@ -13,6 +13,12 @@ import { FaArrowRight } from "react-icons/fa";
 function SliderComponent() {
   const [sliderRef, setSliderRef] = useState(null);
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isIconHoverd, setIsIconHoverd] = useState({
+    bmw: false,
+    amazon: false,
+    maersk: false,
+    twilio: false,
+  })
 
   const [isHoverd, setIsHovered] = useState(false);
 
@@ -153,14 +159,18 @@ function SliderComponent() {
                     <svg class="absolute right-8 top-5 " role="presentation" width="20" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.9.27c1.62 0 2.92 1.3 2.92 2.91v13.1c0 .8-.65 1.45-1.46 1.45H3.42c-2.15 0-3.24-1.05-3.24-2.83V6.4c0-2.45 2.18-3.2 4.12-3.2C4.3 1.57 5.6.26 7.21.26h9.7zM7.83 3.55a1.1 1.1 0 1 0 0 2.18h5.45a1.1 1.1 0 1 0 0-2.18H7.82zm0 4.36a1.1 1.1 0 1 0 0 2.18h8.73a1.1 1.1 0 0 0 0-2.18H7.82zm0 4.36a1.1 1.1 0 1 0 0 2.18h8.73a1.1 1.1 0 1 0 0-2.18H7.82zM4 5.73c-.9 0-1.64.73-1.64 1.63v7.1c0 .6.5 1.09 1.1 1.09h1.09V5.73H4z" fill="#fff"></path>
                     </svg>
 
-                    <h1 className='md:px-2 leading-8 absolute left-5 max-w-[468px] text-[28px] bottom-5 text-white group-hover:translate-y-[-38px] transition-transform duration-[600ms] ease-in-out'>Learn why BMW chose Stripe to power e-commerce and payments</h1>
+                    <div
+                      onMouseEnter={() => setIsIconHoverd({ ...isIconHoverd, bmw: true })}
+                      onMouseLeave={() => setIsIconHoverd({ ...isIconHoverd, bmw: false })}
+                    >
+                      <h1 className='md:px-2 leading-8 absolute left-5 max-w-[468px] text-[28px] bottom-5 text-white group-hover:translate-y-[-38px] transition-transform duration-[600ms] ease-in-out'>Learn why BMW chose Stripe to power e-commerce and payments</h1>
 
-                    <p className='text-[15px] text-white absolute md:left-7 bottom-0 translate-y-10 group-hover:translate-y-[-20px] transition-transform duration-[600ms] ease-in-out'>
-                      Read story
-                      <span>
-                        
-                      </span>
-                    </p>
+                      <p
+                        className='flex items-center text-[15px] text-white absolute md:left-7 bottom-0 translate-y-10 group-hover:translate-y-[-20px] transition-transform duration-[600ms] ease-in-out'>
+                        Read story
+                        <span className='pt-[2px]'>{isIconHoverd.bmw ? <FaArrowRight size={10} className='transform translate-x-1.5 ' /> : <MdKeyboardArrowRight />}</span>
+                      </p>
+                    </div>
                   </div>
                 </div>
 
@@ -228,9 +238,17 @@ function SliderComponent() {
                     <svg class="absolute right-8 top-5 " role="presentation" width="20" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.9.27c1.62 0 2.92 1.3 2.92 2.91v13.1c0 .8-.65 1.45-1.46 1.45H3.42c-2.15 0-3.24-1.05-3.24-2.83V6.4c0-2.45 2.18-3.2 4.12-3.2C4.3 1.57 5.6.26 7.21.26h9.7zM7.83 3.55a1.1 1.1 0 1 0 0 2.18h5.45a1.1 1.1 0 1 0 0-2.18H7.82zm0 4.36a1.1 1.1 0 1 0 0 2.18h8.73a1.1 1.1 0 0 0 0-2.18H7.82zm0 4.36a1.1 1.1 0 1 0 0 2.18h8.73a1.1 1.1 0 1 0 0-2.18H7.82zM4 5.73c-.9 0-1.64.73-1.64 1.63v7.1c0 .6.5 1.09 1.1 1.09h1.09V5.73H4z" fill="#fff"></path>
                     </svg>
 
-                    <h1 className='md:px-2 leading-8 absolute left-5 max-w-[468px] text-[28px] bottom-5 text-white group-hover:translate-y-[-38px] transition-transform duration-[600ms] ease-in-out'>See how Amazon simplied cross-border payments with Stripe</h1>
+                    <div
+                      onMouseEnter={() => setIsIconHoverd({ ...isIconHoverd, amazon: true })}
+                      onMouseLeave={() => setIsIconHoverd({ ...isIconHoverd, amazon: false })}
+                    >
+                      <h1 className='md:px-2 leading-8 absolute left-5 max-w-[468px] text-[28px] bottom-5 text-white group-hover:translate-y-[-38px] transition-transform duration-[600ms] ease-in-out'>See how Amazon simplied cross-border payments with Stripe</h1>
 
-                    <span className='text-[15px] text-white absolute left-5 md:left-7 bottom-0 translate-y-10 group-hover:translate-y-[-20px] transition-transform duration-[600ms] ease-in-out'>Read story</span>
+                      <p className='flex items-center text-[15px] text-white absolute left-5 md:left-7 bottom-0 translate-y-10 group-hover:translate-y-[-20px] transition-transform duration-[600ms] ease-in-out'>
+                        Read story
+                        <span className='pt-[2px]'>{isIconHoverd.amazon ? <FaArrowRight size={10} className='transform translate-x-1.5 ' /> : <MdKeyboardArrowRight />}</span>
+                      </p>
+                    </div>
                   </div>
                 </div>
 
@@ -297,9 +315,17 @@ function SliderComponent() {
                     <svg class="absolute right-8 top-5 " role="presentation" width="20" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.9.27c1.62 0 2.92 1.3 2.92 2.91v13.1c0 .8-.65 1.45-1.46 1.45H3.42c-2.15 0-3.24-1.05-3.24-2.83V6.4c0-2.45 2.18-3.2 4.12-3.2C4.3 1.57 5.6.26 7.21.26h9.7zM7.83 3.55a1.1 1.1 0 1 0 0 2.18h5.45a1.1 1.1 0 1 0 0-2.18H7.82zm0 4.36a1.1 1.1 0 1 0 0 2.18h8.73a1.1 1.1 0 0 0 0-2.18H7.82zm0 4.36a1.1 1.1 0 1 0 0 2.18h8.73a1.1 1.1 0 1 0 0-2.18H7.82zM4 5.73c-.9 0-1.64.73-1.64 1.63v7.1c0 .6.5 1.09 1.1 1.09h1.09V5.73H4z" fill="#fff"></path>
                     </svg>
 
-                    <h1 className='px-2 leading-8 absolute left-5 max-w-[468px] text-[28px] bottom-5 text-white group-hover:translate-y-[-38px] transition-transform duration-[600ms] ease-in-out'>See how Maersk tapped into new technology to make it easier to ship around the world</h1>
+                    <div
+                      onMouseEnter={() => setIsIconHoverd({ ...isIconHoverd, maersk: true })}
+                      onMouseLeave={() => setIsIconHoverd({ ...isIconHoverd, maersk: false })}
+                    >
+                      <h1 className='px-2 leading-8 absolute left-5 max-w-[468px] text-[28px] bottom-5 text-white group-hover:translate-y-[-38px] transition-transform duration-[600ms] ease-in-out'>See how Maersk tapped into new technology to make it easier to ship around the world</h1>
 
-                    <span className='text-[15px] text-white absolute left-7 bottom-0 translate-y-10 group-hover:translate-y-[-20px] transition-transform duration-[600ms] ease-in-out'>Read story</span>
+                      <p className='flex items-center text-[15px] text-white absolute left-5 md:left-7 bottom-0 translate-y-10 group-hover:translate-y-[-20px] transition-transform duration-[600ms] ease-in-out'>
+                        Read story
+                        <span className='pt-[2px]'>{isIconHoverd.maersk ? <FaArrowRight size={10} className='transform translate-x-1.5 ' /> : <MdKeyboardArrowRight />}</span>
+                      </p>
+                    </div>
                   </div>
                 </div>
 
@@ -367,9 +393,16 @@ function SliderComponent() {
                     <svg class="absolute right-8 top-5 " role="presentation" width="20" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.9.27c1.62 0 2.92 1.3 2.92 2.91v13.1c0 .8-.65 1.45-1.46 1.45H3.42c-2.15 0-3.24-1.05-3.24-2.83V6.4c0-2.45 2.18-3.2 4.12-3.2C4.3 1.57 5.6.26 7.21.26h9.7zM7.83 3.55a1.1 1.1 0 1 0 0 2.18h5.45a1.1 1.1 0 1 0 0-2.18H7.82zm0 4.36a1.1 1.1 0 1 0 0 2.18h8.73a1.1 1.1 0 0 0 0-2.18H7.82zm0 4.36a1.1 1.1 0 1 0 0 2.18h8.73a1.1 1.1 0 1 0 0-2.18H7.82zM4 5.73c-.9 0-1.64.73-1.64 1.63v7.1c0 .6.5 1.09 1.1 1.09h1.09V5.73H4z" fill="#fff"></path>
                     </svg>
 
-                    <h1 className='px-2 leading-8 absolute left-5 max-w-[468px] text-[28px] bottom-5 text-white group-hover:translate-y-[-38px] transition-transform duration-[600ms] ease-in-out'>See how Twilio increased authorization rates by 10% with stripe</h1>
+                    <div
+                      onMouseEnter={() => setIsIconHoverd({ ...isIconHoverd, maersk: true })}
+                      onMouseLeave={() => setIsIconHoverd({ ...isIconHoverd, maersk: false })}
+                    ><h1 className='px-2 leading-8 absolute left-5 max-w-[468px] text-[28px] bottom-5 text-white group-hover:translate-y-[-38px] transition-transform duration-[600ms] ease-in-out'>See how Twilio increased authorization rates by 10% with stripe</h1>
 
-                    <span className='text-[15px] text-white absolute left-7 bottom-0 translate-y-10 group-hover:translate-y-[-20px] transition-transform duration-[600ms] ease-in-out'>Read story</span>
+                      <p className='flex items-center text-[15px] text-white absolute left-5 md:left-7 bottom-0 translate-y-10 group-hover:translate-y-[-20px] transition-transform duration-[600ms] ease-in-out'>
+                        Read story
+                        <span className='pt-[2px]'>{isIconHoverd.maersk ? <FaArrowRight size={10} className='transform translate-x-1.5 ' /> : <MdKeyboardArrowRight />}</span>
+                      </p>
+                    </div>
                   </div>
                 </div>
 
