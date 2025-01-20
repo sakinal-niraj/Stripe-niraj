@@ -20,7 +20,7 @@ function Ship() {
 
 
         >
-            <div className=' pt-36 md:pt-80 px-5 md:px-4 md:pl-8 xl:px-24 2xl:px-56  w-full 3xl:flex justify-center text-white z-10 relative'>
+            <div className=' pt-36 md:pt-40 3xl:pb-20 px-5 md:px-4 md:pl-8 xl:px-24 2xl:px-56  w-full 3xl:flex justify-center text-white z-10 relative'>
                 <div className='md:space-y-16 pt-5 max-w-[1100px] 3xl:ml-10'>
                     {/* row 1 */}
                     <div className='grid sm:grid-cols-2 grid-cols-1 space-y-6 md:pl-4'>

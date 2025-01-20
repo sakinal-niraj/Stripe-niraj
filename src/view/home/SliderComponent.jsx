@@ -146,7 +146,7 @@ function SliderComponent() {
                 </div>
 
                 {/* img1 */}
-                <div className='w-full h-[400px] relative z-0 rounded-lg group overflow-hidden cursor-pointer'>
+                <div className='w-full xl:h-[400px] h-[400px] relative z-0 rounded-lg group overflow-hidden cursor-pointer'>
                   <img src={bmw} alt="" className='w-full h-full object-cover rounded-lg shadow-gray-100 shadow-xl max-w-full scale-[1.04] group-hover:scale-[1] group-hover:translate-y-[-4px] transition-transform duration-700 ease-out;' />
                   {/* for opacity */}
                   <div className="absolute inset-0 bg-[#0066B1] bg-gradient-to-t from-[#2c5775] opacity-50 rounded-lg" />

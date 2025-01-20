@@ -15,7 +15,7 @@ function Globle() {
     return (
         <section className="relative "
         >
-            <div className='pb-32 pt-20 px-5 md:px-10 xl:px-24 2xl:px-56 pt-16 3xl:pt-0 w-full space-y-12 flex justify-center '>
+            <div className='pb-32 px-5 md:px-10 xl:px-24 2xl:px-56 pt-16 3xl:pt-0 w-full space-y-12 flex justify-center '>
                 <div className='max-w-[1050px] 3xl:ml-10'>
                     {/* Content */}
                     <div className='flex flex-col space-y-6 md:w-[60%] w-full font-bold'>
