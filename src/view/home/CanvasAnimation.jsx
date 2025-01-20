@@ -61,15 +61,15 @@ const CanvasAnimation = () => {
 
     return (
         <div className=''>
-            <div>
+            <div className='max-h-[400px]'>
                 <canvas
                     width={"32"}
                     height={"32"}
                     ref={canvasRef}
-                    className="absolute top-0 left-0 w-full h-full -z-20"
-                    style={{
-                        clipPath: 'polygon(0 0, 100% 0, 100% 34%, 0 83%)',
-                    }}
+                    className="absolute top-0 left-0 w-full h-full -z-20 canvas"
+                    // style={{
+                    //     ,
+                    // }}
                 >
                 </canvas>
             </div>

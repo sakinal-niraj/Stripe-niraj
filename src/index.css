@@ -15,3 +15,24 @@ body{
     margin: 0;
     padding: 0;
 }
+
+@media (min-width: 768px) and (max-width: 1550px) {
+.canvas {
+    clip-path: polygon(0 0, 100% 0, 100% 34%, 0 83%);
+  }
+}
+
+@media(max-width:767px){
+    .canvas {
+        clip-path: polygon(0 0, 100% 0, 100% 44%, 0 56%);
+      }
+}
+
+  
+
+  @media (min-width: 1550px) {
+    .canvas {
+      clip-path: polygon(0 0, 100% 0, 100% 4%, 0 43%);
+    }
+  }
+
