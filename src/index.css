@@ -56,3 +56,39 @@ body{
     clip-path: polygon(0 0, 100% 0, 100% 6%, 0 30%);
   }
 }
+
+
+
+
+
+/* globe scale */
+.globe_scale {
+  clip-path: polygon(0 12%, 100% 0, 100% 100%, 0% 100%);
+  -webkit-clip-path:polygon(0 12%, 100% 0, 100% 100%, 0% 100%);
+}
+
+@media (min-width: 1601px) {
+  .globe_scale {
+    clip-path:polygon(0 27%, 100% 0, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 27%, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+
+
+
+
+
+/* Ship */
+.ship_canvas {
+  clip-path: polygon(0 10%, 100% 0, 100% 90%, 0% 100%);
+  -webkit-clip-path:polygon(0 10%, 100% 0, 100% 90%, 0% 100%);
+}
+
+
+/* @media (min-width: 1551px) {
+  .ship_canvas {
+    clip-path: polygon(0 0, 100% 0, 100% 6%, 0 30%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 10%, 0 0%);
+  }
+} */

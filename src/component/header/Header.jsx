@@ -119,7 +119,7 @@ function Header() {
                                             opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-300 ease-in-out
                                             group-hover:transform z-50 min-w-[500px] transform'>
 
-                                            <Resources />
+                                                <Resources />
                                             </div>
                                         </li>
                                         <li className='relative px-5 hover:opacity-50'>
@@ -134,7 +134,7 @@ function Header() {
                         <div className='lg:flex space-y-2 space-x-2 items-center hidden 3xl:ml-24'>
                             {/* Sign in */}
                             <div
-                                className='flex items-center pt-1 font-bold first-letter:uppercase transform text-[15px] hover:opacity-50 text-white'
+                                className='flex items-center pt-1 font-bold first-letter:uppercase transform text-[15px] hover:opacity-70 text-white'
                                 onMouseEnter={() => setHovered({ ...hovered, signIn: true })}
                                 onMouseLeave={() => setHovered({ ...hovered, signIn: false })}
                             >
@@ -144,12 +144,20 @@ function Header() {
 
                             {/* Contact sales */}
                             <div
-                                className='flex items-center font-normal transform bg-white rounded-full py-1.5 px-4 gap-1'
+                                className="flex items-center font-normal transform bg-white rounded-full py-1.5 px-4 gap-1 hover:bg-[#ffffffc7]"
                                 onMouseEnter={() => setHovered({ ...hovered, contactSales: true })}
                                 onMouseLeave={() => setHovered({ ...hovered, contactSales: false })}
                             >
-                                <span className='font-medium text-[15px] bg-gradient-to-r from-[#FFBD22] to-[#A13FBC] bg-clip-text text-transparent'>Contact sales</span>
-                                <span className='pt-[2px] font-bold transition duration-500'>{hovered.contactSales ? <BsArrowRightShort /> : <MdKeyboardArrowRight />}</span>
+                                <span className="font-medium text-[15px] bg-gradient-to-r from-[#FFBD22] to-[#A13FBC] bg-clip-text text-transparent">
+                                    Contact sales
+                                </span>
+                                <span className="pt-[2px] font-bold">
+                                    {hovered.contactSales ? (
+                                        <BsArrowRightShort className="text-[#FFBD22]" />
+                                    ) : (
+                                        <MdKeyboardArrowRight className="text-[#A13FBC]" />
+                                    )}
+                                </span>
                             </div>
                         </div>
 

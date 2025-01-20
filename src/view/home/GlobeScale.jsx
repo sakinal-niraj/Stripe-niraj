@@ -6,11 +6,11 @@ function GlobeScale() {
     <>
       <section
         className="bg-[#0A2540] relative z-20
-        before:content-[''] before:block before:w-full before:h-28"
-        style={{
-          clipPath: 'polygon(0 12%, 100% 0, 100% 100%, 0% 100%)',
-          WebkitClipPath: 'polygon(0 12%, 100% 0, 100% 100%, 0% 100%)',
-        }}
+        before:content-[''] before:block before:w-full before:h-28 globe_scale"
+        // style={{
+        //   clipPath: 'polygon(0 12%, 100% 0, 100% 100%, 0% 100%)',
+        //   WebkitClipPath: 'polygon(0 12%, 100% 0, 100% 100%, 0% 100%)',
+        // }}
       >
         <div className="py-10 px-5 md:px-10 xl:px-24 2xl:px-56 pt-16 w-full text-white z-10 flex justify-center relative 3xl:static">
           <div className='w-full 3xl:max-w-[1050px] 3xl:relative static'>

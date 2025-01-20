@@ -14,9 +14,9 @@ import { FaArrowRight } from "react-icons/fa";
 function Startup() {
     const [isHoverd, setIsHovered] = useState(null);
     return (
-        <section className='bg-[#f6f9fc] 
+        <section className='bg-[#f6f9fc]
         w-full 3xl:flex justify-center
-        after:content-[""] after:block after:w-full after:bg-[#f6f9fc] after:absolute after:h-28 z-0 top-9 md:top-[150px]:h-28 '>
+        after:content-[""] after:block after:w-full after:bg-[#f6f9fc] after:absolute after:h-36 z-0 top-9 pb-[100px] 3xl:pb-[200px] md:top-[150px]'>
             <div className='px-6 md:px-10 xl:px-24 2xl:px-56 py-20 w-full space-y-12 flex justify-center '>
                 <div className='3xl:max-w-[1050px] 3xl:ml-10 3xl:mt-10'>
                     {/* Content */}
@@ -161,8 +161,8 @@ function Startup() {
                             {/* Row 2 */}
                             <div className=" p-1 w-full bg-white shadow-md rounded-md shadow-[#cfcfcf] group relative overflow-hidden">
                                 {/* Header Section */}
-                                <header className='bg-[rgb(240,247,254)] lg:h-[330px] md:h-[250px] sm:h-[200px] overflow-hidden w-full'>
-                                    <div className='w-full h-full group-hover:rounded-t-lg group-hover:bg-[radial-gradient(circle_at_top_center,#ffcb57,_transparent_70%),_radial-gradient(circle_at_left_center,#D7B0B0,_transparent_40%)] flex flex-col gap-0 p-0'>
+                                <header className='bg-[rgb(240,247,254)] lg:h-[330px] md:h-[250px] sm:h-[200px] overflow-hidden w-full '>
+                                    <div className='w-full h-full group-hover:rounded-t-lg group-hover:bg-[radial-gradient(circle_at_top_right,#FFD748,_transparent_70%),_radial-gradient(circle_at_top_left,#00a60086,_transparent_40%)] flex flex-col gap-0 p-0'>
                                         <span className='pt-10 pb-6 pl-16 transition-transform duration-300 group-hover:-translate-y-2'>
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 73 25" width="73" height="25" fill="none"><path d="M32.477 13.486V17H30.86V7.924h3.627c2.023 0 3.287.948 3.287 2.781 0 1.808-1.264 2.781-3.287 2.781h-2.01Zm0-1.39H34.4c1.163 0 1.782-.506 1.782-1.39 0-.898-.62-1.391-1.782-1.391h-1.922v2.78ZM44.44 13.688c0 2.06-1.327 3.451-3.197 3.451-1.871 0-3.198-1.39-3.198-3.45 0-2.061 1.327-3.451 3.198-3.451 1.87 0 3.197 1.39 3.197 3.45Zm-4.866 0c0 1.353.645 2.174 1.669 2.174 1.023 0 1.668-.821 1.668-2.174 0-1.352-.645-2.174-1.668-2.174-1.024 0-1.669.822-1.669 2.174ZM48.658 10.364h1.251l1.188 4.399 1.176-4.399h1.504L51.78 17h-1.315l-1.213-4.348L48.038 17h-1.314l-1.997-6.636h1.554l1.201 4.399 1.176-4.399ZM56.974 17.139c-1.858 0-2.92-1.567-2.92-3.45 0-1.884 1.062-3.451 2.92-3.451.86 0 1.492.34 1.909.834V7.924H60.4V17h-1.517v-.695c-.417.493-1.05.834-1.909.834Zm1.947-3.64c0-1.252-.708-1.934-1.643-1.934-1.1 0-1.694.86-1.694 2.123 0 1.264.594 2.124 1.694 2.124.935 0 1.643-.695 1.643-1.921v-.392ZM67.513 10.364V17h-1.517v-.708c-.38.443-.948.847-1.808.847-1.39 0-2.25-.948-2.25-2.376v-4.399h1.517v4.07c0 .809.354 1.327 1.176 1.327.682 0 1.365-.505 1.365-1.453v-3.944h1.517ZM72.878 10.351v1.517a3.842 3.842 0 0 0-.556-.038c-.96 0-1.694.62-1.694 1.681V17h-1.517v-6.636h1.517v.986c.29-.62.973-1.024 1.82-1.024.177 0 .316.013.43.025Z" fill="#2E3A55"></path><path d="M24.5 12.25c0 6.765-5.485 12.25-12.25 12.25S0 19.015 0 12.25 5.485 0 12.25 0 24.5 5.485 24.5 12.25Z" fill="#000"></path><path d="M13.13 6.18c-.456 0-.863.146-1.225.445-.346.294-.58.708-.7 1.235v6.958c.322.348.74.519 1.264.519.854 0 1.47-.407 1.844-1.216.375-.825.56-2.017.56-3.586 0-1.568-.153-2.687-.459-3.353-.298-.67-.725-1.003-1.285-1.003Zm1.18-.83c.696 0 1.308.179 1.844.539.547.36.974.898 1.284 1.618.306.72.463 1.6.463 2.641 0 1.84-.422 3.253-1.264 4.24-.83.976-1.957 1.464-3.387 1.464-.403 0-.781-.05-1.144-.155a2.62 2.62 0 0 1-.902-.46v1.927c0 .566.15.957.443 1.178.294.216.75.329 1.365.329v.406l-.54-.02A148.787 148.787 0 0 0 9.647 19c-.403 0-1.245.027-2.525.077v-.406c.439 0 .749-.097.922-.29.185-.183.282-.52.282-1.023V7.716c0-.592-.1-1.022-.302-1.293-.185-.27-.516-.406-.983-.406V5.61c.427.039.842.058 1.245.058 1.163 0 2.138-.089 2.927-.271V7.17a3.004 3.004 0 0 1 1.225-1.35c.523-.31 1.151-.47 1.872-.47Z" fill="#fff"></path></svg>
                                         </span>
